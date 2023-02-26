@@ -277,7 +277,10 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="java">
-              <a href="https://github.com/zstoimchev/more-or-less-less-is-more" target="_blank">
+              <!--
+      - #modal deneme
+    -->
+              <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -401,7 +404,247 @@
   </main>
 
 
-
+ <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>WatCounts</h2>
+                            <hr class="star-primary">
+                            <img src="images/watcountsdesign.png" class="img-responsive img-centered" alt="">
+                            <p> WatCounts is an occupancy tracking application designed for the University of Waterloo. 
+                                The system uses a Raspberry Pi with a camera to track the number of people entering and exiting the library.
+                                A mechanical enclosure was designed to hold the Pi and position the camera above the library door.
+                                I implemented human detection using the pre-trained OpenCV linear SVM, and I used a centroid tracking algorithm to determine the direction each person was moving in.
+                                The project was a success with over 90% tracking accuracy! View the code here: <a href="https://github.com/rebecca-butler/WatCounts">WatCounts</a>
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>Sept - Dec 2020
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                    <strong>Raspberry Pi, Python, Picamera, OpenCV, HOGCV
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Magneto</h2>
+                            <hr class="star-primary">
+                            <video width="700px" controls muted>
+                               <source src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2FVID_20190724_162254.mp4?v=1567021599265" type="video/mp4">
+                            </video>
+                            <p><br>Magneto is a robot designed to follow a path while detecting the polarity of hidden magnets.
+                               When the robot detects a strong magnetic field, it stops and flashes the LED before continuing the course. <br><br>
+                               I programmed the robot in C and soldered components on the PCB, including optical encoders and a hall-effect sensor.
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>May - July 2019
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                    <strong> PCB design, surface-mount soldering, C programming
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Pothole Finder</h2>
+                            <hr class="star-primary">
+                            <video width="700px" controls>
+                               <source src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2Fvideo-1550421287.mp4?v=1567031757669" type="video/mp4">
+                            </video>
+                            <p><br> The Pothole Finder uses an Arduino board with an accelerometer to detect sudden changes in the downward/upward acceleration of a car, indicating that it has hit a pothole.
+                               When potholes are detected, the GPS sensor records the coordinates and sends them to an SQL database. 
+                               A Python script then uses this data to plot locations on a map using the Google Maps Plotter API.
+                               <br><br>
+                               I completed this project during the Make UofT Hackathon in a group of 3. My role was to write the Python script to collect data from the SQL database.
+                               See the code here: <a href="https://github.com/rebecca-butler/Pothole-Finder">Pothole Finder</a>
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>Feb 2019
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                    <strong>Arduino, GPS, accelerometer, Python, MySQL
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Machining and Fabrication</h2>
+                            <hr class="star-primary">
+                            <img src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2Ftictac%20resized.jpg?v=1566932722685" width="462px">
+                            <img src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2F69762521_2452875624943254_4312511013338480640_n.jpg?v=1567026883926" width="250px">
+                            <p>
+                               I have completed several projects in the machine shop. 
+                               Pictured on the left is an aluminum tic-tac-toe board I designed in SolidWorks. 
+                               I machined the aluminum and brass pegs using a lathe, and the base using a mill and drill press.
+                               <br><br>
+                               The phone stand, pictured on the right, was also designed in SolidWorks and prototyped using a 3D printer.
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>Sept - Dec 2017
+                                    </strong>
+                                </li>
+                                <li>Tools:
+                                    <strong>SolidWorks, lathe, mill, drill press, 3D printer
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Piano Bot</h2>
+                            <hr class="star-primary">
+                            <video width="300px" controls>
+                               <source src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2Fvideo-1567026061.mp4?v=1567028648871" type="video/mp4">
+                            </video>
+                            <p><br>The Piano Bot was designed as a tool to allow children to experiment with composing music.
+                               The roobot runs along a track of coloured squares, each of which represents a music note.
+                               After reading each of the notes, the stylus swivels to play the correct notes of the song.
+                               <br><br>
+                               A LEGO EV3 robot was used as the base model, with additional 3D printed and laser cut parts added. 
+                               The robot was programmed in C, available here: <a href="https://github.com/rebecca-butler/Piano-Bot">Piano Bot</a>
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>Jan - Apr 2018
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                    <strong>LEGO EV3, 3D printer, laser cutter, sensors, C programming
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+      <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Embedded Minesweeper</h2>
+                            <hr class="star-primary">
+                            <img src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2Fkeil.jpg?v=1566938786995" class="img-responsive img-centered" alt="">
+                            <p>I developed a Minesweeper game in C that runs on a Keil development board. 
+                               The game randomly distributes mines on a 9x9 grid and allows users to place flags or dig up mines.
+                               The player selects squares on the grid using a joystick, and uses one of two pushbuttons to place flags or dig.
+                                Check out the code here: <a href="https://github.com/rebecca-butler/Minesweeper">Minesweeper</a>
+                               <br><br>
+                          </p>
+                            <ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>May - Aug 2019
+                                    </strong>
+                                </li>
+                                <li>Technologies:
+                                    <strong>Keil development board, C programming, joystick and pushbutton interfacing
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
