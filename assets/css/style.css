@@ -1961,7 +1961,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
