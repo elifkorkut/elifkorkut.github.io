@@ -488,7 +488,10 @@
 
                                 <div class="mySlides">
                                   <div class="numbertext">2 / 3</div>
-                                  <img src="./assets/f_index/Raccoon_Logo.png" style="width:100%">
+                                  
+                                  <video width="700px" controls muted>
+                               <source src="https://cdn.glitch.com/ff1ca69f-ddf6-4632-8378-34074e19fe2e%2FVID_20190724_162254.mp4?v=1567021599265" type="video/mp4">
+                            </video>
                                   <div class="text">Caption Two</div>
                                 </div>
 
@@ -819,10 +822,10 @@ function showSlides(n) {
     slides[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" activ", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  dots[slideIndex-1].className += " activ";
 }
 </script>
 
