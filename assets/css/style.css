@@ -1938,9 +1938,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
@@ -1966,7 +1964,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: green;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
