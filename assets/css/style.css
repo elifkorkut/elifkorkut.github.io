@@ -1946,6 +1946,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   max-width: 1000px;
   position: relative;
   margin: auto;
+justify-content: center;
 }
 
 /* Hide the images by default */
