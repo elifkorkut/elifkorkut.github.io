@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-@import 'src/styles.css';
+@import '../styles.css';
 
 /* Footer */
 footer {
