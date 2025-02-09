@@ -13,7 +13,7 @@ export default {
 
     <div class="about-section">
       <div class="profile-photo">
-        <img src="../src/assets/pp.jpeg" alt="Profile Photo" />
+        <img src="../assets/pp.jpeg" alt="Profile Photo" />
       </div>
 
       <div class="about-text">
