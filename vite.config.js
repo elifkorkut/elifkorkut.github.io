@@ -8,6 +8,6 @@ export default defineConfig({
 })
 
 module.exports = {
-publicPath: ‘/elifkorkut.github.io/’
+publicPath: /elifkorkut.github.io/
 }
 
