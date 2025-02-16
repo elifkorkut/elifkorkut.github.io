@@ -1,23 +1,20 @@
+
+
 <script>
 import TopSection from './components/TopSection.vue';
 import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
-import AboutMe from './components/AboutMeCard.vue';
-import Projects from './components/ProjectsContainer.vue';
+import AboutMeCard from './components/AboutMeCard.vue';
 import MyFooter from './components/MyFooter.vue';
-import Resume from './components/ResumeCard.vue';
-
 
 export default {
-  name: 'App',
+  name: 'AboutMe',
   components: {
     TopSection,
     Navbar,
-    Hero,
-    Projects,
+    AboutMeCard,
     MyFooter,
-    Resume,
-    AboutMe
+    
+   
   }
 };
 </script>
@@ -26,16 +23,15 @@ export default {
 
 <div class="wrap2em">
    
-  <div id="app">
+  <div id="aboutme">
     <TopSection/>
-    <Navbar />
-    <Hero />
-    <Projects />
+    <Navbar/>
+   <AboutMeCard/>
   </div>
 </div>
-  <div id="footer">
 
-    <MyFooter />
+  <div id="footer">
+ <MyFooter/>
   </div>
     
  
