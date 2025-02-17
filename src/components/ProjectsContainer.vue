@@ -40,7 +40,7 @@
           
            <div class="project-card personal-projects">     
             <a href="tunnels.html" target="_blank" class="project-link">
-              <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+              <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
             </a>
                <div class="project-content">
                   <p class="header"> Tunnels (2023)</p>
@@ -69,7 +69,7 @@
             <div class="project-card personal-projects">
                   
               <a href="roboko.html" target="_blank" class="project-link">
-                <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
               </a>
                  <div class="project-content">
                     <p class="header">RoboKO (2024)</p>
@@ -97,7 +97,7 @@
            <div class="project-card personal-projects">
                   
             <a href="wretched.html" target="_blank" class="project-link">
-              <img src= "../assets/DownhillBikeLogo.png" alt="Link Icon">
+              <img src= "/images/DownhillBikeLogo.png" alt="Link Icon">
             </a>
                <div class="project-content">
                   <p class="header"> Wretched (2023)</p>
@@ -123,7 +123,7 @@
               <div class="project-card personal-projects">
                   
                 <a href="findthedifference.html" target="_blank" class="project-link">
-                  <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                  <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                 </a>
                    <div class="project-content">
                       <p class="header"> Find the Difference (2023)</p>
@@ -149,7 +149,7 @@
                 <div class="project-card personal-projects">
                   
                   <a href="downhillbike.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header">Downhill Bike (2023)</p>
@@ -175,7 +175,7 @@
                 <div class="project-card publications">
                   
                   <a href="systematicreview.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png"alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png"alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header"> Review</p>
@@ -205,7 +205,7 @@
                 <div class="project-card publications">
                   
                   <a href="sketchrecognition.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header"> Sketchscape (2023)</p>
@@ -232,7 +232,7 @@
                  <div class="project-card publications">
                   
                   <a href="heterotopia.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header"> Heterotopia (2023)</p>
@@ -260,7 +260,7 @@
                  <div class="project-card personal-projects">
                   
                   <a href="virtualmuseum.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header"> Virtual Museum (2023)</p>
@@ -289,7 +289,7 @@
                  <div class="project-card personal-projects">
                   
                   <a href="holofice.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png"alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png"alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header">Holoffice (2022)</p>
@@ -318,7 +318,7 @@
                  <div class="project-card personal-projects">
                   
                   <a href="sketchscape.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header">Sketchscape (2021)</p>
@@ -343,7 +343,7 @@
                 <div class="project-card personal-projects">
                   
                   <a href="ludikid.html" target="_blank" class="project-link">
-                    <img src="../assets/DownhillBikeLogo.png" alt="Link Icon">
+                    <img src="/images/DownhillBikeLogo.png" alt="Link Icon">
                   </a>
                      <div class="project-content">
                         <p class="header">Ludikid (2021)</p>

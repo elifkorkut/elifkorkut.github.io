@@ -13,7 +13,7 @@ export default {
 
     <div class="about-section">
       <div class="profile-photo">
-        <img src="../assets/pp.jpeg" alt="Profile Photo" />
+        <img src="/images/Raccoon_Logo_white.png" alt="Logo" class="top-logo" />
       </div>
 
       <div class="about-text">

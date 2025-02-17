@@ -1,8 +1,18 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/',
   plugins: [vue()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html', // default entry
+        about: 'aboutme.html',
+        resume: 'resume.html',
+        // Add other HTML files here
+      },
+    },
+  },
+  base: '/elifkorkut.github.io/', // IMPORTANT for GitHub Pages
+ 
 })

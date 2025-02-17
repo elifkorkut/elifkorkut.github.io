@@ -5,7 +5,7 @@
       <div class="top-content">
 
         <a href="index.html">
-          <img src="../assets/Raccoon_Logo_white.png" alt="Logo" class="top-logo">
+          <img src="/images/Raccoon_Logo_white.png" alt="Logo" class="top-logo" />
 
         </a>
 
@@ -22,7 +22,8 @@
   </script>
   
   <style scoped>
-  @import  '../styles.css';
+  
+
   
     /*-----------------------------------*\
     Top-Logo
