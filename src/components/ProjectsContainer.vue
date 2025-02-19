@@ -366,15 +366,16 @@
 
 </template>
 
-<script>
+<script setup>
 export default {
   name: 'Projects',
   }
 
+  import { onMounted } from 'vue';
+
+  onMounted(()=> { 
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the filter buttons and the dropdown
     const filterButtons = document.querySelectorAll(".filter-btn");
     const filterDropdownBtns = document.querySelectorAll(".filter-dropdown-btn");
     const projectCards = document.querySelectorAll(".project-card");
@@ -464,7 +465,7 @@ export default {
 
 <style scoped>
 
-@import  '../styles.css';
+
 
   
   
@@ -795,13 +796,6 @@ export default {
 {
  
 }
-
-
-
-
-
-
-
 
 
 
