@@ -13,6 +13,6 @@ export default defineConfig({
       },
     },
   },
-  base: '/elifkorkut.github.io/', // IMPORTANT for GitHub Pages
+  base: '/', // IMPORTANT for GitHub Pages
  
 })
