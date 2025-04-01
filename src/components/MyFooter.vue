@@ -1,3 +1,20 @@
+<script setup>
+import { onMounted } from 'vue';
+
+// Load Ionicons dynamically when the component is mounted
+onMounted(() => {
+  const scriptESM = document.createElement('script');
+  scriptESM.type = 'module';
+  scriptESM.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
+  document.head.appendChild(scriptESM);
+
+  const scriptNoModule = document.createElement('script');
+  scriptNoModule.noModule = true;
+  scriptNoModule.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js';
+  document.head.appendChild(scriptNoModule);
+});
+</script>
+
 <template>
   <footer>
     <p>Copyright &copy; Elif Hilal Korkut 2024.</p>
@@ -27,59 +44,41 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'MyFooter'
-}
-</script>
-
 <style scoped>
 @import '../styles.css';
 
 /* Footer */
 footer {
-   
-   background-color:var(--primary-color);
+   background-color: var(--primary-color);
    color: white;
    padding: 0px 0px;
    text-align: center;
-   width:100%;
+   width: 100%;
    height: 6rem;
    bottom: 0;
    z-index: 6;
    position: static;
- }
+}
 
- .footer-text
- {
+.footer-text {
    align-items: center;
- }
+}
 
- .social-list-footer {
-    
+.social-list-footer {
    display: flex;
    justify-content: center;
    align-items: center;
    gap: 15px;
    margin-left: -30px;
    margin-top: -10px;
-   
- }
+}
 
-
- .social-item-footer .social-link-footer {
+.social-item-footer .social-link-footer {
    color: var(--light-gray-70);
    font-size: 18px;
- }
- 
+}
 
- 
- .social-item-footer .social-link-footer:hover { 
-
-   color: var(--accent-color)
-  }
- 
-
-
-
+.social-item-footer .social-link-footer:hover { 
+   color: var(--accent-color);
+}
 </style>

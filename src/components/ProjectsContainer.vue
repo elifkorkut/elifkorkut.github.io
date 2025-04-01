@@ -367,9 +367,7 @@
 </template>
 
 <script setup>
-export default {
-  name: 'Projects',
-  }
+
 
   import { onMounted } from 'vue';
 

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+
 export default defineConfig({
   plugins: [vue()],
   build: {
@@ -9,6 +10,7 @@ export default defineConfig({
         main: 'index.html', // default entry
         about: 'aboutme.html',
         resume: 'resume.html',
+      
         // Add other HTML files here
       },
     },
