@@ -117,6 +117,7 @@ export default {
  font-size: 18px;
  margin: 0 0 8px;
  color: var(--description-color);
+ color: var(--description-color);
 }
 
 .project-content {

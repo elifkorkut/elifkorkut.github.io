@@ -134,7 +134,7 @@
   .nav-buttons button:hover,
   .prev-button:hover,
   .next-button:hover {
-    background-color: var(  --hover-color-button );
+    background-color: var(--hover-color-button );
   }
   
   .back-button {
@@ -144,6 +144,7 @@
   .caption {
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 0;
     font-size: 4rem;
     font-weight: bold;
   }
@@ -161,7 +162,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--hover-color-button);
+    background-color: var(--gallery-background);
     margin-top: 2.5rem;
   }
   
