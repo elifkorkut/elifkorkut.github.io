@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-@import  'src/styles.css';
+@import  '../styles.css';
 
  /* Hero Section */
  .hero {

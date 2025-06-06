@@ -24,23 +24,9 @@ export default {
 
 <template>
 
-<div class="wrap2em">
-   
-  <div id="app">
-    <TopSection/>
-    <Navbar />
-    <Hero />
-    <Projects />
-  </div>
-</div>
-  <div id="footer">
-
-    <MyFooter />
-  </div>
+<router-view /> 
     
- 
 </template>
-
 
 <style>
 @import 'styles.css'; /* Add your global CSS */

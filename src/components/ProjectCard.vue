@@ -1,23 +1,33 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  description: String,
-
-})
-
-const count = ref(0)
-
-</script>
-
 <template>
-  <h1>{{ msg }}</h1>
-   
-   
+  <div class="project-card">     
+    <router-link :to="link" class="project-link">
+      <img :src="image" :alt="title + ' Icon'">
+    </router-link>
+    <div class="project-content">
+      <p class="header">{{ title }}</p>
+      <p class="role">{{ role }}</p>
+      <p class="description">{{ description }}</p>
+      <div class="project-tags">
+        <span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
 </template>
 
+<script>
+export default {
+  props: {
+  link: { type: String, default: "/" },
+  image: { type: String, default: "/default-image.png" },
+  title: { type: String, default: "Untitled Project" },
+  role: { type: String, default: "Role not specified" },
+  description: { type: String, default: "No description available." },
+  tags: { type: Array, default: () => [] }
+}
+};
+</script>
+
 <style scoped>
-  @import  '../styles.css';
 
 
 .project-card {
@@ -28,17 +38,16 @@ const count = ref(0)
    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
    transition: transform 0.3s ease;
    z-index: 1;
+   width: 380px;
+
  }
 
    
  .project-card img {
   
-  
-   vertical-align:bottom;
-   width: 100%;
-   object-fit:cover;
-   /*background-color: white;
-   border-radius: 10px*/;
+  width: 100%;
+  object-fit: cover;
+  vertical-align:bottom;
  }
  
  .project-card:hover {
@@ -100,7 +109,7 @@ const count = ref(0)
 
  padding: 16px;
  background: var(--project-card-info-);
- 
+ width: 100%;
 
 }
 
@@ -127,26 +136,9 @@ const count = ref(0)
 
  
  /* Responsive Design */
-
-
+  
 
  
-
-/* For tablets */
-@media (max-width: 1024px) and (min-width: 600px) 
-{
- 
-}
-/* For mobile phones */
-@media (max-width: 599px)
-{
- 
-}
-
-@media (min-width: 1024px) 
-{
- 
-}
 
 
 </style>

@@ -17,7 +17,7 @@ onMounted(() => {
 
 <template>
   <footer>
-    <p>Copyright &copy; Elif Hilal Korkut 2024.</p>
+    <p>Copyright &copy; Elif Hilal Korkut 2025.</p>
     <div class="separator"></div>
     <ul class="social-list-footer">
       <li class="social-item-footer">

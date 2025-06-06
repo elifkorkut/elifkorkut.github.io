@@ -3,11 +3,9 @@
 
 <section>
       <div class="top-content">
-
-        <a href="index.html">
-          <img src="/images/Raccoon_Logo_white.png" alt="Logo" class="top-logo" />
-
-        </a>
+        <router-link to="/">
+  <img src="/images/Raccoon_Logo_white.png" alt="Logo" class="top-logo" />
+</router-link>
 
         <p class="top-text">&nbsp;&nbsp;&nbsp;elif hilal korkut | game developer</p>
       </div>

@@ -10,10 +10,10 @@ export default {
     <header>
       <h2 class="h2 article-title">About Me</h2>
     </header>
-
+    
     <div class="about-section">
       <div class="profile-photo">
-        <img src="/images/Raccoon_Logo_white.png" alt="Logo" class="top-logo" />
+        <img src="/images/pp.jpeg" alt="Logo" class="top-logo" />
       </div>
 
       <div class="about-text">
