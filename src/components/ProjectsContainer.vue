@@ -56,6 +56,7 @@
       :role="project.role"
       :description="project.description"
       :tags="project.tags"
+      :types="project.types"
     />
   </div>
 </template>
@@ -75,7 +76,8 @@ const projects = [
     title: 'Tunnels (2023)',
     role: 'Game Developer - NomadMonkey',
     description: 'Space Shooter game',
-    tags: ['Published Games', 'Unity', 'C#', 'VR']
+    tags: [ 'Unity', 'C#', 'VR'],
+    types: ['Personal Projects']
   },
   {
     id: 2,
@@ -84,7 +86,8 @@ const projects = [
     title: 'Other Project',
     role: 'Game Developer',
     description: 'Another Game',
-    tags: ['Personal Projects', 'Quest', 'Photon']
+    tags: [ 'Quest', 'Photon'],
+    types: ['Personal Projects']
   },
   {
     id: 3,
@@ -93,7 +96,8 @@ const projects = [
     title: 'Other Project 2',
     role: 'Game Developer',
     description: 'Another Game',
-    tags: ['Publications', 'Unity']
+    tags: ['Unity'],
+    types: ['Published Games'],
   }
 ];
 
@@ -110,7 +114,7 @@ function applyFilter(category) {
     filteredProjects.value = projects;
   } else {
     filteredProjects.value = projects.filter(project =>
-      project.tags.includes(category)
+      project.types.includes(category)
     );
   }
 

@@ -10,6 +10,9 @@
       <div class="project-tags">
         <span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span>
       </div>
+      <div class="project-types">
+        <span v-for="type in types" :key="typpe" class="type">{{ type }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -22,7 +25,8 @@ export default {
   title: { type: String, default: "Untitled Project" },
   role: { type: String, default: "Role not specified" },
   description: { type: String, default: "No description available." },
-  tags: { type: Array, default: () => [] }
+  tags: { type: Array, default: () => [] },
+  type: { type: Array, default: () => [] }
 }
 };
 </script>
@@ -69,6 +73,16 @@ export default {
    padding: 5px 8px;
    margin-right: 5px;
    font-size: 12px;
+ }
+
+  
+ .project-types {
+   
+ display: none;
+ }
+ 
+ .type {
+ display: none;
  }
 
 
