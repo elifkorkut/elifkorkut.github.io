@@ -40,11 +40,13 @@ export default {
   \*-----------------------------------*/
   @import  '../styles.css';
   .about-section {
+
     display: flex;
     align-items: center;
     max-width: 1300px;
-    margin: 10px;
-    padding: 0px;
+   
+    padding-left: 2em;
+    padding-right: 2em;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -61,16 +63,14 @@ export default {
   
   .about-text h2 {
     font-size: 30px;
-    margin-bottom: 0px;
-    padding: 30px;
     color: #333;
   }
   
   .about-text p {
-    font-size: 20px;
+    font-size: 1.1em;
     line-height: 1.6;
     color: #555;
-    padding: 30px;
+    
   }
   
   /* Responsive adjustments */
@@ -82,17 +82,16 @@ export default {
     }
   
   
-  
+
     .profile-photo img {
-        margin-right: 0;
-        margin-bottom: 20px;
+     
+       
+         padding-top: 2rem;
          width: 150px;
           height: 150px;
           border-radius: 50%;
           object-fit: cover;
-          margin-right: 20px;
-        
-    }
+          }
   }
   
   </style>

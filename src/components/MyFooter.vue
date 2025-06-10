@@ -51,7 +51,7 @@ onMounted(() => {
 footer {
    background-color: var(--primary-color);
    color: white;
-   padding: 0px 0px;
+   padding: 1px 0px;
    text-align: center;
    width: 100%;
    height: 6rem;
@@ -61,6 +61,7 @@ footer {
 }
 
 .footer-text {
+    
    align-items: center;
 }
 

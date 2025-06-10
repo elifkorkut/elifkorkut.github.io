@@ -7,8 +7,8 @@
   --background-color: #202124; 
   --primary-color:#2F333D;  
   --accent-color:#97A3B6 ; 
-  
-  --text-color: white;  
+  --text-color: white; 
+  --text-color_daak:#202124;  
   
   --accent-color-button:#2F333D;
   --hover-color-button:#676f7c ;
@@ -128,7 +128,9 @@
       border: 1px solid var(--accent-color);
       border-radius: 20px;
       box-shadow: var(--secondary-color);
-      padding:2em;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 2rem;
       margin-top: 20rem;
       z-index: 4;
       position: relative;
@@ -145,7 +147,7 @@
   {
      .article-section{ 
       margin-top: 10em;
-      padding:0.5em ;
+
      }
   }
   /* For tablets */
@@ -153,7 +155,7 @@
   {
     .article-section { 
       margin-top: 10em;
-      padding:0.5em ;
+      
      }
   }
   /* For mobile phones */
@@ -161,7 +163,7 @@
   {
     .article-section { 
        margin-top: 10em;
-      padding:0.5em ;
+     
      }
   }
   
