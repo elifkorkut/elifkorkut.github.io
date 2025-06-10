@@ -47,59 +47,34 @@
   </div>
 
   <div class="projects-container">
-    <ProjectCard
-      v-for="project in filteredProjects"
-      :key="project.id"
-      :link="project.link"
-      :image="project.image"
-      :title="project.title"
-      :role="project.role"
-      :description="project.description"
-      :tags="project.tags"
-      :types="project.types"
-    />
+    <router-link
+        v-for="project in filteredProjects"
+        :key="project.id"
+        :to="project.link"
+        class="project-card-link"
+      >
+        <ProjectCard
+          :image="project.image"
+          :title="project.title"
+          :role="project.role"
+          :description="project.description"
+          :tags="project.tags"
+          :types="project.types"
+        />
+      </router-link>
   </div>
 </template>
 
 <script setup>
+//import { ref } from 'vue';
 import { ref, onMounted } from 'vue';
+import { projects } from '../data/projects.js';
 import ProjectCard from './ProjectCard.vue';
 
 // Define categories and project data
 const categories = ['All', 'Published Games', 'Personal Projects', 'Publications'];
 
-const projects = [
-  {
-    id: 1,
-    link: '/tunnels',
-    image: '/images/DownhillBikeLogo.png',
-    title: 'Tunnels (2023)',
-    role: 'Game Developer - NomadMonkey',
-    description: 'Space Shooter game',
-    tags: [ 'Unity', 'C#', 'VR'],
-    types: ['Personal Projects']
-  },
-  {
-    id: 2,
-    link: '/downhillbike',
-    image: '/images/OtherProject.png',
-    title: 'Other Project',
-    role: 'Game Developer',
-    description: 'Another Game',
-    tags: [ 'Quest', 'Photon'],
-    types: ['Personal Projects']
-  },
-  {
-    id: 3,
-    link: '/tunnels',
-    image: '/images/OtherProject2.png',
-    title: 'Other Project 2',
-    role: 'Game Developer',
-    description: 'Another Game',
-    tags: ['Unity'],
-    types: ['Published Games'],
-  }
-];
+
 
 // Reactive properties
 const selectedCategory = ref('All');

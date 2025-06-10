@@ -2,18 +2,19 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import AboutMe from '../views/AboutMe.vue'
 import Resume from '../views/Resume.vue'
-import Tunnels from '../projects/Tunnels.vue'
-import DownhillBike from '../projects/DownhillBike.vue'
+import ProjectDetail from '../components/ProjectDetail.vue';
+
 
 
 
 // Define your routes
 const routes = [
+ 
+  { path: '/project/:slug', component: ProjectDetail },
   { path: '/', component: Home },
   { path: '/aboutme', component: AboutMe },
   { path: '/resume', component: Resume },
-  { path: '/tunnels', component: Tunnels},
-  { path: '/downhillbike', component: DownhillBike}
+ 
 
 ]
 

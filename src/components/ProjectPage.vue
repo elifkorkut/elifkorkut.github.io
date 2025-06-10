@@ -144,7 +144,6 @@
   .caption {
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 0;
     font-size: 4rem;
     font-weight: bold;
   }
