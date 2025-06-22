@@ -53,7 +53,7 @@ export default {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   z-index: 1;
-  width: 380px;
+  max-width: 380px;
 }
 
 .project-card img {

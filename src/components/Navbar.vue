@@ -24,6 +24,8 @@ export default {
   padding: 10px 30px;
   position: relative;
   z-index: 5;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-btn {
@@ -71,11 +73,20 @@ export default {
 }
 @media (max-width: 1024px) and (min-width: 600px),
        (max-width: 599px) {
-  .navbar {
+        .navbar {
     position: fixed;
-    left: 3px;
-    bottom: 0px;
-    right: 3px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 8px;
+    border-radius: 20px 20px 20px 20px;
+    width: auto;
+  }
+
+  .nav-btn {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    margin: 0 4px;
   }
 }
 </style>

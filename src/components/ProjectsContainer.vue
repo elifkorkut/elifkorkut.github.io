@@ -54,10 +54,10 @@
         class="project-card-link"
       >
         <ProjectCard
-          :image="project.image"
+          :image="project.cardImage"
           :title="project.title"
           :role="project.role"
-          :description="project.description"
+          :description="project.shortDescription"
           :tags="project.tags"
           :types="project.types"
         />
@@ -72,7 +72,7 @@ import { projects } from '../data/projects.js';
 import ProjectCard from './ProjectCard.vue';
 
 // Define categories and project data
-const categories = ['All', 'Published Games', 'Personal Projects', 'Publications'];
+const categories = ['All', 'Published Games', 'Multimedia Projects', 'Publications'];
 
 
 

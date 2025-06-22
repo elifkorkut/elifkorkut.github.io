@@ -1,153 +1,203 @@
-// src/data/projects.js
 
+
+// /src/data/projects.js
 export const projects = [
-  {
+  { 
     id: 1,
-    slug: 'tunnels',
-    link: '/project/tunnels',
-    image: '/images/DownhillBikeLogo.png',
-    title: 'Tunnels (2023)',
-    role: 'Game Developer - NomadMonkey',
-    description: 'Space Shooter game',
-    tags: ['Unity', 'C#', 'VR'],
-    types: ['Personal Projects'],
-    details: {
-      length: '6 months',
-      studio: 'XYZ Studios',
-      team: '5 (2 Designers, 1 Gameplay Programmer, 1 Sound Designer, 1 Producer)',
-      tech: 'Unity3D, C#, Blender, Photoshop'
-    },
-    roleInfo: {
-      description: ['As a Gameplay Programmer, I was responsible for implementing core game mechanics, including movement and AI behavior.'],
-      responsibilities: [
-        'Gameplay Implementation: Programmed various interactive gameplay elements.',
-        'AI Behavior: Created enemy AI, including pathfinding, decision trees, etc.',
-        'Collaboration: Worked closely with design and sound teams.',
-        'Optimization: Ensured smooth performance across platforms.'
-      ]
-    },
-    gallery: [
-      { type: 'image', src: '/images/DownhillBikeLogo.png' },
-      { type: 'video', src: '/images/tunnels/video1.mp4' }
-    ]
-  },
-  {
-    id: 2,
     slug: 'downhillbike',
     link: '/project/downhillbike',
-    image: '/images/OtherProject.png',
+    cardImage: '/images/DownhillBikeLogo.png',
     title: 'Downhill Bike',
     role: 'Game Developer',
-    description: 'Physics-based downhill bike game',
-    tags: ['Unity', 'Multiplayer'],
-    types: ['Personal Projects'],
-    details: {
-      length: '3 months',
-      studio: 'IndieDev',
-      team: '3',
-      tech: 'Unity3D, C#'
+    link1:'',
+    link2:'',
+    shortDescription: 'A VR cycling game with immersive terrain and competitive gameplay.',
+    tags: ['VR', 'Unity', 'Cycling'],
+    types: [ 'Publications'],
+    mainArt: {
+      type: 'video',
+      src: '/images/tunnels/video1.mp4',
+      alt: 'Downhill Bike Main Art',
+      description: 'Cover image for Downhill Bike project.'
     },
-    roleInfo: {
-      description: ['Handled player physics and terrain interaction'],
-      responsibilities: ['Built realistic bike physics', 'Created race logic', 'UI implementation']
+    secondaryArt: {
+      type: 'video',
+      src: '/images/tunnels/video1.mp4',
+      alt: 'Gameplay Demo',
+      description: 'Gameplay demo of Downhill Bike showing terrain and VR input.'
     },
-    gallery: [{ type: 'image', src: '/images/OtherProject.png' }]
+    summaryHtml: `
+      <p><strong>Downhill Bike</strong> is a VR cycling game that immerses players in scenic terrain...</p>
+    `,
+    detailsHtml: `
+      <ul>
+        <li><strong>Released:</strong> May 2025</li>
+        <li><strong>Engine:</strong> Unity</li>
+        <li><strong>Studio:</strong> Beyond Motion</li>
+        <li><strong>Publisher:</strong> Immersion Studios</li>
+        <li><strong>Team Size:</strong> 10</li>
+        <li><strong>Tech:</strong> Unity, C#, Blender</li>
+      </ul>
+    `,
+    responsibilitiesHtml: `
+      <p>I led the systems design for terrain navigation and implemented physics-based motion...</p>
+    `,
+    roleHtml: `
+      <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
+    `,
+    keyContributions: [
+      'Bicycle Physics & Core Mechanics',
+      'VR Interaction & Input Mapping',
+      'Multiplayer Sync & Replay System',
+      'Optimization & Shader LODs'
+    ],
+    gallery: [
+      {
+        type: 'image',
+        src: '/images/pp.jpeg',
+        alt: 'Downhill Bike Cover',
+        topText: 'Main Menu Art',
+        bottomText: 'Rendered in Unity HDRP'
+      },
+      {
+        type: 'video',
+        src: '/images/pp.jpeg',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      }
+    ]
   },
 
+
+  { 
+    id: 2,
+    slug: 'downhillbike2',
+    link: '/project/downhillbike2',
+    cardImage: '/images/DownhillBikeLogo.png',
+    title: 'Downhill Bike2',
+    role: 'Game Developer',
+    types: ['Multimedia Projects'],
+    shortDescription: 'A VR cycling game with immersive terrain and competitive gameplay.',
+    tags: ['VR', 'Unity', 'Cycling'],
+    mainArt: {
+      type: 'video',
+      src: '/images/tunnels/video1.mp4',
+      alt: 'Downhill Bike Main Art',
+      description: 'Cover image for Downhill Bike project.'
+    },
+    secondaryArt: {
+      type: 'video',
+      src: '/images/tunnels/video1.mp4',
+      alt: 'Gameplay Demo',
+      description: 'Gameplay demo of Downhill Bike showing terrain and VR input.'
+    },
+    summaryHtml: `
+      <p><strong>Downhill Bike</strong> is a VR cycling game that immerses players in scenic terrain...</p>
+    `,
+    detailsHtml: `
+      <ul>
+        <li><strong>Released:</strong> May 2025</li>
+        <li><strong>Engine:</strong> Unity</li>
+        <li><strong>Studio:</strong> Beyond Motion</li>
+        <li><strong>Publisher:</strong> Immersion Studios</li>
+        <li><strong>Team Size:</strong> 10</li>
+        <li><strong>Tech:</strong> Unity, C#, Blender</li>
+      </ul>
+    `,
+    responsibilitiesHtml: `
+      <p>I led the systems design for terrain navigation and implemented physics-based motion...</p>
+    `,
+    roleHtml: `
+      <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
+    `,
+    keyContributions: [
+      'Bicycle Physics & Core Mechanics',
+      'VR Interaction & Input Mapping',
+      'Multiplayer Sync & Replay System',
+      'Optimization & Shader LODs'
+    ],
+    gallery: [
+      {
+        type: 'image',
+        src: '/images/pp.jpeg',
+        alt: 'Downhill Bike Cover',
+        topText: 'Main Menu Art',
+        bottomText: 'Rendered in Unity HDRP'
+      },
+      {
+        type: 'image',
+        src: '/images/pp.jpeg',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      }
+    ]
+
+  },
+
+  {
+
+  id: 3,
+  slug: 'downhillbike3',
+  link: '/project/downhillbike3',
+  cardImage: '/images/DownhillBikeLogo.png',
+  title: 'Downhill Bike3',
+  types: ['Published Games'],
+  role: 'Game Developer',
+  shortDescription: 'A VR cycling game with immersive terrain and competitive gameplay.',
+  tags: ['VR', 'Unity', 'Cycling'],
+  mainArt: {
+    type: 'video',
+    src: '/images/tunnels/video1.mp4',
+    alt: 'Downhill Bike Main Art',
+    description: 'Cover image for Downhill Bike project.'
+  },
+  secondaryArt: {
+    type: 'video',
+    src: '/images/tunnels/video1.mp4',
+    alt: 'Gameplay Demo',
+    description: 'Gameplay demo of Downhill Bike showing terrain and VR input.'
+  },
+  summaryHtml: `
+    <p><strong>Downhill Bike</strong> is a VR cycling game that immerses players in scenic forest environments, focusing on realism and competitive gameplay. It features a detailed physics-based bike system including suspension, dual-brake controls, leaning, bunny hops, and wheelies. The game supports Oculus leaderboard integration, ghost players, replay functionality, and simulated multiplayer modes, enhanced by haptic feedback and spatial audio for a fully immersive experience.</p>
+    <ul>
+      <li><strong>Released:</strong> May 2025</li>
+      <li><strong>Engine:</strong> Unity</li>
+      <li><strong>Studio:</strong> Beyond Motion</li>
+      <li><strong>Publisher:</strong> Immersion Studios</li>
+      <li><strong>Team Size:</strong> 10</li>
+      <li><strong>Tech:</strong> Unity, C#, Blender</li>
+    </ul>
+  `,
+  responsibilitiesHtml: `
+    <p>As the sole developer of <strong>Downhill Bike</strong>, I was responsible for the complete design and implementation of all core systems. This included gameplay mechanics, VR interactions, UI development, and performance optimization. I collaborated closely with artists and designers to ensure a cohesive and immersive VR experience on Oculus platforms.</p>
+  `,
+  keyContributions: [
+    'Engineered a fully interactive physics-based bike system featuring suspension, dual-brake controls, bunny hops, leaning, and wheelies for realistic movement and control.',
+    'Designed intuitive VR interactions focusing on player comfort and precision, enhanced by motion dynamics, haptic feedback, and spatial audio.',
+    'Developed a simulated multiplayer experience with replay systems and ghost players for benchmarking and asynchronous competition.',
+    'Implemented global (Oculus-integrated) and local leaderboard systems alongside checkpoint mechanics to support competitive progression.',
+    'Profiled and optimized CPU, GPU, and memory performance specifically for Oculus devices, using Unity Profiler and custom tools for lighting and physics tuning.',
+    'Created in-game UI elements and a guided tutorial mode to improve onboarding and player retention, collaborating with design and art teams to maintain clarity and VR comfort standards.'
+  ],
+  gallery: [
+    {
+      type: 'image',
+      src: '/images/pp.jpeg',
+      alt: 'Downhill Bike Cover',
+      topText: 'Main Menu Art',
+      bottomText: 'Rendered in Unity HDRP'
+    },
+    {
+      type: 'video',
+      src: '/images/pp.jpeg',
+      alt: 'Gameplay Preview',
+      topText: 'Gameplay Trailer',
+      bottomText: 'Raw captured footage from Quest 2'
+    }
+  ]
+}
   
-    {
-      id: 3,
-      slug: 'tunnelsss',
-      link: '/project/tunnelsss',
-      image: '/images/DownhillBikeLogo.png',
-      title: 'Tunnelsss (2023)',
-      role: 'Game Developer - NomadMonkey',
-      description: 'Space Shooter game',
-      tags: ['Unity', 'C#', 'VR'],
-      types: ['Personal Projects'],
-      details: {
-        length: '6 months',
-        studio: 'XYZ Studios',
-        team: '5 (2 Designers, 1 Gameplay Programmer, 1 Sound Designer, 1 Producer)',
-        tech: 'Unity3D, C#, Blender, Photoshop'
-      },
-      roleInfo: {
-        description: ['As a Gameplay Programmer, I was responsible for implementing core game mechanics, including movement and AI behavior.'],
-        responsibilities: [
-          'Gameplay Implementation: Programmed various interactive gameplay elements.',
-          'AI Behavior: Created enemy AI, including pathfinding, decision trees, etc.',
-          'Collaboration: Worked closely with design and sound teams.',
-          'Optimization: Ensured smooth performance across platforms.'
-        ]
-      },
-      gallery: [
-        { type: 'image', src: '/images/DownhillBikeLogo.png' },
-        { type: 'video', src: '/images/tunnels/video1.mp4' }
-      ]
-    },
 
-    {
-      id: 4,
-      slug: 'tunnelss',
-      link: '/project/tunnelss',
-      image: '/images/DownhillBikeLogo.png',
-      title: 'Tunnelss (2023)',
-      role: 'Game Developer - NomadMonkey',
-      description: 'Space Shooter game',
-      tags: ['Unity', 'C#', 'VR'],
-      types: ['Personal Projects'],
-      details: {
-        length: '6 months',
-        studio: 'XYZ Studios',
-        team: '5 (2 Designers, 1 Gameplay Programmer, 1 Sound Designer, 1 Producer)',
-        tech: 'Unity3D, C#, Blender, Photoshop'
-      },
-      roleInfo: {
-        description: ['As a Gameplay Programmer, I was responsible for implementing core game mechanics, including movement and AI behavior.'],
-        responsibilities: [
-          'Gameplay Implementation: Programmed various interactive gameplay elements.',
-          'AI Behavior: Created enemy AI, including pathfinding, decision trees, etc.',
-          'Collaboration: Worked closely with design and sound teams.',
-          'Optimization: Ensured smooth performance across platforms.'
-        ]
-      },
-      gallery: [
-        { type: 'image', src: '/images/DownhillBikeLogo.png' },
-        { type: 'video', src: '/images/tunnels/video1.mp4' }
-      ]
-    },
-    
-   /* ['All', 'Published Games', 'Personal Projects', 'Publications'];*/
-    {
-      id: 5,
-      slug: 'heterotopia',
-      link: '/project/heterotopia',
-      image: '/images/publications/heterotopia_publication_cover.png',
-      title: 'Developing a framework for heterotopias as discursive playgrounds: a comparative analysis of non-immersive and immersive technologies',
-      role: 'Author',
-      description: 'Korkut, E.H., Surer, E. Developing a framework for heterotopias as discursive playgrounds: a comparative analysis of non-immersive and immersive technologies. Virtual Reality 28, 16 (2024). https://doi.org/10.1007/s10055-023-00905-w',
-      types: ['Publications'],
-      tags: [],
-      descriptionlong: ['The discursive space represents the reordering of knowledge gained through accumulation. In the digital age, multimedia has become the language of information, and the space for archival practices is provided by non-immersive technologies, resulting in the disappearance of several layers from discursive activities. Heterotopias are unique, multilayered epistemic contexts that connect other systems through the exchange of information. This paper describes a process to create a framework for Virtual Reality, Mixed Reality, and personal computer environments based on heterotopias to provide absent layers. This study provides virtual museum space as an informational terrain that contains a “world within worlds” and presents place production as a layer of heterotopia and the subject of discourse. Automation for the individual multimedia content is provided via various sorting and grouping algorithms, and procedural content generation algorithms such as Binary Space Partitioning, Cellular Automata, Growth Algorithm, and Procedural Room Generation. Versions of the framework were comparatively evaluated through a user study involving 30 participants, considering factors such as usability, technology acceptance, and presence. The results of the study show that the framework can serve diverse contexts to construct multilayered digital habitats and is flexible for integration into professional and daily life practices.'],
-      details: {
-        
-        length: '6 months',
-        studio: 'XYZ Studios',
-        team: '5 (2 Designers, 1 Gameplay Programmer, 1 Sound Designer, 1 Producer)',
-        tech: 'Unity3D, C#, Blender, Photoshop'
-      },
-      roleInfo: {
-        description: ['As a Gameplay Programmer, I was responsible for implementing core game mechanics, including movement and AI behavior.'],
-        responsibilities: [
-          'Gameplay Implementation: Programmed various interactive gameplay elements.',
-          'AI Behavior: Created enemy AI, including pathfinding, decision trees, etc.',
-          'Collaboration: Worked closely with design and sound teams.',
-          'Optimization: Ensured smooth performance across platforms.'
-        ]
-      },
-      gallery: [
-        {type: 'image', src: '/images/publications/heterotopia_publication_cover.png' }
-      ]
-    },
-
-];
+]
