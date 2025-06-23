@@ -182,7 +182,7 @@ onMounted(() => {
   display: none;
   position: relative;
   margin-right: 30px;
-  margin-left: 15px;
+  margin-left: 30px;
 }
 
 .dropdown-toggle {
@@ -225,7 +225,7 @@ onMounted(() => {
   padding-bottom: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-template-rows: auto;
   grid-auto-flow: row;
   justify-items: center; /* Center cards */
@@ -261,5 +261,38 @@ onMounted(() => {
   #dropdown-menu {
     display: block; /* Ensure dropdown is displayed for mobile */
   }
+
+}
+
+
+@media (max-width: 500px) {
+  .filters {
+    display: none;
+  }
+
+  .dropdown-container {
+    display: block;
+  }
+
+  #dropdown-menu {
+    display: block; /* Ensure dropdown is displayed for mobile */
+  }
+
+  .projects-container {
+  display: grid;
+  position: relative;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: row;
+  justify-items: center; /* Center cards */
+
+}
 }
 </style>

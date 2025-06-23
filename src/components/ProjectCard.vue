@@ -1,31 +1,12 @@
 <template>
   <div class="project-card">
     <img :src="image" :alt="title + ' Icon'" />
-
     <div class="project-content">
       <p class="header">{{ title }}</p>
       <p class="role">{{ role }}</p>
       <p class="description">{{ description }}</p>
-
       <div class="project-tags">
-        <span
-          v-for="tag in tags"
-          :key="tag"
-          class="tag"
-        >
-          {{ tag }}
-        </span>
-      </div>
-
-      <!-- You had types displayed but hidden via CSS — keeping that structure -->
-      <div class="project-types">
-        <span
-          v-for="type in types"
-          :key="type"
-          class="type"
-        >
-          {{ type }}
-        </span>
+        <span v-for="tag in tags" :key="tag" class="tag">{{ tag }}</span>
       </div>
     </div>
   </div>
@@ -35,12 +16,12 @@
 export default {
   name: 'ProjectCard',
   props: {
-    image: { type: String, default: '/default-image.png' },
-    title: { type: String, default: 'Untitled Project' },
-    role: { type: String, default: 'Role not specified' },
-    description: { type: String, default: 'No description available.' },
-    tags: { type: Array, default: () => [] },
-    types: { type: Array, default: () => [] } // kept for compatibility, even if hidden
+    image: String,
+    title: String,
+    role: String,
+    description: String,
+    tags: Array,
+    types: Array
   }
 };
 </script>
@@ -53,73 +34,35 @@ export default {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   z-index: 1;
-  max-width: 380px;
+  width: 100%;
+  max-width: 360px;
+  margin: 1rem auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    max-width: 100%;
+    margin: 1rem 1rem;
+  }
 }
 
 .project-card img {
   width: 100%;
+  height: auto;
   object-fit: cover;
-  vertical-align: bottom;
+  display: block;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
 }
 
-.project-tags {
-  margin-top: 10px;
-}
-
-.tag {
-  display: inline-block;
-  background-color: var(--tag-color);
-  color: white;
-  border-radius: 4px;
-  padding: 5px 8px;
-  margin-right: 5px;
-  font-size: 12px;
-}
-
-.project-types {
-  display: none;
-}
-
-.type {
-  display: none;
-}
-
-.project-header {
-  position: relative;
-  padding: 16px;
-  background: var(--selected-color-button);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.project-header .details {
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.project-header .details span {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.project-header .header {
-  font-size: 18px;
-  margin: 0 0 8px;
-  color: var(--description-color);
-}
-
 .project-content {
   padding: 16px;
   background: var(--project-card-info-);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .project-content .header {
@@ -129,15 +72,30 @@ export default {
   font-weight: bold;
 }
 
+.project-content .role {
+  font-size: 14px;
+  color: var(--description-color-gray-dark);
+  margin-bottom: 8px;
+}
+
 .project-content .description {
   font-size: 14px;
   margin: 0;
   color: var(--description-color-gray-light);
 }
 
-.project-content .role {
-  font-size: 14px;
-  color: var(--description-color-gray-dark);
-  margin-bottom: 8px;
+.project-tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background-color: var(--tag-color);
+  color: white;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
 }
 </style>

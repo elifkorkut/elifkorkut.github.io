@@ -106,32 +106,29 @@
  
  
  }
+ 
  /* For mobile phones */
- @media (max-width: 599px)
- {
-   .top-content
-   {
-        
-             position: absolute;
-             top: 20px;
-             left: 50%;
-             transform: translateX(-50%);
-             width: 500px;
-   }
- 
-   .top-text {
- 
-       font-size: 0.9rem; 
-     
-   }
- 
-   .top-logo
-   {
-       width: 80px; 
-    }
- 
- 
- }
+@media (max-width: 599px)
+{
+  .top-content
+  {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw; /* Responsive width instead of fixed 500px */
+    max-width: 300px; /* Optional: limit how large it can get */
+  }
+
+  .top-text {
+    font-size: 0.9rem; 
+  }
+
+  .top-logo {
+    width: 80px; 
+  }
+}
+
 
   
   </style>
