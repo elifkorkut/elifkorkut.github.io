@@ -25,14 +25,23 @@
   .section-caption {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
     color: var(--project-color-caption-color);
   }
   
   .caption-line {
     width: 100%;
-    border: 2px solid white;
+    border: 0.1rem solid white;
     margin-bottom: 1rem;
   }
+
+  @media (max-width: 580px) {
+    .section-caption {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+    color: var(--project-color-caption-color);
+  }
+}
   </style>
   

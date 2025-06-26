@@ -21,18 +21,19 @@
 
       <!-- Project layout -->
       <div v-else class="project-layout">
+       
         <div class="summary-art-wrapper">
           <ProjectSummary :summaryHtml="project.summaryHtml" class="half-width" />
+          <ProjectDetail :detailsHtml = "project.detailsHtml" class=" half-width"/>
           <ArtBlock :art="project.mainArt" class="half-width" />
         </div>
 
         <div class="secondary-resp-contrib-wrapper">
           <div class="left-side">
-            <ArtBlock :art="project.secondaryArt" topText="Secondary Art" class="half-width" />
+            <ArtBlock :art="project.secondaryArt" topText="" class="half-width" />
             <ProjectResponsibilities :responsibilitiesHtml="project.responsibilitiesHtml" class="half-width" />
           </div>
-
-          <ProjectContributions :contributions="project.keyContributions" class="half-width" />
+          <ProjectContributions :contributionsHtml ="project.keyContributionsHtml" class="half-width" />
         </div>
 
         <GridGallery :items="project.gallery" />
@@ -62,6 +63,7 @@ import Navbar from '../components/Navbar.vue';
 import TopSection from '../components/TopSection.vue';
 import MyFooter from '../components/MyFooter.vue';
 
+import ProjectDetail from '../components/ProjectDetail.vue';
 import ProjectSummary from '../components/ProjectSummary.vue';
 import PublicationSummary from '../components/PublicationSummary.vue';
 import ArtBlock from '../components/ArtBlock.vue';
@@ -143,11 +145,29 @@ function goTo(link) {
   margin-bottom: 2rem;
 }
 
-/* Half width class - responsive */
+::v-deep(.project-summary a),
+::v-deep(.project-summary strong) {
+  display: inline;
+  white-space: normal;
+}
+
+::v-deep(.project-details a) {
+  display: inline;
+  white-space: normal;
+  color: white;
+  text-decoration: underline;
+}
+
+::v-deep(.project-details strong) {
+  display: inline;
+  white-space: normal;
+  font-weight: 600;
+ }
+ 
 .half-width {
   width: 100%;
 }
-@media (min-width: 769px) {
+@media (min-width: 950px) {
   .half-width {
     width: 48%;
   }
@@ -158,6 +178,11 @@ function goTo(link) {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
 }
 
 /* Navigation Buttons */

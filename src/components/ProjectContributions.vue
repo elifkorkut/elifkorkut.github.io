@@ -2,18 +2,14 @@
   <section class="contributions">
     <h2 class="section-caption">Key Contributions</h2>
     <hr class="caption-line" />
-    <ul>
-      <li v-for="(item, index) in contributions" :key="index">
-        {{ item }}
-      </li>
-    </ul>
+    <div v-html="contributionsHtml"></div>
   </section>
 </template>
 
 <script setup>
 defineProps({
-  contributions: {
-    type: Array,
+  contributionsHtml: {
+    type: String,
     required: true
   }
 });
@@ -21,30 +17,30 @@ defineProps({
 
 <style scoped>
 .contributions {
+  background: none;
+  padding: 0;
   color: var(--project-description-color);
 }
 
 .section-caption {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
   color: var(--project-color-caption-color);
 }
 
 .caption-line {
   width: 100%;
-  border: 2px solid white;
+  border: 0.1rem solid white;
   margin-bottom: 1rem;
 }
 
-/* Align list text flush with caption line */
-.contributions ul {
-  list-style-type: disc;
-  padding-left: 0;
-  margin-left: 1rem; /* bullet and text aligned */
+@media (max-width: 580px) {
+  .section-caption {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  color: var(--project-color-caption-color);
 }
-
-.contributions li {
-  margin-bottom: 0.75rem;
 }
 </style>

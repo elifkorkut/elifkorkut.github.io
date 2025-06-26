@@ -48,25 +48,24 @@
 
   <div class="projects-container">
     <router-link
-        v-for="project in filteredProjects"
-        :key="project.id"
-        :to="project.link"
-        class="project-card-link"
-      >
-        <ProjectCard
-          :image="project.cardImage"
-          :title="project.title"
-          :role="project.role"
-          :description="project.shortDescription"
-          :tags="project.tags"
-          :types="project.types"
-        />
-      </router-link>
+      v-for="project in filteredProjects"
+      :key="project.id"
+      :to="project.link"
+      class="project-card-link"
+    >
+      <ProjectCard
+        :image="project.cardImage"
+        :title="project.title"
+        :role="project.role"
+        :description="project.shortDescription"
+        :tags="project.tags"
+        :types="project.types"
+      />
+    </router-link>
   </div>
 </template>
 
 <script setup>
-//import { ref } from 'vue';
 import { ref, onMounted } from 'vue';
 import { projects } from '../data/projects.js';
 import ProjectCard from './ProjectCard.vue';
@@ -74,11 +73,9 @@ import ProjectCard from './ProjectCard.vue';
 // Define categories and project data
 const categories = ['All', 'Published Games', 'Multimedia Projects', 'Publications'];
 
-
-
 // Reactive properties
 const selectedCategory = ref('All');
-const filteredProjects = ref(projects);
+const filteredProjects = ref([]);
 const dropdownVisible = ref(false);
 
 // Function to apply filter based on the selected category
@@ -86,10 +83,15 @@ function applyFilter(category) {
   selectedCategory.value = category;
 
   if (category === 'All') {
-    filteredProjects.value = projects;
+    filteredProjects.value = projects.filter(
+      project => project && project.show !== false
+    );
   } else {
-    filteredProjects.value = projects.filter(project =>
-      project.types.includes(category)
+    filteredProjects.value = projects.filter(
+      project =>
+        project &&
+        project.show !== false &&
+        project.types.includes(category)
     );
   }
 
@@ -211,7 +213,7 @@ onMounted(() => {
   border-radius: 0px;
   margin-top: 10px;
   font-size: 2rem;
-  z-index: 10; /* Increased z-index for visibility */
+  z-index: 10;
   padding-right: 20px;
 }
 
@@ -228,8 +230,7 @@ onMounted(() => {
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-template-rows: auto;
   grid-auto-flow: row;
-  justify-items: center; /* Center cards */
-
+  justify-items: center;
 }
 
 .dropdown-menu button {
@@ -259,11 +260,9 @@ onMounted(() => {
   }
 
   #dropdown-menu {
-    display: block; /* Ensure dropdown is displayed for mobile */
+    display: block;
   }
-
 }
-
 
 @media (max-width: 500px) {
   .filters {
@@ -275,24 +274,23 @@ onMounted(() => {
   }
 
   #dropdown-menu {
-    display: block; /* Ensure dropdown is displayed for mobile */
+    display: block;
   }
 
   .projects-container {
-  display: grid;
-  position: relative;
-  gap: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 0px;
-  margin-right: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: auto;
-  grid-auto-flow: row;
-  justify-items: center; /* Center cards */
-
-}
+    display: grid;
+    position: relative;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    justify-items: center;
+  }
 }
 </style>

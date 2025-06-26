@@ -31,7 +31,7 @@
   
   <style scoped>
   .art-block {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
   
   .top-text {
@@ -45,12 +45,19 @@
     max-width: 100%;
     border-radius: 8px;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
   }
   
   .description {
     font-size: 1rem;
     color: var(--text-secondary);
   }
+
+  @media (max-width: 950px) {
+    .description {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+  }
+}
   </style>
   

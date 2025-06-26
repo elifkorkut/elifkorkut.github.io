@@ -52,6 +52,7 @@ export default {
   height: auto;
   object-fit: cover;
   display: block;
+  border-radius: 0px;
 }
 
 .project-card:hover {

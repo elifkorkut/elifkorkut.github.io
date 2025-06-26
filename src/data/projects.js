@@ -4,52 +4,69 @@
 export const projects = [
   { 
     id: 1,
-    slug: 'downhillbike',
-    link: '/project/downhillbike',
-    cardImage: '/images/DownhillBikeLogo.png',
-    title: 'Downhill Bike',
+    show: true,
+    slug: 'tunnels',
+    link: '/project/tunnels',
+    cardImage: 'public/images/tunnels/CoverSquare.png',
+    title: 'Tunnels',
     role: 'Game Developer',
     link1:'',
     link2:'',
-    shortDescription: 'A VR cycling game with immersive terrain and competitive gameplay.',
-    tags: ['VR', 'Unity', 'Cycling'],
-    types: [ 'Publications'],
+    shortDescription: 'A VR Horror Adventure Game',
+    tags: ['Oculus', 'Unity', 'Photon'],
+    types: [ 'Published Game'],
     mainArt: {
-      type: 'video',
-      src: '/images/tunnels/video1.mp4',
-      alt: 'Downhill Bike Main Art',
-      description: 'Cover image for Downhill Bike project.'
+      type: 'image',
+      src: 'public/images/tunnels/1920x1080.png',
+      alt: 'Tunnels (2025)',
+      description: 'Tunnels (2025)'
     },
     secondaryArt: {
       type: 'video',
-      src: '/images/tunnels/video1.mp4',
-      alt: 'Gameplay Demo',
-      description: 'Gameplay demo of Downhill Bike showing terrain and VR input.'
+      src: 'public/images/tunnels/v1.mp4',
+      alt: 'Tunnels (2025)',
+      description: 'Tunnels (2025)'
     },
     summaryHtml: `
-      <p><strong>Downhill Bike</strong> is a VR cycling game that immerses players in scenic terrain...</p>
-    `,
+      <p>Tunnels is a VR horror game with single-player and multiplayer modes, focused on creating a tense, claustrophobic experience. Players can crawl, swim, climb, and zipline to explore the environment. Enemies react to light, sound, and movement, forcing players to adapt their strategies. In single-player, you follow a story through eerie tunnels, guided by cryptic clues and a mysterious voice on the radio. In multiplayer, players face changing maze-like levels and must cooperate to escape while avoiding monsters.</p>
+   `
+     ,
     detailsHtml: `
-      <ul>
-        <li><strong>Released:</strong> May 2025</li>
-        <li><strong>Engine:</strong> Unity</li>
-        <li><strong>Studio:</strong> Beyond Motion</li>
-        <li><strong>Publisher:</strong> Immersion Studios</li>
-        <li><strong>Team Size:</strong> 10</li>
-        <li><strong>Tech:</strong> Unity, C#, Blender</li>
-      </ul>
-    `,
+    <li><strong>Released Date: </strong> May 2025</li>
+    <li><strong>Project Length:</strong> 1 Year</li>
+    <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/tunnels/6963147540402115/" target="_blank" rel="noopener noreferrer">Tunnels</a></li>
+    <li><strong>Studio:</strong> <a href="https://nomadmonkey.xyz/" target="_blank" rel="noopener noreferrer">Nomad Monkey</a></li>
+    <li><strong>Publisher: </strong><a href="https://mastiff-games.com/games/" target="_blank" rel="noopener noreferrer">Mastiff Games</a> </li>
+    <li><strong>My Role:</strong> Game Developer</li>
+    <li><strong>Technologies:</strong> Unity, C#, Photon, Oculus, Blender</li>`
+    ,
     responsibilitiesHtml: `
-      <p>I led the systems design for terrain navigation and implemented physics-based motion...</p>
+      <p>As the game developer for the Tunnels project, I was responsible for the full technical implementation of both single-player and multiplayer modes. I worked closely with sound designers and game artists, providing custom Unity tools to support their work and enhance their workflows.
+</p>
     `,
     roleHtml: `
       <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
     `,
-    keyContributions: [
-      'Bicycle Physics & Core Mechanics',
-      'VR Interaction & Input Mapping',
-      'Multiplayer Sync & Replay System',
-      'Optimization & Shader LODs'
+    keyContributionsHtml: [
+      `
+<strong>Multiplayer Integration</strong>
+Built multiplayer functionality using Photon Fusion for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
+
+<strong>Monetization & Platform Services </strong>
+Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.
+
+<strong>VR Gameplay & Mechanics</strong>
+Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions and precise spatial control. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
+
+<strong>AI Systems</strong>
+Designed intelligent enemy AI that dynamically reacts to light, sound, and player movement. Implemented modular, scalable behaviors using based on game design patterns.
+
+<strong>Performance Optimization</strong>
+Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.
+
+<strong>UI, Localization & Asset Management</strong>
+Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.
+`
     ],
     gallery: [
       {
@@ -72,6 +89,7 @@ export const projects = [
 
   { 
     id: 2,
+    show: true,
     slug: 'downhillbike2',
     link: '/project/downhillbike2',
     cardImage: '/images/DownhillBikeLogo.png',
@@ -139,6 +157,8 @@ export const projects = [
   {
 
   id: 3,
+
+  show: true,
   slug: 'downhillbike3',
   link: '/project/downhillbike3',
   cardImage: '/images/DownhillBikeLogo.png',

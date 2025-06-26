@@ -1,85 +1,77 @@
-<script setup>
-import { onMounted } from 'vue';
-
-// Load Ionicons dynamically when the component is mounted
-onMounted(() => {
-  const scriptESM = document.createElement('script');
-  scriptESM.type = 'module';
-  scriptESM.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js';
-  document.head.appendChild(scriptESM);
-
-  const scriptNoModule = document.createElement('script');
-  scriptNoModule.noModule = true;
-  scriptNoModule.src = 'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js';
-  document.head.appendChild(scriptNoModule);
-});
-</script>
-
 <template>
-  <footer>
-    <p>Copyright &copy; Elif Hilal Korkut 2025.</p>
-    <div class="separator"></div>
-    <ul class="social-list-footer">
-      <li class="social-item-footer">
-        <a href="mailto:elifh.korkut@gmail.com" class="social-link-footer" target="_blank">
-          <ion-icon name="mail-outline"></ion-icon>
+  <footer class="footer">
+   
+    <ul class="footer-social-links">
+      <li>
+        <a href="mailto:elifh.korkut@gmail.com" class="social-btn" aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
         </a>
       </li>
-      <li class="social-item-footer">
-        <a href="https://www.linkedin.com/in/elifhilalkorkut/" class="social-link-footer" target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
+      <li>
+        <a href="https://discord.com/users/elif.korkut#3106" class="social-btn" aria-label="Discord">
+          <i class="fa-brands fa-discord"></i>
         </a>
       </li>
-      <li class="social-item-footer">
-        <a href="https://github.com/elifkorkut" class="social-link-footer" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
+      <li>
+        <a href="https://github.com/elifkorkut" class="social-btn" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
         </a>
       </li>
-      <li class="social-item-footer">
-        <a href="https://discord.com/users/elif.korkut#3106" class="social-link-footer" target="_blank">
-          <ion-icon name="logo-discord"></ion-icon>
+      <li>
+        <a href="https://www.linkedin.com/in/elifhilalkorkut/" class="social-btn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
         </a>
       </li>
     </ul>
+    <p class="footer-copy">&copy; 2025 Elif Hilal Korkut. All rights reserved.</p>
   </footer>
 </template>
 
 <style scoped>
-@import '../styles.css';
-
-/* Footer */
-footer {
-   background-color: var(--primary-color);
-   color: white;
-   padding: 1px 0px;
-   text-align: center;
-   width: 100%;
-   height: 6rem;
-   bottom: 0;
-   z-index: 6;
-   position: static;
+.footer {
+  padding: 1.5rem 0;
+  background-color: var(--primary-color);
+  text-align: center;
+  color: #ccc;
 }
 
-.footer-text {
-    
-   align-items: center;
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
 }
 
-.social-list-footer {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 15px;
-   margin-left: -30px;
-   margin-top: -10px;
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  border: 1.5px solid #888;
+  border-radius: 50%;
+  background-color: transparent;
+  color: inherit;
+  transition: transform 0.3s ease;
 }
 
-.social-item-footer .social-link-footer {
-   color: var(--light-gray-70);
-   font-size: 18px;
+.social-btn:hover {
+  transform: scale(1.1);
+  /* No background or color change — preserves original icon color */
 }
 
-.social-item-footer .social-link-footer:hover { 
-   color: var(--accent-color);
+.footer-copy {
+  font-size: 0.85rem;
+  color: #777;
+  margin: 0;
 }
+@media (max-width: 1023px) {
+  .footer {
+    background-color: var(--secondary-color);
+    padding-bottom: 5rem; /* mobile only */
+  } }
 </style>
+

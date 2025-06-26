@@ -1,16 +1,44 @@
 <template>
-  <div class="details" v-html="detailsHtml" />
+  <section class="project-details" v-html="detailsHtml"></section>
 </template>
 
 <script setup>
-defineProps(['detailsHtml']);
+defineProps({
+    detailsHtml: {
+      type: String,
+      required: true,
+    },
+  });
 </script>
 
 <style scoped>
-.details {
-  background: var(--project-card-background-color);
-  padding: 1.5rem;
-  margin-top: 2rem;
-  border-radius: 0.5rem;
+@import '../styles.css';
+
+
+.project-details {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 2rem;
+    font-weight: 100;
 }
+
+.project-details strong {
+    
+    font-weight: 50;
+}
+
+
+@media (max-width: 580px) {
+  .project-details {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    
+  }
+}
+
 </style>
+
+
+
+  

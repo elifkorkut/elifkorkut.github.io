@@ -71,8 +71,7 @@ export default {
     position: absolute;
   }
 }
-@media (max-width: 1024px) and (min-width: 600px),
-       (max-width: 599px) {
+@media (max-width: 1023px)  {
         .navbar {
     position: fixed;
     bottom: 10px;
