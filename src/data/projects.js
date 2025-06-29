@@ -7,7 +7,7 @@ export const projects = [
     show: true,
     slug: 'tunnels',
     link: '/project/tunnels',
-    cardImage: 'public/images/tunnels/CoverSquare.png',
+    cardImage: '/images/tunnels/CoverSquare.png',
     title: 'Tunnels',
     role: 'Game Developer',
     link1:'',
@@ -17,13 +17,13 @@ export const projects = [
     types: [ 'Published Game'],
     mainArt: {
       type: 'image',
-      src: 'public/images/tunnels/1920x1080.png',
+      src: '/images/tunnels/1920x1080.png',
       alt: 'Tunnels (2025)',
       description: 'Tunnels (2025)'
     },
     secondaryArt: {
       type: 'video',
-      src: 'public/images/tunnels/v1.mp4',
+      src: '/images/tunnels/v1.mp4',
       alt: 'Tunnels (2025)',
       description: 'Tunnels (2025)'
     },
@@ -71,18 +71,59 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
     gallery: [
       {
         type: 'image',
-        src: '/images/pp.jpeg',
-        alt: 'Downhill Bike Cover',
+        src: 'images/tunnels/p1.png',
+        alt: 'tunnelsp1',
         topText: 'Main Menu Art',
         bottomText: 'Rendered in Unity HDRP'
       },
       {
-        type: 'video',
-        src: '/images/pp.jpeg',
+        type: 'image',
+        src: 'images/tunnels/p2.png',
         alt: 'Gameplay Preview',
         topText: 'Gameplay Trailer',
         bottomText: 'Raw captured footage from Quest 2'
-      }
+      },
+
+      {
+        type: 'image',
+        src: 'images/tunnels/p3.png',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      },
+
+      {
+        type: 'video',
+        src: 'images/tunnels/v1.mp4',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      },
+
+      {
+        type: 'image',
+        src: 'images/tunnels/p4.png',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      },
+
+      {
+        type: 'image',
+        src: 'images/tunnels/p5.png',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      },
+
+      {
+        type: 'image',
+        src: 'images/tunnels/p6.png',
+        alt: 'Gameplay Preview',
+        topText: 'Gameplay Trailer',
+        bottomText: 'Raw captured footage from Quest 2'
+      },
+
     ]
   },
 
