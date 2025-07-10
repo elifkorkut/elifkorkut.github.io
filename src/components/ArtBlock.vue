@@ -7,10 +7,11 @@
           v-else-if="art.type === 'video'"
           :src="art.src"
           :alt="art.alt"
-          controls
+          autoplay
+          loop
           muted
           playsinline
-        />
+        > </video>
       </div>
       <p class="description">{{ art.description }}</p>
     </div>

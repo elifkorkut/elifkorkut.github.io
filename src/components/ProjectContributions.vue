@@ -35,6 +35,26 @@ defineProps({
   margin-bottom: 1rem;
 }
 
+.text-large {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.text-medium {
+  font-size: 10rem;
+  font-weight: 500;
+}
+
+.text-small {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.text-highlight {
+  color: var(--project-accent-color);
+  font-weight: 600;
+}
+
 @media (max-width: 580px) {
   .section-caption {
   font-size: 1.5rem;
@@ -43,4 +63,7 @@ defineProps({
   color: var(--project-color-caption-color);
 }
 }
+
+
+
 </style>

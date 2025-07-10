@@ -185,6 +185,7 @@ a {
   text-decoration: underline;
 }
 
+
 /* Navigation Buttons */
 .nav-buttons {
   display: flex;

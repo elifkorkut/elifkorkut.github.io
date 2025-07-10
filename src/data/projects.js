@@ -47,27 +47,30 @@ export const projects = [
     roleHtml: `
       <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
     `,
-    keyContributionsHtml: [
+    keyContributionsHtml: 
       `
-<strong>Multiplayer Integration</strong>
-Built multiplayer functionality using Photon Fusion for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
+<strong>Multiplayer Integration</strong><br>
+Built multiplayer functionality using <strong> Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
 
-<strong>Monetization & Platform Services </strong>
+<br><strong>Monetization & Platform Services </strong><br>
 Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.
 
-<strong>VR Gameplay & Mechanics</strong>
-Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions and precise spatial control. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
+<br> <strong>VR Gameplay & Mechanics</strong><br>
+Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
 
-<strong>AI Systems</strong>
-Designed intelligent enemy AI that dynamically reacts to light, sound, and player movement. Implemented modular, scalable behaviors using based on game design patterns.
+<br><strong>AI Systems</strong><br>
+  <p><span class="text-large">Led Core Gameplay Systems</span></p>
+  <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
+  <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
+  <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.
 
-<strong>Performance Optimization</strong>
+<br><strong>Performance Optimization</strong><br>
 Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.
 
-<strong>UI, Localization & Asset Management</strong>
+<br><strong>UI, Localization & Asset Management</strong><br>
 Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.
 `
-    ],
+    ,
     gallery: [
       {
         type: 'image',
@@ -258,7 +261,135 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
       bottomText: 'Raw captured footage from Quest 2'
     }
   ]
-}
+},
+
+{ 
+  id: 5,
+  show: true,
+  slug: 'heterotopia',
+  link: '/project/heterotopia',
+  cardImage: 'public/images/publications/heterotopia/cover.png',
+  title: 'Developing a framework for heterotopias as discursive playgrounds: a comparative analysis of non-immersive and immersive technologies' ,
+  role: 'Author',
+  types: ['Publications'],
+  shortDescription: 'Korkut, E.H., Surer, E. Developing a framework for heterotopias as discursive playgrounds: a comparative analysis of non-immersive and immersive technologies.  Virtual Reality 28, 16 (2024). https://doi.org/10.1007/s10055-023-00905-w',
+  tags: ['VR', 'Unity', 'Virtual Museum'],
+  link1:[' '],
+  citation:'Korkut, E.H., Surer, E. Developing a framework for heterotopias as discursive playgrounds: a comparative analysis of non-immersive and immersive technologies. Virtual Reality 28, 16 (2024). https://doi.org/10.1007/s10055-023-00905-w ',
+  mainArt: {
+    type: 'image',
+    src: 'images/publications/heterotopia/1.jpg',
+    alt: 'ht1',
+    description: 'ht'
+  },
+  secondaryArt: {
+    type: 'image',
+    src: 'images/publications/heterotopia/2.jpg',
+    alt: 'ht2',
+    description: 'pc version'
+  },
+  summaryHtml: `
+    <p>The discursive space represents the reordering of knowledge gained through accumulation. 
+    In the digital age, multimedia has become the language of information, and the space for archival practices is provided by non-immersive technologies, 
+    resulting in the disappearance of several layers from discursive activities. 
+    Heterotopias are unique, multilayered epistemic contexts that connect 
+    other systems through the exchange of information. 
+    This paper describes a process to create a framework for Virtual Reality, 
+    Mixed Reality, and personal computer environments based on heterotopias to provide absent layers. 
+    This study provides virtual museum space as an informational terrain that contains a “world within worlds” 
+    and presents place production as a layer of heterotopia and the subject of discourse. 
+    Automation for the individual multimedia content is provided via various sorting and grouping algorithms, 
+    and procedural content generation algorithms such as Binary Space Partitioning, 
+    Cellular Automata, Growth Algorithm, and Procedural Room Generation.
+    Versions of the framework were comparatively evaluated through a user study involving 30 participants,
+    considering factors such as usability, technology acceptance, and presence. 
+    The results of the study show that the framework can serve diverse contexts to construct multilayered 
+    digital habitats and is flexible for integration into professional and daily life practices.</p>
+  `,
+
+  gallery: [
+    {
+      type: 'image',
+      src: 'public/images/publications/heterotopia/1.jpg',
+      alt: 'Downhill Bike Cover',
+      topText: 'Main Menu Art',
+      bottomText: 'Rendered in Unity HDRP'
+    },
+    {
+      type: 'image',
+      src: 'public/images/publications/heterotopia/2.jpg',
+      alt: 'Gameplay Preview',
+      topText: 'Gameplay Trailer',
+      bottomText: 'Raw captured footage from Quest 2'
+    },
+    {
+      type: 'image',
+      src: 'public/images/publications/heterotopia/3.jpg',
+      alt: 'Gameplay Preview',
+      topText: 'Gameplay Trailer',
+      bottomText: 'Raw captured footage from Quest 2'
+    }
+  ,
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/4.jpg',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/5.jpg',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/6.png',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/7.png',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/8.jpg',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/9.png',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/10.png',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  {
+    type: 'image',
+    src: 'public/images/publications/heterotopia/11.jpg',
+    alt: 'Gameplay Preview',
+    topText: 'Gameplay Trailer',
+    bottomText: 'Raw captured footage from Quest 2'
+  },
+  ]
+
+},
+
   
 
 ]

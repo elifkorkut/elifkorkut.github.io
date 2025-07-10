@@ -66,6 +66,6 @@ defineProps({
 .bottom-text {
   margin-top: 0.5rem;
   font-size: 0.95rem;
-  color: var(--project-description-color);
+  color: var( --text-secondary);
 }
 </style>
