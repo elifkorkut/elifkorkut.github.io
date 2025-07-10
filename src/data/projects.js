@@ -21,6 +21,12 @@ export const projects = [
       alt: 'Tunnels (2025)',
       description: 'Tunnels (2025)'
     },
+    optArt: {
+      type: 'image',
+      src: '/images/tunnels/1920x1080.png',
+      alt: 'Tunnels (2025)',
+      description: 'Tunnels (2025)'
+    },
     secondaryArt: {
       type: 'video',
       src: '/images/tunnels/v1.mp4',

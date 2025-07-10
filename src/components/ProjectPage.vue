@@ -3,51 +3,88 @@
   <TopSection />
 
   <div class="wrap2em">
-    <div class="container">
-      <!-- Dynamic title -->
-      <h1 :class="['caption', { 'is-publication': isPublicationLayout }]">
+    <div class="page-container">
+      <!-- Caption -->
+      <h1
+        :class="[
+          'caption',
+          isPublicationLayout ? 'caption-publication' : 'caption-project'
+        ]"
+      >
         {{ project.title }}
       </h1>
       <hr class="caption-line" />
+    </div>
+  </div>
 
-      <!-- Publication layout -->
-      <div v-if="isPublicationLayout" class="publication-layout">
-        <div class="pub-summary-art-wrapper">
-          <PublicationSummary :summaryHtml="project.summaryHtml" class="half-width" />
-          <ArtBlock :art="project.mainArt" class="half-width" />
+  <!-- Publication Layout -->
+  <div v-if="isPublicationLayout" class="publication-layout">
+    <div class="summary-wrapper publication-wrapper">
+      <div class="layout-split">
+        <div class="left">
+          <PublicationSummary :summaryHtml="project.summaryHtml" />
         </div>
-        <GridGallery :items="project.gallery" />
+        <div class="right">
+          <ArtBlock :art="project.mainArt" />
+        </div>
       </div>
+    </div>
+    <GridGallery :items="project.gallery" class="gallery-wrapper" />
+  </div>
 
-      <!-- Project layout -->
-      <div v-else class="project-layout">
-       
-        <div class="summary-art-wrapper">
-          <ProjectSummary :summaryHtml="project.summaryHtml" class="half-width" />
-          <ProjectDetail :detailsHtml = "project.detailsHtml" class=" half-width"/>
-          <ArtBlock :art="project.mainArt" class="half-width" />
+  <!-- Project Layout -->
+  <div v-else class="project-layout">
+    <!-- Summary Section -->
+    <div class="summary-wrapper project-wrapper">
+      <div class="layout-split">
+        <div class="left">
+          <ProjectSummary :summaryHtml="project.summaryHtml" />
+          <ProjectDetail :detailsHtml="project.detailsHtml" />
         </div>
+        <div class="right">
+          <ArtBlock :art="project.mainArt" />
+        </div>
+      </div>
+    </div>
 
-        <div class="secondary-resp-contrib-wrapper">
-          <div class="left-side">
-            <ArtBlock :art="project.secondaryArt" topText="" class="half-width" />
-            <ProjectResponsibilities :responsibilitiesHtml="project.responsibilitiesHtml" class="half-width" />
+    <!-- Secondary Section -->
+    <div class="secondary-wrapper project-wrapper">
+      <div class="layout-responsive">
+        <template v-if="isMobile">
+          <ArtBlock :art="project.secondaryArt" />
+          <ProjectResponsibilities :responsibilitiesHtml="project.responsibilitiesHtml" />
+          <ArtBlock v-if="project.optArt" :art="project.optArt" class="optart-block" />
+          <ProjectContributions :contributionsHtml="project.keyContributionsHtml" />
+        </template>
+
+        <template v-else>
+          <!-- Left Column -->
+          <div class="column">
+            <ArtBlock :art="project.secondaryArt" />
+            <ProjectResponsibilities :responsibilitiesHtml="project.responsibilitiesHtml" />
+            <ArtBlock v-if="project.optArt" :art="project.optArt" class="optart-block" />
           </div>
-          <ProjectContributions :contributionsHtml ="project.keyContributionsHtml" class="half-width" />
-        </div>
 
-        <GridGallery :items="project.gallery" />
+          <!-- Right Column -->
+          <div class="column">
+            <ProjectContributions :contributionsHtml="project.keyContributionsHtml" />
+          </div>
+        </template>
       </div>
+    </div>
 
-      <!-- Navigation Buttons -->
-      <div class="nav-buttons">
-        <button v-if="previousProject" @click="goTo(previousProject.link)" class="nav-btn">
-          ← Previous
-        </button>
-        <button v-if="nextProject" @click="goTo(nextProject.link)" class="nav-btn">
-          Next →
-        </button>
-      </div>
+    <GridGallery :items="project.gallery" class="gallery-wrapper" />
+  </div>
+
+  <div class="wrap2em">
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button v-if="previousProject" @click="goTo(previousProject.link)" class="nav-btn">
+        ← Previous
+      </button>
+      <button v-if="nextProject" @click="goTo(nextProject.link)" class="nav-btn">
+        Next →
+      </button>
     </div>
   </div>
 
@@ -55,7 +92,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { projects } from '../data/projects.js';
 
@@ -67,15 +104,14 @@ import ProjectDetail from '../components/ProjectDetail.vue';
 import ProjectSummary from '../components/ProjectSummary.vue';
 import PublicationSummary from '../components/PublicationSummary.vue';
 import ArtBlock from '../components/ArtBlock.vue';
-
 import ProjectResponsibilities from '../components/ProjectResponsibilities.vue';
 import ProjectContributions from '../components/ProjectContributions.vue';
-
 import GridGallery from '../components/GridGallery.vue';
 
 const route = useRoute();
 const router = useRouter();
 const slug = ref(route.params.slug);
+const isMobile = ref(false);
 
 watch(() => route.params.slug, (newSlug) => {
   slug.value = newSlug;
@@ -86,20 +122,16 @@ const project = computed(() => projects[currentIndex.value] || { title: 'Project
 
 const previousProject = computed(() => {
   for (let i = currentIndex.value - 1; i >= 0; i--) {
-    if (projects[i].show !== false) {
-      return projects[i]; // Found a visible previous project
-    }
+    if (projects[i].show !== false) return projects[i];
   }
-  return null; // No visible project found to the left
+  return null;
 });
 
 const nextProject = computed(() => {
   for (let i = currentIndex.value + 1; i < projects.length; i++) {
-    if (projects[i].show !== false) {
-      return projects[i]; // Found a visible next project
-    }
+    if (projects[i].show !== false) return projects[i];
   }
-  return null; // No visible project found to the right
+  return null;
 });
 
 const isPublicationLayout = computed(() =>
@@ -109,51 +141,115 @@ const isPublicationLayout = computed(() =>
 function goTo(link) {
   router.push(link);
 }
+
+onMounted(() => {
+  isMobile.value = window.innerWidth < 950;
+  window.addEventListener('resize', () => {
+    isMobile.value = window.innerWidth < 950;
+  });
+});
 </script>
 
 <style scoped>
 @import '../styles.css';
 
-.container {
-  width: 95%;
-  margin: 10rem auto 0 auto;
+.page-container {
+  width: 100%;
+  margin: 10rem 0 0 0;
 }
 
-/* Title */
-.caption {
-  text-align: left;
-  margin-top: 1rem;
-  margin-bottom: 0;
+.caption-project {
   font-size: 4rem;
   font-weight: bold;
+  text-align: left;
 }
 
-/* Smaller for publications */
-.caption.is-publication {
-  font-size: 2.5rem;
+.caption-publication {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
 }
 
-/* Center title on small screens */
 @media (max-width: 768px) {
-  .caption {
+  .caption-project {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .caption-publication {
+    font-size: 1.5rem;
     text-align: center;
   }
 }
 
 .caption-line {
   width: 100%;
-  border: 2px solid white;
-  margin-bottom: 1.5rem;
+  border: 1px solid white;
+  margin-bottom: 1rem;
 }
 
-/* Layout wrapper sections */
-.summary-art-wrapper,
-.secondary-resp-contrib-wrapper,
-.pub-summary-art-wrapper {
+.layout-responsive {
+  display: flex;
+  gap: 2rem;
+}
+
+.layout-split {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.layout-split .left,
+.layout-split .right {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.column {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 949px) {
+  .layout-responsive,
+  .layout-split {
+    display: block;
+  }
+
+  .column,
+  .layout-split .left,
+  .layout-split .right {
+    width: 100%;
+  }
+}
+
+.summary-wrapper {
+  background-color: var(--primary-background);
+  padding: 2rem;
+  border-radius: 10px;
   margin-bottom: 2rem;
+}
+
+.secondary-wrapper {
+  background-color: var(--summary-background);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.gallery-wrapper {
+  background-color: var(--primary-background);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
 }
 
 ::v-deep(.project-summary a),
@@ -173,35 +269,6 @@ function goTo(link) {
   display: inline;
   white-space: normal;
   font-weight: 600;
- }
- 
-.half-width {
-  width: 100%;
-}
-@media (min-width: 950px) {
-  .half-width {
-    width: 48%;
-  }
-}
-
-.left-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-a {
-  color: white;
-  text-decoration: underline;
-}
-
-
-/* Navigation Buttons */
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2em;
 }
 
 .nav-btn {

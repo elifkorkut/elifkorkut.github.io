@@ -4,6 +4,8 @@
 
 :root {
   --background-color: #202124; 
+  --summary-background: #2F333D;
+  --dteails-background: #202124;
   --primary-color: #2F333D;  
   --accent-color: #97A3B6; 
   --text-color: white; 
