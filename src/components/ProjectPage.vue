@@ -84,12 +84,23 @@ watch(() => route.params.slug, (newSlug) => {
 const currentIndex = computed(() => projects.findIndex(p => p.slug === slug.value));
 const project = computed(() => projects[currentIndex.value] || { title: 'Project Not Found', types: [] });
 
-const previousProject = computed(() =>
-  currentIndex.value > 0 ? projects[currentIndex.value - 1] : null
-);
-const nextProject = computed(() =>
-  currentIndex.value < projects.length - 1 ? projects[currentIndex.value + 1] : null
-);
+const previousProject = computed(() => {
+  for (let i = currentIndex.value - 1; i >= 0; i--) {
+    if (projects[i].show !== false) {
+      return projects[i]; // Found a visible previous project
+    }
+  }
+  return null; // No visible project found to the left
+});
+
+const nextProject = computed(() => {
+  for (let i = currentIndex.value + 1; i < projects.length; i++) {
+    if (projects[i].show !== false) {
+      return projects[i]; // Found a visible next project
+    }
+  }
+  return null; // No visible project found to the right
+});
 
 const isPublicationLayout = computed(() =>
   project.value.types.includes('Publications')

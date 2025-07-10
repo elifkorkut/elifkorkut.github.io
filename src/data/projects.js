@@ -133,7 +133,7 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
 
   { 
     id: 2,
-    show: true,
+    show: false,
     slug: 'downhillbike2',
     link: '/project/downhillbike2',
     cardImage: '/images/DownhillBikeLogo.png',
@@ -202,7 +202,7 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
 
   id: 3,
 
-  show: true,
+  show: false,
   slug: 'downhillbike3',
   link: '/project/downhillbike3',
   cardImage: '/images/DownhillBikeLogo.png',
