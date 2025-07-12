@@ -274,7 +274,7 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
   show: true,
   slug: 'heterotopia',
   link: '/project/heterotopia',
-  cardImage: 'public/images/publications/heterotopia/cover.png',
+  cardImage: '/images/publications/heterotopia/cover.png',
   title: 'Developing a framework for heterotopias as discursive playgrounds: a comparative analysis of non-immersive and immersive technologies' ,
   role: 'Author',
   types: ['Publications'],
@@ -316,21 +316,21 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
   gallery: [
     {
       type: 'image',
-      src: 'public/images/publications/heterotopia/1.jpg',
+      src: '/images/publications/heterotopia/1.jpg',
       alt: 'Downhill Bike Cover',
       topText: 'Main Menu Art',
       bottomText: 'Rendered in Unity HDRP'
     },
     {
       type: 'image',
-      src: 'public/images/publications/heterotopia/2.jpg',
+      src: '/images/publications/heterotopia/2.jpg',
       alt: 'Gameplay Preview',
       topText: 'Gameplay Trailer',
       bottomText: 'Raw captured footage from Quest 2'
     },
     {
       type: 'image',
-      src: 'public/images/publications/heterotopia/3.jpg',
+      src: '/images/publications/heterotopia/3.jpg',
       alt: 'Gameplay Preview',
       topText: 'Gameplay Trailer',
       bottomText: 'Raw captured footage from Quest 2'
@@ -338,56 +338,56 @@ Integrated diegetic and non-diegetic UI for VR, supported multi-language localiz
   ,
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/4.jpg',
+    src: '/images/publications/heterotopia/4.jpg',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/5.jpg',
+    src: '/images/publications/heterotopia/5.jpg',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/6.png',
+    src: '/images/publications/heterotopia/6.png',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/7.png',
+    src: '/images/publications/heterotopia/7.png',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/8.jpg',
+    src: '/images/publications/heterotopia/8.jpg',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/9.png',
+    src: '/images/publications/heterotopia/9.png',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/10.png',
+    src: '/images/publications/heterotopia/10.png',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
   },
   {
     type: 'image',
-    src: 'public/images/publications/heterotopia/11.jpg',
+    src: '/images/publications/heterotopia/11.jpg',
     alt: 'Gameplay Preview',
     topText: 'Gameplay Trailer',
     bottomText: 'Raw captured footage from Quest 2'
