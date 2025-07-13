@@ -5,11 +5,11 @@
 :root {
   --background-color: #202124; 
   --summary-background: #2F333D;
-  --dteails-background: #202124;
+  --details-background: #202124;
   --primary-color: #2F333D;  
   --accent-color: #97A3B6; 
   --text-color: white; 
-  --text-color_daak: #202124;  
+  --text-color_dark: #202124;  
 
   --text-secondary: #676f7c;
   --accent-color-button: #2F333D;
@@ -22,7 +22,7 @@
   --description-color-gray-dark: #999;
   --description-color-gray-light: #ccc;
   --project-card-info-: #2F333D;
-  --project-card-color: white;
+  --project-card-color: #2F333D;
   --description-alt-text: #999;
 
   --project-description-color: #ffffff;

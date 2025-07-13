@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .project-card {
   background-color: var(--project-card-color);
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
@@ -43,7 +43,7 @@ export default {
 @media (max-width: 480px) {
   .project-card {
     max-width: 100%;
-    margin: 1rem 1rem;
+    
   }
 }
 
