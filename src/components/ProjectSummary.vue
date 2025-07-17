@@ -13,10 +13,11 @@
   
   <style scoped>
   .project-summary {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.1rem;
     font-size: 1.125rem;
     color: var(--text-color);
     line-height: 1.6;
+    text-align: justify;
   }
   
   @media (max-width: 580px) {

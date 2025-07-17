@@ -50,30 +50,43 @@ export default
       roleHtml: `
         <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
       `,
-      keyContributionsHtml: 
-        `
-  <strong>Multiplayer Integration</strong><br>
-  Built multiplayer functionality using <strong> Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
-  
-  <br><strong>Monetization & Platform Services </strong><br>
-  Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.
-  
-  <br> <strong>VR Gameplay & Mechanics</strong><br>
-  Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
-  
-  <br><strong>AI Systems</strong><br>
-    <p><span class="text-large">Led Core Gameplay Systems</span></p>
-    <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
-    <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
-    <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.
-  
-  <br><strong>Performance Optimization</strong><br>
-  Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.
-  
-  <br><strong>UI, Localization & Asset Management</strong><br>
-  Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.
-  `
-      ,
+      keyContributionsHtml: [`
+  <ul>
+    <li>
+      <strong>Multiplayer Integration</strong>
+      <p>Built multiplayer functionality using <strong>Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.</p>
+    </li>
+
+    <li>
+      <strong>Monetization & Platform Services</strong>
+      <p>Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.</p>
+    </li>
+
+    <li>
+      <strong>VR Gameplay & Mechanics</strong>
+      <p>Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.</p>
+    </li>
+
+    <li>
+      <strong>AI Systems</strong>
+      <p><span class="text-large">Led Core Gameplay Systems</span></p>
+      <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
+      <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
+      <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>
+      <p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.</p>
+    </li>
+
+    <li>
+      <strong>Performance Optimization</strong>
+      <p>Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.</p>
+    </li>
+
+    <li>
+      <strong>UI, Localization & Asset Management</strong>
+      <p>Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.</p>
+    </li>
+  </ul>
+`],
       gallery: [
         {
           type: 'image',

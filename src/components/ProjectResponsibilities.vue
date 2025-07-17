@@ -20,6 +20,7 @@
     background: none;
     padding: 0;
     color: var(--project-description-color);
+    text-align: justify;
   }
   
   .section-caption {

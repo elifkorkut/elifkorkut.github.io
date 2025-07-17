@@ -22,7 +22,14 @@
     <div class="summary-wrapper publication-wrapper">
       <div class="layout-split">
         <div class="left">
+         
           <PublicationSummary :summaryHtml="project.summaryHtml" />
+          <div class="citation">
+  <p>{{ project.citation }}</p>
+</div>
+<a :href="project.link1" target="_blank" rel="noopener noreferrer" class="link-button">
+      <img src="/images/read.jpg" alt="External Link" class="link-icon" />
+    </a>
         </div>
         <div class="right">
           <ArtBlock :art="project.mainArt" />
@@ -167,7 +174,7 @@ onMounted(() => {
 .caption-publication {
   font-size: 2rem;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -184,7 +191,7 @@ onMounted(() => {
 .caption-line {
   width: 100%;
   border: 1px solid white;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .layout-responsive {
@@ -281,9 +288,53 @@ onMounted(() => {
   transition: background-color 0.3s ease;
 }
 
+
 .nav-btn:hover,
 .nav-btn:focus {
   background: var(--hover-color-button);
   outline: none;
 }
+
+.link-button {
+  align-self: center;
+  text-decoration: none;
+}
+
+.link-icon {
+  width: 100%;
+  height: 70px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.link-icon:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 600px) {
+ 
+  .link-icon {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.citation {
+  margin-top: 1rem;
+  color: var(--citation-text-color, #888);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: justify;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* Optional: Responsive sizing */
+@media (max-width: 600px) {
+  .citation {
+    font-size: 0.85rem;
+  }
+}
+
+
 </style>
