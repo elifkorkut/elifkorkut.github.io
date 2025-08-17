@@ -4,8 +4,8 @@ export default
       show: true,
       slug: 'downhillbike',
       link: '/project/downhillbike',
-      cardImage: '/images/tunnels/CoverSquare.png',
-      title: 'Tunnels',
+      cardImage: '/images/downhillbike/DownhillBikeLogo.png',
+      title: 'Downhill Bike',
       role: 'Game Developer',
       link1:'',
       link2:'',
@@ -50,29 +50,23 @@ export default
       roleHtml: `
         <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
       `,
-      keyContributionsHtml: 
-        `
-  <strong>Multiplayer Integration</strong><br>
-  Built multiplayer functionality using <strong> Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
-  
-  <br><strong>Monetization & Platform Services </strong><br>
-  Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.
-  
-  <br> <strong>VR Gameplay & Mechanics</strong><br>
-  Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
-  
-  <br><strong>AI Systems</strong><br>
-    <p><span class="text-large">Led Core Gameplay Systems</span></p>
-    <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
-    <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
-    <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.
-  
-  <br><strong>Performance Optimization</strong><br>
-  Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.
-  
-  <br><strong>UI, Localization & Asset Management</strong><br>
-  Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.
-  `
+      keyContributionsHtml: ` <div class="contribution-header">Advanced Machine Learning Architecture</div>
+<p>Developed a novel <span class="highlight">neural network architecture</span> that improved model accuracy by <span class="metric">35%</span> while reducing computational overhead. This breakthrough enables <span class="emphasis">real-time processing</span> of complex data patterns in resource-constrained environments.</p>
+<p>The architecture incorporates <span class="highlight">attention mechanisms</span> and <strong>dynamic routing protocols</strong> that adapt to varying input complexities, making it particularly effective for edge computing applications.</p>
+
+<div class="contribution-header">Scalable Data Pipeline Framework</div>
+<p>Architected and implemented a <span class="highlight">distributed data processing system</span> capable of handling <span class="metric">10TB+ daily throughput</span> with <span class="metric">99.9% uptime</span> reliability. The framework reduces data processing latency by <span class="emphasis">60%</span> compared to previous solutions.</p>
+<p>Built using <span class="highlight">Apache Kafka</span> and <span class="highlight">Kubernetes orchestration</span>, the system automatically scales based on demand and includes comprehensive <strong>monitoring and alerting capabilities</strong>.</p>
+
+<div class="contribution-header">Open Source Security Tool</div>
+<p>Created and maintained a widely-adopted <span class="highlight">cybersecurity analysis tool</span> with over <span class="metric">5,000 GitHub stars</span> and active contribution from <span class="emphasis">200+ developers worldwide</span>. The tool has been integrated into major enterprise security platforms.</p>
+<p>Features include <span class="highlight">automated vulnerability scanning</span>, <strong>threat intelligence integration</strong>, and support for multiple programming languages and frameworks.</p>
+
+<div class="contribution-header">Research Publication & Industry Impact</div>
+<p>Published <span class="metric">12 peer-reviewed papers</span> in top-tier conferences including <span class="highlight">NeurIPS</span> and <span class="highlight">ICML</span>, with total citations exceeding <span class="emphasis">800+</span>. Research focuses on intersection of AI ethics and algorithmic fairness.</p>
+<p>Led cross-functional teams to translate research findings into <strong>production-ready solutions</strong> that have been deployed across <span class="highlight">Fortune 500 companies</span>, impacting millions of users globally.</p>
+`
+    
       ,
       gallery: [
         {

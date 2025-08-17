@@ -1,96 +1,97 @@
 <template>
   <section class="contributions">
-    <h2 class="section-caption">Key Contributions</h2>
-    <hr class="caption-line" />
-    <div class="contribution-html" v-html="contributionsHtml" />
+    <h2 class="section-title">Key Contributions</h2>
+    <div class="contributions-list">
+      <!-- Loop through each contribution in the array -->
+      <div 
+        v-for="(contribution, index) in contributionsHtml" 
+        :key="index" 
+        class="contribution-item"
+      >
+        <h3 class="contribution-header">{{ contribution.header }}</h3>
+        <p class="contribution-description" v-html="contribution.description"></p>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
+// The component now correctly expects an Array with the name "contributionsHtml"
 defineProps({
   contributionsHtml: {
-    type: String,
+    type: Array,
     required: true,
-  },
+    default: () => []
+  }
 });
 </script>
 
 <style scoped>
+:root {
+  --bg-primary_contributions: #0A0F1E;
+  --bg-card_contributions: #1A2033;
+  --text-primary_contributions: #F0F4F8;
+  --text-secondary_contributions: #A0AEC0;
+  --accent-color_contributions: #99D9F2;
+  --border-color_contributions: #3A415A;
+}
+
 .contributions {
-  color: var(--project-description-color);
-  text-align: justify;
-  padding: 0;
-}
-
-.section-caption {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--project-color-caption-color);
-  margin-bottom: 0.25rem;
-}
-
-.caption-line {
   width: 100%;
-  border: 0.1rem solid white;
-  margin-bottom: 1rem;
 }
 
-.contribution-html {
-  padding-left: 0rem;
-}
-
-.contribution-html strong {
-  display: list-item;
-  list-style-type: disc;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-left: 0rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.contribution-html p,
-.contribution-html div,
-.contribution-html span {
-  margin: 0.25rem 0 0.5rem 2rem;
-  display: block;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.text-large {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.text-medium {
-  font-size: 1.05rem;
+.section-title {
+  font-size: 1.6rem;
   font-weight: 600;
+  color: var(--text-primary_contributions);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color_contributions);
 }
 
-.text-small {
-  font-size: 1rem;
-  font-weight: 400;
+.contributions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.text-highlight {
-  color: var(--project-accent-color);
+.contribution-item {
+  background-color: var(--bg-primary_contributions); /* Slightly darker than the main card */
+  padding: 1.25rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-color_contributions);
+}
+
+.contribution-header {
+  font-size: 1.1rem;
   font-weight: 600;
+  color: var(--accent-color_contributions);
+  margin: 0 0 0.5rem 0;
 }
 
-@media (max-width: 580px) {
-  .section-caption {
-    font-size: 1.5rem;
-  }
+.contribution-description {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary_contributions);
+  text-align: justify;
+  margin: 0;
+}
 
-  .contribution-html {
-    font-size: 0.9rem;
-  }
+/* Style for the bolded text inside the description */
+.contribution-description :deep(b) {
+  color: var(--text-primary_contributions);
+  font-weight: 500;
+}
 
-  .contribution-html p,
-  .contribution-html div,
-  .contribution-html span {
-    margin-left: 1.2rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .contribution-header {
+    font-size: 1rem;
+  }
+  .contribution-description {
     font-size: 0.85rem;
   }
 }

@@ -11,7 +11,7 @@ export default
       link2:'',
       shortDescription: 'A VR Horror Adventure Game',
       tags: ['Oculus', 'Unity', 'Photon'],
-      types: [ 'Published Game'],
+      types: [ 'Published Games'],
       mainArt: {
         type: 'image',
         src: '/images/tunnels/1920x1080.png',
@@ -50,43 +50,32 @@ export default
       roleHtml: `
         <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
       `,
-      keyContributionsHtml: [`
-  <ul>
-    <li>
-      <strong>Multiplayer Integration</strong>
-      <p>Built multiplayer functionality using <strong>Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.</p>
-    </li>
-
-    <li>
-      <strong>Monetization & Platform Services</strong>
-      <p>Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.</p>
-    </li>
-
-    <li>
-      <strong>VR Gameplay & Mechanics</strong>
-      <p>Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.</p>
-    </li>
-
-    <li>
-      <strong>AI Systems</strong>
-      <p><span class="text-large">Led Core Gameplay Systems</span></p>
-      <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
-      <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
-      <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>
-      <p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.</p>
-    </li>
-
-    <li>
-      <strong>Performance Optimization</strong>
-      <p>Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.</p>
-    </li>
-
-    <li>
-      <strong>UI, Localization & Asset Management</strong>
-      <p>Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.</p>
-    </li>
-  </ul>
-`],
+      keyContributionsHtml:  [
+        {
+          header: 'Multiplayer Integration',
+          description: 'Built multiplayer functionality using <b>Photon Fusion</b> for low-latency networking and <b>Photon Voice</b> for in-game voice communication, supporting scalable and synchronized cooperative gameplay.'
+        },
+        {
+          header: 'Monetization & Platform Services',
+          description: 'Integrated <b>in-app purchases</b> and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with <b>Unity Cloud Save</b> and <b>Unity Analytics</b> for persistent player data and behavior tracking.'
+        },
+        {
+          header: 'VR Gameplay & Mechanics',
+          description: 'Developed immersive VR systems including <b>crawling, swimming, climbing, and ziplining</b> with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.'
+        },
+        {
+          header: 'AI Systems',
+          description: 'Implemented <b>AI behavior trees</b> and combat logic with modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.'
+        },
+        {
+          header: 'Performance Optimization',
+          description: 'Optimized for VR by profiling and refining <b>CPU, GPU, and memory usage</b> using <b>Unity Profiler</b>, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates and created custom tools for managing baked lighting, fog systems, and light probe setups.'
+        },
+        {
+          header: 'UI, Localization & Asset Management',
+          description: 'Integrated <b>diegetic and non-diegetic UI</b> for VR, supported multi-language localization via Unity Localization, and used <b>Addressables</b> for modular asset streaming and memory management during runtime.'
+        }
+      ],
       gallery: [
         {
           type: 'image',

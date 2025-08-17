@@ -13,7 +13,10 @@ import wretched from './projects/wretched.js';
 import downhillbike from './projects/downhillbike.js';
 
 
-export const projects = [virtualmuseum, tunnels, holoffice, roboko, heterotopia,downhillbike,
+/*export const projects = [virtualmuseum, tunnels, holoffice, roboko, heterotopia,downhillbike,
   wretched,findthedifference,sketchscape,ludikid,processing,sketchrecognition,visualisationreview
 
+];*/
+
+export const projects = [heterotopia, tunnels
 ];

@@ -3,7 +3,8 @@
 \*-----------------------------------*/
 
 :root {
-  --background-color: #202124; 
+
+  --background-color: #23252B;              /* Deep Charcoal, modern base */
   --summary-background: #2F333D;
   --details-background: #202124;
   --primary-color: #2F333D;  
@@ -14,22 +15,80 @@
   --text-secondary: #676f7c;
   --accent-color-button: #2F333D;
   --hover-color-button: #676f7c;
-  --selected-color-button: #97A3B6;
+  --selected-color-button: #97A3B6;        /* Lighter, muted blue-gray */
+  
+    /* Project */
+  --tag-color: #23252B;                     /* Deep charcoal for tags */
+  --description-color: #F5F6FA;             /* Matches main text */
+  --description-color-gray-dark: #8A8F99;   /* Muted gray for less emphasis */
+  --description-color-gray-light: #B0B6C3;  /* Lighter muted gray */
+  --project-card-info-: #2F333D;            /* Matches summary-background */
+  --project-card-color: #2F333D;            /* Matches summary-background */
+  --description-alt-text: #8A8F99;          /* Muted gray */
+  
+  --project-description-color: #F5F6FA;     /* Consistent with main text */
+  --project-color-caption-color: #B0B6C3;   /* Subtle, muted gray */
+  --project-card-background-color: #23252B; /* Matches background */
+  --gallery-background: #23252B;            /* Unified gallery look */
+  
+  /* about */
+  --bg-card_about:  #23252B;                /* Matches background */
+  --text-primary_about: #F5F6FA;            /* Main text */
+  --text-secondary_about: #B0B6C3;          /* Subtle secondary */
+  --accent-color_about: #97A3B6;            /* Accent */
+  --border-color_about: #3C4250;            /* Soft border */
+  --shadow-color_about: rgba(44, 50, 61, 0.25); /* Soft shadow */
+  
+  /* resume */
+  --bg-primary_resume: #202124;             /* Deep background */
+  --bg-card_resume: #23252B;                /* Slightly lighter card */
+  --text-primary_resume: #F5F6FA;           /* Main text */
+  --text-secondary_resume: #B0B6C3;         /* Subtle secondary */
+  --accent-color_resume: #97A3B6;           /* Accent */
+  --border-color_resume: #3C4250;           /* Soft border */
+  --shadow-color_resume: rgba(44, 50, 61, 0.3);
+  --tag-bg-color_resume: rgba(151, 163, 182, 0.08); /* Soft accent background */
+  --tag-border-color_resume: rgba(151, 163, 182, 0.25);
+  
+  --bg-primary_contributions: #202124;
+  --bg-card_contributions: #23252B;
+  --text-primary_contributions: #F5F6FA;
+  --text-secondary_contributions: #B0B6C3;
+  --accent-color_contributions:  #97A3B6;
+  --border-color_contributions: #3C4250;
+  
+  --text-primary_details: #F5F6FA;
+  --text-secondary_details: #B0B6C3;
+  --accent-color_details: #97A3B6;
+  --border-color_details: #3C4250;
+  
+  --bg-primary_resp: #202124;
+  --text-primary_resp: #F5F6FA;
+  --text-secondary_resp: #B0B6C3;
+  --accent-color_resp:  #97A3B6;
+  --border-color_resp: #3C4250;
+  
+  --text-primary_summary: #F5F6FA;
+  --text-secondary_summary: #B0B6C3;
+  --border-color_summary: #3C4250;
+  
+  --text-primary_pub-summary: #F5F6FA;
+  --text-secondary_pub-summary: #B0B6C3;
+  --border-color_pub-summary: #3C4250;
+  
+  --bg-primary_project: #202124;
+  --bg-card_project: #23252B;
+  --bg-card-alt_project: #292C34;           /* Slightly lighter for alternation */
+  --text-primary_project: #F5F6FA;
+  --text-secondary_project: #B0B6C3;
+  --accent-color_project:  #97A3B6;
+  --border-color_project: #3C4250;
 
-  /* Project */
-  --tag-color: #202124; 
-  --description-color: #ffffff;
-  --description-color-gray-dark: #999;
-  --description-color-gray-light: #ccc;
-  --project-card-info-: #2F333D;
-  --project-card-color: #2F333D;
-  --description-alt-text: #999;
-
-  --project-description-color: #ffffff;
-  --project-color-caption-color: #ffffff;
-  --project-card-background-color: #202124;
-  --gallery-background: #2F333D;
 }
+
+
+
+
 
 /*-----------------------------------*\
   General Reset & Global Fixes

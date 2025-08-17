@@ -1,6 +1,5 @@
 <template>
   <div class="art-block">
-    <h3 class="top-text">{{ topText }}</h3>
     <div class="media-wrapper">
       <img
         v-if="art.type === 'image'"
@@ -30,10 +29,6 @@ defineProps({
     type: Object,
     required: true,
   },
-  topText: {
-    type: String,
-    default: '',
-  },
 });
 </script>
 
@@ -42,29 +37,23 @@ defineProps({
   margin-bottom: 0.5rem;
 }
 
-.top-text {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-
 .media-wrapper img,
 .media-wrapper video {
   max-width: 100%;
   border-radius: 8px;
   display: block;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem; /* Increased margin for better spacing */
 }
 
 .description {
-  font-size: 1rem;
-  color: var(--text-secondary);
+  font-size: 0.9rem; /* Adjusted for consistency */
+  color: var(--text-secondary, #A0AEC0); /* Added fallback color */
+  text-align: center; /* Center the description */
 }
 
 @media (max-width: 950px) {
   .description {
-    font-size: 0.7rem;
-    color: var(--text-secondary);
+    font-size: 0.8rem; /* Adjusted for consistency */
   }
 }
 </style>

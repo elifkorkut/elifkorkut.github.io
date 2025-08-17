@@ -2,7 +2,7 @@
   <Navbar />
   <TopSection />
 
-  <div class="wrap2em">
+  <div class="page-wrapper">
     <div class="page-container">
       <!-- Caption -->
       <h1
@@ -22,14 +22,15 @@
     <div class="summary-wrapper publication-wrapper">
       <div class="layout-split">
         <div class="left">
-         
           <PublicationSummary :summaryHtml="project.summaryHtml" />
           <div class="citation">
-  <p>{{ project.citation }}</p>
-</div>
-<a :href="project.link1" target="_blank" rel="noopener noreferrer" class="link-button">
-      <img src="/images/read.jpg" alt="External Link" class="link-icon" />
-    </a>
+            <p>{{ project.citation }}</p>
+          </div>
+          <a :href="project.link1" target="_blank" rel="noopener noreferrer" class="link-button">
+            Read Publication
+            <!-- SVG for external link icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
         </div>
         <div class="right">
           <ArtBlock :art="project.mainArt" />
@@ -83,14 +84,18 @@
     <GridGallery :items="project.gallery" class="gallery-wrapper" />
   </div>
 
-  <div class="wrap2em">
+  <div class="page-wrapper">
     <!-- Navigation Buttons -->
     <div class="nav-buttons">
       <button v-if="previousProject" @click="goTo(previousProject.link)" class="nav-btn">
-        ← Previous
+        <!-- SVG for back arrow icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Previous
       </button>
       <button v-if="nextProject" @click="goTo(nextProject.link)" class="nav-btn">
-        Next →
+        Next
+        <!-- SVG for forward arrow icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </button>
     </div>
   </div>
@@ -158,183 +163,200 @@ onMounted(() => {
 </script>
 
 <style scoped>
-@import '../styles.css';
+:root {
+  --bg-primary_project: #0A0F1E;
+  --bg-card_project: #1A2033;
+  --bg-card-alt_project: #111627; /* New alternating color */
+  --text-primary_project: #F0F4F8;
+  --text-secondary_project: #A0AEC0;
+  --accent-color_project: #99D9F2;
+  --border-color_project: #3A415A;
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Removed horizontal padding */
+}
 
 .page-container {
   width: 100%;
-  margin: 10rem 0 0 0;
+  margin: 10rem 0 2rem 0; /* Increased top margin */
+  padding: 0 2rem; /* Keep padding on the title container */
+}
+
+.caption {
+  color: var(--text-primary_project);
+  margin-bottom: 1rem;
 }
 
 .caption-project {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 3.5rem;
+  font-weight: 700;
   text-align: left;
 }
 
 .caption-publication {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .caption-project {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-  .caption-publication {
-    font-size: 1.5rem;
-    text-align: center;
-  }
 }
 
 .caption-line {
   width: 100%;
-  border: 1px solid white;
-  margin-bottom: 0rem;
+  border: 0;
+  height: 1px;
+  background: var(--border-color_project);
+  margin-bottom: 2rem;
 }
 
-.layout-responsive {
-  display: flex;
-  gap: 2rem;
+.project-layout, .publication-layout {
+  max-width: 100%; /* Allow layouts to be full width */
+  margin: 0 auto 2rem auto;
+  /* Removed horizontal padding */
 }
 
-.layout-split {
+.layout-responsive, .layout-split {
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .layout-split .left,
 .layout-split .right {
-  width: 48%;
+  flex: 1;
+  min-width: 0;
+}
+
+.left {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
 .column {
-  width: 48%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 0;
 }
 
-@media (max-width: 949px) {
-  .layout-responsive,
-  .layout-split {
-    display: block;
-  }
-
-  .column,
-  .layout-split .left,
-  .layout-split .right {
-    width: 100%;
-  }
-}
-
-.summary-wrapper {
-  background-color: var(--primary-background);
+.summary-wrapper, .secondary-wrapper, .gallery-wrapper {
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 0; /* Sharp edges for full-width look */
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid var(--border-color_project);
+  border-bottom: 1px solid var(--border-color_project);
   margin-bottom: 2rem;
+}
+
+.summary-wrapper, .gallery-wrapper {
+  background-color: var(--bg-card_project);
 }
 
 .secondary-wrapper {
-  background-color: var(--summary-background);
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+  background-color: var(--bg-card-alt_project); /* Alternating color */
 }
 
-.gallery-wrapper {
-  background-color: var(--primary-background);
-  border-radius: 10px;
-  padding: 2rem;
-}
 
 .nav-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 2em;
-}
-
-::v-deep(.project-summary a),
-::v-deep(.project-summary strong) {
-  display: inline;
-  white-space: normal;
-}
-
-::v-deep(.project-details a) {
-  display: inline;
-  white-space: normal;
-  color: white;
-  text-decoration: underline;
-}
-
-::v-deep(.project-details strong) {
-  display: inline;
-  white-space: normal;
-  font-weight: 600;
+  margin: 2rem 0;
+  padding: 0 2rem; /* Add padding back to nav buttons */
 }
 
 .nav-btn {
-  padding: 10px 20px;
-  background: var(--accent-color-button);
-  color: white;
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bg-card_project);
+  color: var(--text-primary_project);
+  border: 1px solid var(--border-color_project);
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-
-.nav-btn:hover,
-.nav-btn:focus {
-  background: var(--hover-color-button);
-  outline: none;
+.nav-btn:hover {
+  background-color: var(--accent-color_project);
+  color: var(--bg-primary_project);
+  border-color: var(--accent-color_project);
 }
 
 .link-button {
-  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color_project);
+  color: var(--bg-primary_project);
+  border: 1px solid var(--accent-color_project);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start;
 }
 
-.link-icon {
-  width: 100%;
-  height: 70px;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.link-icon:hover {
-  transform: scale(1.1);
-}
-@media (max-width: 600px) {
- 
-  .link-icon {
-    width: 100%;
-    height: 40px;
-  }
+.link-button:hover {
+  background-color: transparent;
+  color: var(--accent-color_project);
 }
 
 .citation {
-  margin-top: 1rem;
-  color: var(--citation-text-color, #888);
+  color: var(--text-secondary_project);
   font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  text-align: justify;
-  padding-left: 4px;
-  padding-right: 4px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border-left: 3px solid var(--border-color_project);
+  padding-left: 1rem;
 }
 
-/* Optional: Responsive sizing */
-@media (max-width: 600px) {
-  .citation {
-    font-size: 0.85rem;
+/* Deeply scoped styles for rendered HTML */
+:deep(.project-details a), :deep(.project-summary a) {
+  color: var(--accent-color_project);
+  text-decoration: underline;
+}
+:deep(.project-details strong), :deep(.project-summary strong) {
+  color: var(--text-primary_project);
+  font-weight: 600;
+}
+
+/* Responsive Styles */
+@media (max-width: 949px) {
+  .layout-responsive, .layout-split {
+    flex-direction: column;
   }
 }
 
-
+@media (max-width: 768px) {
+  .page-container {
+    margin-top: 8rem; /* Increased top margin for mobile */
+    padding: 0 1rem;
+  }
+  .summary-wrapper, .secondary-wrapper, .gallery-wrapper {
+    padding: 1.5rem;
+  }
+  .nav-buttons {
+    padding: 0 1rem;
+  }
+  .caption-project {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .caption-publication {
+    font-size: 1.75rem;
+  }
+  .link-button {
+    align-self: stretch;
+  }
+}
 </style>
