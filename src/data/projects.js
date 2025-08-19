@@ -18,5 +18,5 @@ import downhillbike from './projects/downhillbike.js';
 
 ];*/
 
-export const projects = [heterotopia, tunnels
+export const projects = [tunnels,heterotopia
 ];

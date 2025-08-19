@@ -47,9 +47,7 @@ export default
         <p>As the game developer for the Tunnels project, I was responsible for the full technical implementation of both single-player and multiplayer modes. I worked closely with sound designers and game artists, providing custom Unity tools to support their work and enhance their workflows.
   </p>
       `,
-      roleHtml: `
-        <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
-      `,
+      
       keyContributionsHtml:  [
         {
           header: 'Multiplayer Integration',
@@ -81,55 +79,55 @@ export default
           type: 'image',
           src: 'images/tunnels/p1.png',
           alt: 'tunnelsp1',
-          topText: 'Main Menu Art',
-          bottomText: 'Rendered in Unity HDRP'
+          topText: '',
+          bottomText: ''
         },
         {
           type: 'image',
           src: 'images/tunnels/p2.png',
           alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'image',
           src: 'images/tunnels/p3.png',
           alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'video',
           src: 'images/tunnels/v1.mp4',
           alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'image',
           src: 'images/tunnels/p4.png',
           alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'image',
           src: 'images/tunnels/p5.png',
           alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'image',
           src: 'images/tunnels/p6.png',
           alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          topText: '',
+          bottomText: ''
         },
   
       ]

@@ -7,6 +7,7 @@ const experience = ref([
     {
         title: 'Game Developer',
         company: 'Nomad Monkey',
+        companyUrl: 'https://nomadmonkey.xyz/', // Added company URL
         period: '2023 March - Current',
         achievements: [
             'Led end-to-end development of <strong>five published VR titles</strong>, handling design, programming, and deployment.',
@@ -50,14 +51,14 @@ const skills = ref([
 ]);
 
 const publications = ref([
-    { title: 'Developing a Framework for Heterotopias as Discursive Playgrounds : A Comparative Analysis of Non-Immersive and Immersive Technologies', year: '2024', journal: 'Virtual Reality 28, 16, Springer', url: '#' },
-    { title: 'Creating a Virtual Museum Framework for Immersive Reality Environments Through a Perspective From Heterotopia', year: '2023', journal: 'Master of Science, Middle East Technical University', url: '#' },
-    { title: 'Visualization in virtual reality : a systematic review', year: '2023', journal: 'Virtual Reality 27, 1447–1480', url: '#' },
-    { title: 'Sketch Recognition for Interactive Game Experiences Using Neural Networks', year: '2021', journal: '2021 Entertainment Computing – ICEC 2021. Lecture Notes in Computer Science(), vol 13056.', url: '#' }
+    { title: 'Developing a Framework for Heterotopias as Discursive Playgrounds : A Comparative Analysis of Non-Immersive and Immersive Technologies', year: '2024', journal: 'Virtual Reality 28, 16,  Springer (2024)', url: 'https://link.springer.com/article/10.1007/s10055-023-00905-w' },
+    { title: 'Creating a Virtual Museum Framework for Immersive Reality Environments Through a Perspective From Heterotopia', year: '2023', journal: 'Master of Science, Middle East Technical University', url: 'https://open.metu.edu.tr/handle/11511/101949' },
+    { title: 'Visualization in virtual reality : a systematic review', year: '2023', journal: 'Virtual Reality 27, 1447–1480', url: 'https://link.springer.com/article/10.1007/s10055-023-00753-8' },
+    { title: 'Sketch Recognition for Interactive Game Experiences Using Neural Networks', year: '2021', journal: '2021 Entertainment Computing – ICEC 2021. Lecture Notes in Computer Science(), vol 13056.', url: 'https://link.springer.com/chapter/10.1007/978-3-030-89394-1_31' }
 ]);
 
 const awards = ref([
-    { title: 'METU Graduate Thesis Awards', type: 'Award', year: '2023', description: 'The thesis titled “Creating a Virtual Museum Framework for Immersive Reality Environments Through a Perspective From Heterotopia” earned METU Graduate Thesis Awards.' },
+    { title: 'METU Graduate Thesis Awards', type: 'Award', year: '2023', description: 'The thesis titled “Creating a Virtual Museum Framework for Immersive Reality Environments Through a Perspective From Heterotopia” earned METU Graduate Thesis Award.' },
     { title: 'METU Informatics Institute Open Research Day', type: 'Award', year: '2023', description: 'The research titled “Developing a Framework for Heterotopias as Discursive Playgrounds : A Comparative Analysis of Non-Immersive and Immersive Technologies” earned Best Poster Award.' },
     { title: 'International Conference on Entertainment Computing', type: 'Conference', year: '2021', description: 'The Paper “ Sketch Recognition for Interactive Game Experiences Using Neural Networks” was presented.' }
 ]);
@@ -77,9 +78,12 @@ const interests = ref([
                     <!-- Each experience is its own card -->
                     <div v-for="(job, index) in experience" :key="index" class="card">
                         <div class="card-header">
-                            <div>
+                            <div class="header-main-content">
                                 <h3>{{ job.title }}</h3>
-                                <p class="company">{{ job.company }}</p>
+                                <a :href="job.companyUrl" target="_blank" rel="noopener noreferrer" class="company-link">
+                                    <p class="company">{{ job.company }}</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="company-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                </a>
                             </div>
                             <div class="date">{{ job.period }}</div>
                         </div>
@@ -93,17 +97,20 @@ const interests = ref([
             <section id="publications">
                 <h2 class="section-title">Publications</h2>
                 <div class="list-container">
-                    <!-- These are clickable 'a' tags, rendered as cards -->
-                    <a v-for="pub in publications" :key="pub.title" :href="pub.url" target="_blank" class="card card-clickable">
+                    <!-- Publication card is now a div, with a button inside -->
+                    <div v-for="pub in publications" :key="pub.title" class="card">
                         <div class="card-header">
-                            <div>
+                            <div class="header-main-content">
                                 <h3>{{ pub.title }}</h3>
                                 <p class="journal">{{ pub.journal }}</p>
                             </div>
                             <div class="date">{{ pub.year }}</div>
                         </div>
-                        <ion-icon name="open-outline" class="external-link-icon"></ion-icon>
-                    </a>
+                        <a :href="pub.url" target="_blank" rel="noopener noreferrer" class="read-button">
+                            Read Publication
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="read-button-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -126,7 +133,7 @@ const interests = ref([
                      <!-- Each education entry is its own card -->
                     <div v-for="edu in education" :key="edu.degree" class="card">
                         <div class="card-header">
-                            <div>
+                            <div class="header-main-content">
                                 <h3>{{ edu.degree }}</h3>
                                 <p class="institution">{{ edu.institution }}</p>
                             </div>
@@ -143,7 +150,7 @@ const interests = ref([
                     <!-- Each award is its own card -->
                     <div v-for="award in awards" :key="award.title" class="card">
                         <div class="card-header">
-                            <div>
+                            <div class="header-main-content">
                                 <h3>{{ award.title }}</h3>
                                 <p class="award-type">{{ award.type }}</p>
                             </div>
@@ -187,18 +194,6 @@ const interests = ref([
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root {
-  --bg-primary_resume: #0A0F1E; /* Deep Navy/Charcoal Blue */
-  --bg-card_resume: #1A2033; /* Lighter Slate Blue/Gray */
-  --text-primary_resume: #F0F4F8; /* Very Light Gray/Off-White */
-  --text-secondary_resume: #A0AEC0; /* Softer Slate Gray */
-  --accent-color_resume: #99D9F2; /* Pale, Desaturated Cyan */
-  --border-color_resume: #3A415A;
-  --shadow-color_resume: rgba(0, 0, 0, 0.4);
-  --tag-bg-color_resume: rgba(153, 217, 242, 0.1);
-  --tag-border-color_resume: rgba(153, 217, 242, 0.3);
-}
-
 * {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
@@ -206,10 +201,8 @@ const interests = ref([
 
 .resume-container {
     background-color: transparent; /* Invisible container */
-    color: var(--text-primary_resume);
     max-width: 900px;
     margin: 0 auto;
-    /* Increased top padding for navbar */
     padding: 8rem 1.5rem 2rem 1.5rem;
 }
 
@@ -225,45 +218,27 @@ const interests = ref([
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
-    color: var(--text-primary_resume);
+    color: var(--text-color);
     text-align: left;
     padding-bottom: 0.75rem;
-    border-bottom: 2px solid var(--border-color_resume);
+    border-bottom: 2px solid var(--line-color);
 }
 
 /* --- Card Styling --- */
 .card {
-    background-color: var(--bg-card_resume);
+    background-color: var(--primary-color);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--border-color_resume);
-    box-shadow: 0 4px 15px var(--shadow-color_resume);
+    border: 1px solid var(--line-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
     transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     position: relative;
 }
 .card:hover {
     transform: translateY(-4px);
-    border-color: var(--accent-color_resume);
+    border-color: var(--accent-color);
 }
-.card-clickable {
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-}
-.card-clickable:hover {
-    box-shadow: 0 8px 25px var(--shadow-color_resume);
-}
-.external-link-icon {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.2rem;
-    color: var(--text-secondary_resume);
-    transition: color 0.3s;
-}
-.card-clickable:hover .external-link-icon {
-    color: var(--accent-color_resume);
-}
+
 .list-container {
     display: flex;
     flex-direction: column;
@@ -277,33 +252,71 @@ const interests = ref([
     align-items: flex-start;
     gap: 1rem;
 }
+
+.header-main-content {
+    flex-grow: 1;
+}
+
 .card-header h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text-primary_resume);
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
 }
-.card-header .company, .card-header .institution, .card-header .journal, .card-header .award-type {
-    color: var(--accent-color_resume);
+
+.company-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.company-link:hover .company {
+    color: var(--text-popup);
+    text-decoration: underline;
+}
+
+.company-link-icon {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+    flex-shrink: 0;
+}
+
+.company-link:hover .company-link-icon {
+    color: var(--text-popup);
+}
+
+.card .institution, .card .journal, .card .award-type {
+    color: var(--text-popup);
     font-weight: 500;
     font-size: 0.9rem;
 }
+.card .company  {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: color 0.3s;
+}
 .card .department {
     font-size: 0.9rem;
-    color: var(--text-secondary_resume);
-    margin-top: 0.5rem; /* Space between header and department */
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
 }
 .card-header .date {
     font-size: 0.85rem;
-    color: var(--accent-color_resume); /* Colored Date Text */
+    color: var(--highlight-color);
     white-space: nowrap;
-    background: var(--bg-primary_resume);
+    background: var(--highlight-bg-color);
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
-    border: 1px solid var(--border-color_resume);
+    border: 0px solid var(--highlight-border);
     flex-shrink: 0;
 }
 .description {
-    color: var(--text-secondary_resume);
+    color: var(--text-secondary);
     font-size: 0.9rem;
     line-height: 1.6;
     margin-top: 1rem;
@@ -311,13 +324,13 @@ const interests = ref([
 
 /* --- Achievements List --- */
 .achievements { list-style: none; padding-left: 1rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
-.achievements li { position: relative; color: var(--text-secondary_resume); font-size: 0.9rem; line-height: 1.6; }
-.achievements li::before { content: '›'; position: absolute; left: -1rem; color: var(--accent-color_resume); font-weight: bold; }
-.achievements li :deep(strong) { color: var(--accent-color_resume); font-weight: 500; }
+.achievements li { position: relative; color: var(--text-color); font-size: 0.9rem; line-height: 1.6; }
+.achievements li::before { content: '›'; position: absolute; left: -1rem; color: var(--accent-color); font-weight: bold; }
+.achievements li :deep(strong) { color: var(--text-popup); font-weight: 600; }
 
 /* --- Tags --- */
 .tags-container { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.tag, .skill-tag { background-color: var(--tag-bg-color_resume); color: var(--accent-color_resume); font-size: 0.8rem; font-weight: 500; padding: 0.5rem 1rem; border-radius: 1rem; border: 1px solid var(--tag-border-color_resume); }
+.tag, .skill-tag { background-color: var(--highlight-bg-color); color: var(--highlight-color); font-size: 0.8rem; font-weight: 500; padding: 0.5rem 1rem; border-radius: 1rem; border: 0px solid var(--line-color); }
 
 /* --- Grids --- */
 .languages-grid, .skills-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
@@ -330,37 +343,66 @@ const interests = ref([
 /* --- Skills --- */
 .skills-grid h4 {
     font-weight: 600;
-    color: var(--text-primary_resume);
+    color: var(--text-color);
     text-align: left;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-color_resume);
+    border-bottom: 0px solid var(--line-color);
 }
+
+/* --- Publication Specific Styles --- */
+.read-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--hover-color-button);
+    color: var(--bg-primary_project);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+.read-button:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--text-secondary);
+}
+
+
+
+
+.read-button-icon {
+    font-size: 1.1em;
+}
+
 
 /* --- MOBILE FRIENDLY ADJUSTMENTS --- */
 @media (max-width: 640px) {
     .resume-container {
-        /* Increased top padding and reduced horizontal padding for more content space */
         padding: 6rem 1rem 1rem 1rem;
     }
     .resume-body {
-        /* Reduced gap between sections on mobile for a tighter layout */
         gap: 3rem;
     }
     .section-title {
-        /* Smaller font size for main titles on mobile */
         font-size: 1.2rem;
     }
     .card {
-        /* Slightly less padding inside cards on mobile */
         padding: 1.25rem;
     }
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
     .card-header h3 {
-        /* Smaller font size for card titles on mobile */
         font-size: 0.95rem;
     }
-    .description, .achievements li, .card .department {
-        /* Slightly smaller body text for better fit */
+    .description, .achievements li, .card .department, .card .institution {
         font-size: 0.8rem;
     }
     .tag, .skill-tag {

@@ -43,7 +43,7 @@ export default {
 }
 
 .nav-btn:hover {
-  background-color: var(--accent-color);
+  background-color: var(--accent-color-navbar-button);
 }
 
 .nav-btn-active {

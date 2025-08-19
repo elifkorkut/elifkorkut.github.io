@@ -31,12 +31,12 @@ defineProps({
 }
 
 .summary-content {
-  color: var(--text-secondary_summary);
+  color: var(--text-color);
   text-align: justify;
 }
 
 .summary-content :deep(p) {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.7;
   margin: 0;
 }
@@ -47,7 +47,7 @@ defineProps({
     font-size: 1.4rem;
   }
   .summary-content :deep(p) {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 </style>

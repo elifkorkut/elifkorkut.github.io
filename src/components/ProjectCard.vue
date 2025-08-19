@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 .project-card {
-  background-color: var(--project-card-color);
+  background-color: var(--primary-color);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
@@ -61,7 +61,7 @@ export default {
 
 .project-content {
   padding: 16px;
-  background: var(--project-card-info-);
+  background: var(--primary-color);
   width: 100%;
   box-sizing: border-box;
 }
@@ -69,20 +69,20 @@ export default {
 .project-content .header {
   font-size: 18px;
   margin: 0 0 8px;
-  color: var(--description-color);
+  color: var(--text-color);
   font-weight: bold;
 }
 
 .project-content .role {
   font-size: 14px;
-  color: var(--description-color-gray-dark);
+  color: var(--text-secondary);
   margin-bottom: 8px;
 }
 
 .project-content .description {
   font-size: 14px;
   margin: 0;
-  color: var(--description-color-gray-light);
+  color: var( --text-tertiary);
 }
 
 .project-tags {
@@ -93,7 +93,7 @@ export default {
 }
 
 .tag {
-  background-color: var(--tag-color);
+  background-color: var(--background-color);
   color: white;
   border-radius: 4px;
   padding: 5px 8px;

@@ -24,10 +24,10 @@ defineProps({
 .section-title {
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--text-primary_details);
+  color: var(--text-color);
   margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border-color_details);
+  
 }
 
 .details-list {

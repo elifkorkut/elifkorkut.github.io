@@ -14,14 +14,14 @@ export default {
     mainArt: {
       type: 'image',
       src: 'images/publications/heterotopia/1.jpg',
-      alt: 'ht1',
-      description: 'ht'
+      alt: '',
+      description: ''
     },
     secondaryArt: {
       type: 'image',
       src: 'images/publications/heterotopia/2.jpg',
-      alt: 'ht2',
-      description: 'pc version'
+      alt: '',
+      description: ''
     },
     summaryHtml: `
       <p>The discursive space represents the reordering of knowledge gained through accumulation. 
@@ -46,80 +46,80 @@ export default {
       {
         type: 'image',
         src: '/images/publications/heterotopia/1.jpg',
-        alt: 'Downhill Bike Cover',
-        topText: 'Main Menu Art',
-        bottomText: 'Rendered in Unity HDRP'
+        alt: 'Cover',
+        topText: '',
+        bottomText: ''
       },
       {
         type: 'image',
         src: '/images/publications/heterotopia/2.jpg',
-        alt: 'Gameplay Preview',
-        topText: 'Gameplay Trailer',
-        bottomText: 'Raw captured footage from Quest 2'
+        alt: 'Preview',
+        topText: '',
+        bottomText: ''
       },
       {
         type: 'image',
         src: '/images/publications/heterotopia/3.jpg',
-        alt: 'Gameplay Preview',
-        topText: 'Gameplay Trailer',
-        bottomText: 'Raw captured footage from Quest 2'
+        alt: 'Preview',
+        topText: '',
+        bottomText: ''
       }
     ,
     {
       type: 'image',
       src: '/images/publications/heterotopia/4.jpg',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/5.jpg',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/6.png',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/7.png',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/8.jpg',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/9.png',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/10.png',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     {
       type: 'image',
       src: '/images/publications/heterotopia/11.jpg',
-      alt: 'Gameplay Preview',
-      topText: 'Gameplay Trailer',
-      bottomText: 'Raw captured footage from Quest 2'
+      alt: 'Preview',
+      topText: '',
+      bottomText: ''
     },
     ]
 }

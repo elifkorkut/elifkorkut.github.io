@@ -13,7 +13,7 @@
       >
         {{ project.title }}
       </h1>
-      <hr class="caption-line" />
+
     </div>
   </div>
 
@@ -163,15 +163,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-:root {
-  --bg-primary_project: #0A0F1E;
-  --bg-card_project: #1A2033;
-  --bg-card-alt_project: #111627; /* New alternating color */
-  --text-primary_project: #F0F4F8;
-  --text-secondary_project: #A0AEC0;
-  --accent-color_project: #99D9F2;
-  --border-color_project: #3A415A;
-}
+
 
 .page-wrapper {
   max-width: 1200px;
@@ -186,7 +178,7 @@ onMounted(() => {
 }
 
 .caption {
-  color: var(--text-primary_project);
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -206,7 +198,7 @@ onMounted(() => {
   width: 100%;
   border: 0;
   height: 1px;
-  background: var(--border-color_project);
+  background: var(--line-color);
   margin-bottom: 2rem;
 }
 
@@ -243,20 +235,20 @@ onMounted(() => {
 
 .summary-wrapper, .secondary-wrapper, .gallery-wrapper {
   padding: 2rem;
-  border-radius: 0; /* Sharp edges for full-width look */
+  border-radius: 0;
   border-left: none;
   border-right: none;
-  border-top: 1px solid var(--border-color_project);
-  border-bottom: 1px solid var(--border-color_project);
+  border-top: 0px solid var(--line-color);
+  border-bottom: 0px solid var(--line-color);
   margin-bottom: 2rem;
 }
 
 .summary-wrapper, .gallery-wrapper {
-  background-color: var(--bg-card_project);
+  background-color: var(--bg-card_project1);
 }
 
 .secondary-wrapper {
-  background-color: var(--bg-card-alt_project); /* Alternating color */
+  background-color: var(--bg-card_project2); /* Alternating color */
 }
 
 
@@ -272,9 +264,9 @@ onMounted(() => {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--bg-card_project);
-  color: var(--text-primary_project);
-  border: 1px solid var(--border-color_project);
+  background-color: var(--hover-color-button);
+  color: var(--text-color);
+  border: 1px solid var(--hover-color-button);
   cursor: pointer;
   border-radius: 6px;
   font-size: 1rem;
@@ -283,8 +275,7 @@ onMounted(() => {
 }
 
 .nav-btn:hover {
-  background-color: var(--accent-color_project);
-  color: var(--bg-primary_project);
+  background-color: var(--hover-color-button);
   border-color: var(--accent-color_project);
 }
 
@@ -294,7 +285,7 @@ onMounted(() => {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--accent-color_project);
+  background-color: var(--hover-color-button);
   color: var(--bg-primary_project);
   border: 1px solid var(--accent-color_project);
   cursor: pointer;
@@ -307,26 +298,26 @@ onMounted(() => {
 }
 
 .link-button:hover {
-  background-color: transparent;
-  color: var(--accent-color_project);
+  background-color: var(--primary-color);
+  color: var(--text-secondary);
 }
 
 .citation {
-  color: var(--text-secondary_project);
+  color: var(--text-secondary);
   font-style: italic;
   font-size: 0.9rem;
   line-height: 1.6;
-  border-left: 3px solid var(--border-color_project);
+  border-left: 3px solid var(--highlight-color);
   padding-left: 1rem;
 }
 
 /* Deeply scoped styles for rendered HTML */
 :deep(.project-details a), :deep(.project-summary a) {
-  color: var(--accent-color_project);
+  color: var(--text-color);
   text-decoration: underline;
 }
 :deep(.project-details strong), :deep(.project-summary strong) {
-  color: var(--text-primary_project);
+  color: var(--text-color);
   font-weight: 600;
 }
 

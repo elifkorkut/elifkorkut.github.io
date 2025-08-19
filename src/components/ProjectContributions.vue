@@ -27,14 +27,7 @@ defineProps({
 </script>
 
 <style scoped>
-:root {
-  --bg-primary_contributions: #0A0F1E;
-  --bg-card_contributions: #1A2033;
-  --text-primary_contributions: #F0F4F8;
-  --text-secondary_contributions: #A0AEC0;
-  --accent-color_contributions: #99D9F2;
-  --border-color_contributions: #3A415A;
-}
+
 
 .contributions {
   width: 100%;
@@ -43,10 +36,10 @@ defineProps({
 .section-title {
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--text-primary_contributions);
+  color: var(--highlight-color);
   margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border-color_contributions);
+  border-bottom: 3px solid var(--line-color);
 }
 
 .contributions-list {
@@ -56,16 +49,16 @@ defineProps({
 }
 
 .contribution-item {
-  background-color: var(--bg-primary_contributions); /* Slightly darker than the main card */
+  background-color: var(--background-color); /* Slightly darker than the main card */
   padding: 1.25rem;
   border-radius: 6px;
-  border-left: 3px solid var(--accent-color_contributions);
+  border-left: 3px solid var(--highlight-color);
 }
 
 .contribution-header {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--accent-color_contributions);
+  color: var(--highlight-color);
   margin: 0 0 0.5rem 0;
 }
 

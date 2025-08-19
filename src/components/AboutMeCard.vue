@@ -54,7 +54,7 @@ export default {
   width: 100%;
   padding: 8rem 1.5rem 2rem 1.5rem;
   font-family: 'Poppins', sans-serif;
-  color: var(--text-primary_about);
+  color: var( --text-color);
 }
 
 .about-content {
@@ -62,10 +62,10 @@ export default {
   display: flex;
   gap: 3rem;
   align-items: flex-start; /* Aligns photo to the top of the text block */
-  background-color: var(--bg-card_about);
+  background-color: var(--primary-color);
   padding: 2.5rem;
   border-radius: 8px;
-  border: 1px solid var(--border-color_about);
+  box-shadow: 3px 3px 10px 10px var(--shadow-color);;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -74,10 +74,10 @@ export default {
   flex-shrink: 0;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 4px 15px var(--shadow-color_about);
+  box-shadow: 0 4px 15px var(--shadow-color);
   width: 200px;
   height: 200px;
-  border: 3px solid var(--accent-color_about);
+
 }
 
 .profile-img {
@@ -93,24 +93,23 @@ export default {
 }
 
 .about-text h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1.8rem;
-  color: var(--text-primary_about);
+  color: var(--text-color);
   font-weight: 600;
-  border-bottom: 2px solid var(--border-color_about);
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.1rem;
 }
 
 .about-text p {
   margin-bottom: 1.25rem;
   font-size: 0.95rem;
-  color: var(--text-secondary_about);
+  color: var(--text-color);
   text-align: justify;
 }
 
 /* Style for the bolded text */
 .about-text p :deep(strong) {
-    color: var(--accent-color_about);
+    color: var(--highlight-color);
     font-weight: 500;
 }
 
@@ -120,7 +119,7 @@ export default {
 
 .conclusion-text {
   font-weight: 500;
-  color: var(--text-primary_about); /* Make the final text stand out a bit more */
+  color: var(--text-color); /* Make the final text stand out a bit more */
 }
 
 /* Responsive styles */
