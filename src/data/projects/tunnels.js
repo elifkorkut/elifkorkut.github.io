@@ -10,7 +10,7 @@ export default
       link1:'',
       link2:'',
       shortDescription: 'A VR Horror Adventure Game',
-      tags: ['Oculus', 'Unity', 'Photon'],
+      tags: ['Oculus', 'Unity', 'Photon','VR'],
       types: [ 'Published Games'],
       mainArt: {
         type: 'image',

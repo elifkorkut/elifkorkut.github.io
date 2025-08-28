@@ -10,7 +10,7 @@ export default
       link1:'',
       link2:'',
       shortDescription: 'Bicycle Simulation Game',
-      tags: ['Oculus', 'Unity'],
+      tags: ['Oculus', 'Unity', 'VR'],
       types: [ 'Published Games'],
       mainArt: {
         type: 'video',
@@ -105,7 +105,9 @@ export default
           alt: 'dbv5',
           topText: '',
           bottomText: ''
-        }
+        },
+
+       
   
        
   
