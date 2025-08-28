@@ -42,7 +42,7 @@ defineProps({
   justify-content: space-between;
   align-items: baseline;
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border-color_details);
+  
 }
 
 .details-list :deep(li:last-child) {
@@ -51,13 +51,13 @@ defineProps({
 
 .details-list :deep(strong) {
   font-weight: 500;
-  color: var(--text-secondary_details);
+  color: var(--text-color);
   flex-shrink: 0;
   margin-right: 1rem;
 }
 
 .details-list :deep(a) {
-  color: var(--accent-color_details);
+  color: var(--text-color);
   text-decoration: none;
   transition: text-decoration 0.3s ease;
 }

@@ -36,7 +36,7 @@ export default
        ,
       detailsHtml: `
       <li><strong>Released Date: </strong> May 2025</li>
-      <li><strong>Project Length:</strong> 1 Year</li>
+      <li><strong>Project Length:</strong> 1.5 Year</li>
       <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/tunnels/6963147540402115/" target="_blank" rel="noopener noreferrer">Tunnels</a></li>
       <li><strong>Studio:</strong> <a href="https://nomadmonkey.xyz/" target="_blank" rel="noopener noreferrer">Nomad Monkey</a></li>
       <li><strong>Publisher: </strong><a href="https://mastiff-games.com/games/" target="_blank" rel="noopener noreferrer">Mastiff Games</a> </li>

@@ -15,11 +15,7 @@ defineProps({
 </script>
 
 <style scoped>
-:root {
-  --text-primary_pub-summary: #F0F4F8;
-  --text-secondary_pub-summary: #A0AEC0;
-  --border-color_pub-summary: #3A415A;
-}
+
 
 .publication-summary {
   width: 100%;

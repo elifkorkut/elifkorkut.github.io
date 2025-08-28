@@ -2,7 +2,7 @@
   <Navbar />
   <TopSection />
 
-  <div class="page-wrapper">
+  
     <div class="page-container">
       <!-- Caption -->
       <h1
@@ -15,7 +15,7 @@
       </h1>
 
     </div>
-  </div>
+  
 
   <!-- Publication Layout -->
   <div v-if="isPublicationLayout" class="publication-layout">
@@ -59,17 +59,17 @@
     <div class="secondary-wrapper project-wrapper">
       <div class="layout-responsive">
         <template v-if="isMobile">
-          <ArtBlock :art="project.secondaryArt" />
           <ProjectResponsibilities :responsibilitiesHtml="project.responsibilitiesHtml" />
-          <ArtBlock v-if="project.optArt" :art="project.optArt" class="optart-block" />
+          <ArtBlock :art="project.secondaryArt" />
           <ProjectContributions :contributionsHtml="project.keyContributionsHtml" />
+          <ArtBlock v-if="project.optArt" :art="project.optArt" class="optart-block" />
         </template>
 
         <template v-else>
           <!-- Left Column -->
           <div class="column">
-            <ArtBlock :art="project.secondaryArt" />
             <ProjectResponsibilities :responsibilitiesHtml="project.responsibilitiesHtml" />
+            <ArtBlock :art="project.secondaryArt" />
             <ArtBlock v-if="project.optArt" :art="project.optArt" class="optart-block" />
           </div>
 
@@ -168,13 +168,13 @@ onMounted(() => {
 .page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  /* Removed horizontal padding */
+  
 }
 
 .page-container {
   width: 100%;
-  margin: 10rem 0 2rem 0; /* Increased top margin */
-  padding: 0 2rem; /* Keep padding on the title container */
+  margin: 10rem 0 0rem 0; 
+  padding: 0 2rem; 
 }
 
 .caption {
@@ -203,10 +203,11 @@ onMounted(() => {
 }
 
 .project-layout, .publication-layout {
-  max-width: 100%; /* Allow layouts to be full width */
-  margin: 0 auto 2rem auto;
-  /* Removed horizontal padding */
+
+  max-width: 100%; 
+  margin: -1rem auto 2rem auto; /* Use negative margin-top to reduce space */
 }
+  
 
 .layout-responsive, .layout-split {
   display: flex;
@@ -326,11 +327,15 @@ onMounted(() => {
   .layout-responsive, .layout-split {
     flex-direction: column;
   }
+  .page-container {
+    margin-top: 10rem; 
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 768px) {
   .page-container {
-    margin-top: 8rem; /* Increased top margin for mobile */
+    margin-top: 10rem;
     padding: 0 1rem;
   }
   .summary-wrapper, .secondary-wrapper, .gallery-wrapper {

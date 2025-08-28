@@ -8,7 +8,7 @@ const experience = ref([
         title: 'Game Developer',
         company: 'Nomad Monkey',
         companyUrl: 'https://nomadmonkey.xyz/', // Added company URL
-        period: '2023 March - Current',
+        period: '2023 March - 2025 August',
         achievements: [
             'Led end-to-end development of <strong>five published VR titles</strong>, handling design, programming, and deployment.',
             'Implemented multiplayer functionalities using <strong>Photon Fusion</strong> and <strong>Fishnet</strong> combined with <strong>Epic Game Online Services</strong>.',
@@ -93,6 +93,24 @@ const interests = ref([
                     </div>
                 </div>
             </section>
+
+            <section id="education">
+                <h2 class="section-title">Education</h2>
+                <div class="list-container">
+                     <!-- Each education entry is its own card -->
+                    <div v-for="edu in education" :key="edu.degree" class="card">
+                        <div class="card-header">
+                            <div class="header-main-content">
+                                <h3>{{ edu.degree }}</h3>
+                                <p class="institution">{{ edu.institution }}</p>
+                            </div>
+                            <div class="date">{{ edu.period }}</div>
+                        </div>
+                        <p class="department">{{ edu.department }}</p>
+                    </div>
+                </div>
+            </section>
+
             
             <section id="publications">
                 <h2 class="section-title">Publications</h2>
@@ -114,36 +132,8 @@ const interests = ref([
                 </div>
             </section>
 
-            <section id="skills">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid">
-                    <!-- Each skill category is its own card -->
-                    <div v-for="category in skills" :key="category.title" class="card">
-                        <h4>{{ category.title }}</h4>
-                        <div class="tags-container">
-                            <span v-for="skill in category.items" :key="skill" class="skill-tag">{{ skill }}</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="education">
-                <h2 class="section-title">Education</h2>
-                <div class="list-container">
-                     <!-- Each education entry is its own card -->
-                    <div v-for="edu in education" :key="edu.degree" class="card">
-                        <div class="card-header">
-                            <div class="header-main-content">
-                                <h3>{{ edu.degree }}</h3>
-                                <p class="institution">{{ edu.institution }}</p>
-                            </div>
-                            <div class="date">{{ edu.period }}</div>
-                        </div>
-                        <p class="department">{{ edu.department }}</p>
-                    </div>
-                </div>
-            </section>
-
+        
+           
             <section id="awards">
                 <h2 class="section-title">Participation & Awards</h2>
                 <div class="list-container">
@@ -160,7 +150,18 @@ const interests = ref([
                     </div>
                 </div>
             </section>
-
+            <section id="skills">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <!-- Each skill category is its own card -->
+                    <div v-for="category in skills" :key="category.title" class="card">
+                        <h4>{{ category.title }}</h4>
+                        <div class="tags-container">
+                            <span v-for="skill in category.items" :key="skill" class="skill-tag">{{ skill }}</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="languages">
                 <h2 class="section-title">Languages</h2>
                 <div class="languages-grid">

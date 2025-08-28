@@ -9,120 +9,105 @@ export default
       role: 'Game Developer',
       link1:'',
       link2:'',
-      shortDescription: 'A VR Horror Adventure Game',
-      tags: ['Oculus', 'Unity', 'Photon'],
-      types: [ 'Published Game'],
+      shortDescription: 'Bicycle Simulation Game',
+      tags: ['Oculus', 'Unity'],
+      types: [ 'Published Games'],
       mainArt: {
-        type: 'image',
-        src: '/images/tunnels/1920x1080.png',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        type: 'video',
+        src: 'images/downhillbike/DownhillBikev4.mp4',
+        alt: 'Downhill Bike (2023)',
+        description: 'Downhill Bike (2023)'
       },
       optArt: {
-        type: 'image',
-        src: '/images/tunnels/1920x1080.png',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        type: 'video',
+        src: 'images/downhillbike/DownhillBikev1.mp4',
+        alt: 'Downhill Bike (2023)',
+        description: 'Downhill Bike (2023)'
       },
       secondaryArt: {
         type: 'video',
-        src: '/images/tunnels/v1.mp4',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        src: 'images/downhillbike/DownhillBikev2.mp4',
+        alt: 'Downhill Bike (2023)',
+        description: 'Downhill Bike (2023)'
       },
       summaryHtml: `
-        <p>Tunnels is a VR horror game with single-player and multiplayer modes, focused on creating a tense, claustrophobic experience. Players can crawl, swim, climb, and zipline to explore the environment. Enemies react to light, sound, and movement, forcing players to adapt their strategies. In single-player, you follow a story through eerie tunnels, guided by cryptic clues and a mysterious voice on the radio. In multiplayer, players face changing maze-like levels and must cooperate to escape while avoiding monsters.</p>
+        <p>Downhill Bike is a VR cycling game that immerses players in scenic forest environments with a focus on realism and competitive gameplay. It features a detailed physics-based bike system with suspension, dual-brake controls, leaning, bunny hops, and wheelies. The game includes Oculus leaderboard integration, ghost players, replay functionality, and a simulated multiplayer mode, supported by haptic feedback and spatial audio for a fully immersive experience.</p>
      `
        ,
       detailsHtml: `
-      <li><strong>Released Date: </strong> May 2025</li>
-      <li><strong>Project Length:</strong> 1 Year</li>
-      <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/tunnels/6963147540402115/" target="_blank" rel="noopener noreferrer">Tunnels</a></li>
+      <li><strong>Released Date: </strong> May 2023</li>
+      <li><strong>Project Length:</strong> 4 Months</li>
+      <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/downhill-bike/9076937272378581/?srsltid=AfmBOoqrJ6JJEkYQxQEBI3TNL18YiEpOHKDX-BdEC8TkNJqL0l4q7pn4" target="_blank" rel="noopener noreferrer">Downhill Bike</a></li>
       <li><strong>Studio:</strong> <a href="https://nomadmonkey.xyz/" target="_blank" rel="noopener noreferrer">Nomad Monkey</a></li>
-      <li><strong>Publisher: </strong><a href="https://mastiff-games.com/games/" target="_blank" rel="noopener noreferrer">Mastiff Games</a> </li>
+      <li><strong>Publisher: </strong><a href="https://www.joygame.com/" target="_blank" rel="noopener noreferrer">Joy Game</a> </li>
       <li><strong>My Role:</strong> Game Developer</li>
-      <li><strong>Technologies:</strong> Unity, C#, Photon, Oculus, Blender</li>`
+      <li><strong>Technologies:</strong> Unity, C#, Oculus, Blender</li>`
       ,
       responsibilitiesHtml: `
-        <p>As the game developer for the Tunnels project, I was responsible for the full technical implementation of both single-player and multiplayer modes. I worked closely with sound designers and game artists, providing custom Unity tools to support their work and enhance their workflows.
+        <p>As the sole developer for Downhill Bike, I was responsible for the complete design and implementation of all core systems. I developed gameplay mechanics, VR interactions, UI systems, and performance optimizations. I also worked closely with artists and designers to support their workflows and ensure a cohesive and immersive VR experience on Oculus platforms.
   </p>
       `,
       roleHtml: `
-        <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
+        <p></p>
       `,
-      keyContributionsHtml: ` <div class="contribution-header">Advanced Machine Learning Architecture</div>
-<p>Developed a novel <span class="highlight">neural network architecture</span> that improved model accuracy by <span class="metric">35%</span> while reducing computational overhead. This breakthrough enables <span class="emphasis">real-time processing</span> of complex data patterns in resource-constrained environments.</p>
-<p>The architecture incorporates <span class="highlight">attention mechanisms</span> and <strong>dynamic routing protocols</strong> that adapt to varying input complexities, making it particularly effective for edge computing applications.</p>
+      keyContributionsHtml: [
 
-<div class="contribution-header">Scalable Data Pipeline Framework</div>
-<p>Architected and implemented a <span class="highlight">distributed data processing system</span> capable of handling <span class="metric">10TB+ daily throughput</span> with <span class="metric">99.9% uptime</span> reliability. The framework reduces data processing latency by <span class="emphasis">60%</span> compared to previous solutions.</p>
-<p>Built using <span class="highlight">Apache Kafka</span> and <span class="highlight">Kubernetes orchestration</span>, the system automatically scales based on demand and includes comprehensive <strong>monitoring and alerting capabilities</strong>.</p>
-
-<div class="contribution-header">Open Source Security Tool</div>
-<p>Created and maintained a widely-adopted <span class="highlight">cybersecurity analysis tool</span> with over <span class="metric">5,000 GitHub stars</span> and active contribution from <span class="emphasis">200+ developers worldwide</span>. The tool has been integrated into major enterprise security platforms.</p>
-<p>Features include <span class="highlight">automated vulnerability scanning</span>, <strong>threat intelligence integration</strong>, and support for multiple programming languages and frameworks.</p>
-
-<div class="contribution-header">Research Publication & Industry Impact</div>
-<p>Published <span class="metric">12 peer-reviewed papers</span> in top-tier conferences including <span class="highlight">NeurIPS</span> and <span class="highlight">ICML</span>, with total citations exceeding <span class="emphasis">800+</span>. Research focuses on intersection of AI ethics and algorithmic fairness.</p>
-<p>Led cross-functional teams to translate research findings into <strong>production-ready solutions</strong> that have been deployed across <span class="highlight">Fortune 500 companies</span>, impacting millions of users globally.</p>
-`
+        
+          {
+            "header": "Bicycle Physics & Core Mechanics",
+            "description": "Engineered a fully interactive, physics-based bike system featuring <b>suspension, dual-brake controls, bunny hops, leaning, and wheelie functionality</b> for realistic movement and control."
+          },
+          {
+            "header": "Immersive VR Interactions",
+            "description": "Designed intuitive VR systems that prioritized player comfort and precision, enhancing realism through <b>motion dynamics, haptic feedback, and spatial audio</b>."
+          },
+          {
+            "header": "Simulated Multiplayer & Replay Systems",
+            "description": "Created a simulated multiplayer experience by developing a <b>replay system</b> and implementing <b>ghost players</b> for performance benchmarking and asynchronous competition."
+          },
+          {
+            "header": "Leaderboards & Checkpoints",
+            "description": "Implemented both global (<b>Oculus-integrated</b>) and local leaderboard systems, along with <b>checkpoint mechanics</b> to support competitive progression and player motivation."
+          },
+          {
+            "header": "Performance Optimization",
+            "description": "Profiled and optimized <b>CPU, GPU, and memory performance</b> for smooth gameplay on Oculus devices. Focused on VR-specific performance using <b>Unity Profiler</b> and custom tools for lighting and physics tuning."
+          },
+          {
+            "header": "UI Systems & Tutorial Design",
+            "description": "Developed <b>in-game UI elements</b> and a guided <b>tutorial mode</b>, enhancing onboarding and player retention. Collaborated with design and art to maintain clarity and VR comfort standards."
+          }
+        
+      ]
     
       ,
       gallery: [
         {
-          type: 'image',
-          src: 'images/tunnels/p1.png',
-          alt: 'tunnelsp1',
-          topText: 'Main Menu Art',
-          bottomText: 'Rendered in Unity HDRP'
+          type: 'video',
+          src: 'images/downhillbike/DownhillBikeg1.mp4',
+          alt: 'dbv1',
+          topText: '',
+          bottomText: ''
         },
-        {
-          type: 'image',
-          src: 'images/tunnels/p2.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+     
   
         {
-          type: 'image',
-          src: 'images/tunnels/p3.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          type: 'video',
+          src: 'images/downhillbike/DownhillBikeg4.mp4',
+          alt: 'dbv4',
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'video',
-          src: 'images/tunnels/v1.mp4',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+          src: 'images/downhillbike/DownhillBikeg5.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        }
   
-        {
-          type: 'image',
-          src: 'images/tunnels/p4.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p5.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p6.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+       
   
       ]
     }

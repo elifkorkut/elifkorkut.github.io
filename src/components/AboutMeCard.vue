@@ -32,7 +32,7 @@ export default {
           Since then, I’ve worked with a wide range of XR devices developing immersive experiences and games that blend art, tech, and a sprinkle of wonder. I even spent a beautiful, slightly chilly chapter in Sweden as an Erasmus student, where I discovered lots of metal bands, and the joy of fika with brilliant developers. I learned a lot, froze a little, and came back with a bigger heart and sharper skills.
         </p>
         <p>
-          After that, I started my first role in the industry, where I developed and published a variety of VR titles bringing immersive ideas to life and turning wild prototypes into real, playable, sometimes delightfully strange experiences. Every project added a new piece to the puzzle of what I love most: blending technology, creativity, and storytelling.
+          After that, I started my first role in the industry, where I developed and published a variety of VR titles bringing immersive ideas to life and turning wild prototypes into real, playable, sometimes delightfully strange experiences.
         </p>
         <p>
           Today, I continue exploring the intersection of design and development building virtual worlds that connect, surprise, and inspire. When I’m not coding or designing, you’ll probably find me behind a camera lens, lost in a museum, or dancing flamenco (¡Olé!).
