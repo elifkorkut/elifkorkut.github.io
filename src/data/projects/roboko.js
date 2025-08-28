@@ -1,134 +1,117 @@
 export default 
     { 
-      id: 1,
+      id: 5,
       show: true,
-      slug: 'tunnels',
-      link: '/project/tunnels',
-      cardImage: '/images/tunnels/CoverSquare.png',
-      title: 'Tunnels',
+      slug: 'roboko',
+      link: '/project/roboko',
+      cardImage: '/images/downhillbike/DownhillBikeLogo.png',
+      title: 'RoboKO',
       role: 'Game Developer',
       link1:'',
       link2:'',
-      shortDescription: 'A VR Horror Adventure Game',
-      tags: ['Oculus', 'Unity', 'Photon'],
+      shortDescription: '',
+      tags: ['Oculus', 'Unity', 'VR','EOS', 'Fishnet'],
       types: [ 'Published Games'],
       mainArt: {
-        type: 'image',
-        src: '/images/tunnels/1920x1080.png',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        type: 'video',
+        src: 'images/downhillbike/DownhillBikev4.mp4',
+        alt: 'RoboKO (2024)',
+        description: 'RoboKO (2024)'
       },
       optArt: {
-        type: 'image',
-        src: '/images/tunnels/1920x1080.png',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        type: 'video',
+        src: 'images/downhillbike/DownhillBikev1.mp4',
+        alt: 'RoboKO (2024)',
+        description: 'RoboKO (2024)'
       },
       secondaryArt: {
         type: 'video',
-        src: '/images/tunnels/v1.mp4',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        src: 'images/downhillbike/DownhillBikev2.mp4',
+        alt: 'RoboKO (2024)',
+        description: 'RoboKO (2024)'
       },
       summaryHtml: `
-        <p>Tunnels is a VR horror game with single-player and multiplayer modes, focused on creating a tense, claustrophobic experience. Players can crawl, swim, climb, and zipline to explore the environment. Enemies react to light, sound, and movement, forcing players to adapt their strategies. In single-player, you follow a story through eerie tunnels, guided by cryptic clues and a mysterious voice on the radio. In multiplayer, players face changing maze-like levels and must cooperate to escape while avoiding monsters.</p>
+        <p>Downhill Bike is a VR cycling game that immerses players in scenic forest environments with a focus on realism and competitive gameplay. It features a detailed physics-based bike system with suspension, dual-brake controls, leaning, bunny hops, and wheelies. The game includes Oculus leaderboard integration, ghost players, replay functionality, and a simulated multiplayer mode, supported by haptic feedback and spatial audio for a fully immersive experience.</p>
      `
        ,
       detailsHtml: `
-      <li><strong>Released Date: </strong> May 2025</li>
-      <li><strong>Project Length:</strong> 1 Year</li>
-      <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/tunnels/6963147540402115/" target="_blank" rel="noopener noreferrer">Tunnels</a></li>
-      <li><strong>Studio:</strong> <a href="https://nomadmonkey.xyz/" target="_blank" rel="noopener noreferrer">Nomad Monkey</a></li>
-      <li><strong>Publisher: </strong><a href="https://mastiff-games.com/games/" target="_blank" rel="noopener noreferrer">Mastiff Games</a> </li>
+      <li><strong>Released Date: </strong> May 2024</li>
+      <li><strong>Project Length:</strong> 5 Months</li>
+      <li><strong>Meta Store: </strong><a href="https://www.meta.com/tr-tr/experiences/roboko/7074323599349672/?srsltid=AfmBOopkt-r7XM-nbrQqkNMwngJ9ydo_AvbICutw7lMfsgiUU1z8CxB9" target="_blank" rel="noopener noreferrer">RoboKO</a></li>
+      <li><strong>Studio:</strong> <a href="https://nomadmonkey.xyz/" target="_blank" rel="noopener noreferrer">Nomad Monkey & Enver</a></li>
+      <li><strong>Publisher: </strong><a href="https://www.enverstudio.com/" target="_blank" rel="noopener noreferrer">Enver</a> </li>
       <li><strong>My Role:</strong> Game Developer</li>
-      <li><strong>Technologies:</strong> Unity, C#, Photon, Oculus, Blender</li>`
+      <li><strong>Technologies:</strong> Unity, C#, Oculus, Blender, EOS, Fishnet </li>`
       ,
       responsibilitiesHtml: `
-        <p>As the game developer for the Tunnels project, I was responsible for the full technical implementation of both single-player and multiplayer modes. I worked closely with sound designers and game artists, providing custom Unity tools to support their work and enhance their workflows.
-  </p>
+        <p>
+
+I was responsible for architecting and implementing core multiplayer gameplay systems, along with features for customization, monetization, and Mixed Reality (MR) integration. My work focused on building scalable infrastructure and tools to enhance user interaction and player engagement.  </p>
       `,
       roleHtml: `
-        <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
+        <p></p>
       `,
-      keyContributionsHtml: 
-        `
-  <strong>Multiplayer Integration</strong><br>
-  Built multiplayer functionality using <strong> Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
-  
-  <br><strong>Monetization & Platform Services </strong><br>
-  Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.
-  
-  <br> <strong>VR Gameplay & Mechanics</strong><br>
-  Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
-  
-  <br><strong>AI Systems</strong><br>
-    <p><span class="text-large">Led Core Gameplay Systems</span></p>
-    <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
-    <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
-    <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.
-  
-  <br><strong>Performance Optimization</strong><br>
-  Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.
-  
-  <br><strong>UI, Localization & Asset Management</strong><br>
-  Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.
-  `
+      keyContributionsHtml: [
+
+        
+          {
+            "header": "Multiplayer Integration & Networking",
+            "description": "Developed multiplayer systems using <b>FishNet</b> and <b>Epic Online Services</b> for stable, <b>synchronized VR gameplay</b>. Designed the core loop, including <b>matchmaking</b> and <b>player balancing</b>."
+          },
+          {
+            "header": "Character Customization & Shaders",
+            "description": "Created advanced <b>character customization</b> tools, including <b>custom shader development</b>, to allow for deep visual and cosmetic personalization."
+          },
+          {
+            "header": "Save & Monetization Infrastructure",
+            "description": "Built a scalable <b>save system</b> using <b>PlayFab</b> and integrated <b>in-app purchases</b> via Meta’s platform to support <b>meta-progression</b>, match history, and saved customizations."
+          },
+          {
+            "header": "Gameplay Loop Engineering",
+            "description": "Engineered and implemented the <b>core multiplayer gameplay loop</b> with a dedicated focus on <b>performance, synchronization</b>, and a smooth <b>user experience (UX)</b>."
+          },
+          {
+            "header": "Mixed Reality Integration",
+            "description": "Integrated <b>Mixed Reality (MR)</b> features that blend <b>real-world interactions</b> with in-game elements to elevate immersion and interactivity."
+          },
+          {
+            "header": "Integrated UI/UX Systems",
+            "description": "Developed <b>responsive in-game UI</b> and <b>interaction mechanics</b> that are deeply integrated with core gameplay systems for a seamless user experience."
+          }
+        
+         
+      ]
+    
       ,
       gallery: [
         {
-          type: 'image',
-          src: 'images/tunnels/p1.png',
-          alt: 'tunnelsp1',
-          topText: 'Main Menu Art',
-          bottomText: 'Rendered in Unity HDRP'
+          type: 'video',
+          src: 'images/downhillbike/DownhillBikeg1.mp4',
+          alt: 'dbv1',
+          topText: '',
+          bottomText: ''
         },
-        {
-          type: 'image',
-          src: 'images/tunnels/p2.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+     
   
         {
-          type: 'image',
-          src: 'images/tunnels/p3.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          type: 'video',
+          src: 'images/downhillbike/DownhillBikeg4.mp4',
+          alt: 'dbv4',
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'video',
-          src: 'images/tunnels/v1.mp4',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          src: 'images/downhillbike/DownhillBikeg5.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
         },
+
+       
   
-        {
-          type: 'image',
-          src: 'images/tunnels/p4.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p5.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p6.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+       
   
       ]
     }

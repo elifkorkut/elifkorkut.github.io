@@ -1,5 +1,5 @@
 <template>
-  <section class="grid-gallery">
+  <section :class="galleryClasses">
     <div
       class="gallery-item"
       v-for="(item, index) in items"
@@ -30,29 +30,55 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   items: {
     type: Array,
     required: true
   }
 });
+
+// Dynamically determine the classes for the gallery container
+const galleryClasses = computed(() => {
+  return {
+    'grid-gallery': true,
+    'regular-grid': props.items.length < 5,
+    'colossal-grid': props.items.length >= 5,
+  };
+});
 </script>
 
 <style scoped>
-/* Masonry layout using CSS columns */
+/* Base styles for the gallery container */
 .grid-gallery {
+  margin-top: 3rem;
+}
+
+/* --- Layout for MORE than 3 items (Colossal/Masonry) --- */
+.colossal-grid {
   column-count: 3;
   column-gap: 2rem;
-  margin-top: 3rem;
+}
+
+/* --- Layout for LESS than 4 items (Regular Grid) --- */
+.regular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 /* Individual items */
 .gallery-item {
-  break-inside: avoid;
   margin-bottom: 2rem;
-  display: inline-block;
   width: 100%;
   text-align: center;
+}
+
+/* Specific style for items in a colossal/masonry layout */
+.colossal-grid .gallery-item {
+  break-inside: avoid;
+  display: inline-block;
 }
 
 /* Top caption */
@@ -77,17 +103,26 @@ defineProps({
   color: var(--text-secondary);
 }
 
-/* Responsive: 2 columns on tablets */
+/* --- Responsive Styles --- */
+
+/* Tablet view */
 @media (max-width: 1024px) {
-  .grid-gallery {
+  .colossal-grid {
     column-count: 2;
+  }
+  .regular-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Responsive: 1 column on mobile */
+/* Mobile view */
 @media (max-width: 640px) {
-  .grid-gallery {
+  .colossal-grid {
     column-count: 1;
+  }
+  .regular-grid {
+    /* If there are 3 items, they will stack vertically */
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>

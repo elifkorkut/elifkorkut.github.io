@@ -1,134 +1,111 @@
 export default 
     { 
-      id: 1,
+      id: 3,
       show: true,
-      slug: 'tunnels',
-      link: '/project/tunnels',
-      cardImage: '/images/tunnels/CoverSquare.png',
-      title: 'Tunnels',
+      slug: 'wretched',
+      link: '/project/wretched',
+      cardImage: 'images/wretched/WretchedCoverSquare.png',
+      title: 'Wretched',
       role: 'Game Developer',
       link1:'',
       link2:'',
-      shortDescription: 'A VR Horror Adventure Game',
-      tags: ['Oculus', 'Unity', 'Photon'],
+      shortDescription: 'A VR Horror Shooter Game',
+      tags: ['Oculus', 'Unity', 'VR'],
       types: [ 'Published Games'],
       mainArt: {
         type: 'image',
-        src: '/images/tunnels/1920x1080.png',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        src: 'images/wretched/Wretched1920x1080.png',
+        alt: 'Wretched (2023)',
+        description: 'Wretched (2023)'
       },
       optArt: {
-        type: 'image',
-        src: '/images/tunnels/1920x1080.png',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        type: 'video',
+        src: 'images/wretched/wretchedv2.mp4',
+        alt: 'Wretched (2023)',
+        description: 'Wretched (2023)'
       },
       secondaryArt: {
         type: 'video',
-        src: '/images/tunnels/v1.mp4',
-        alt: 'Tunnels (2025)',
-        description: 'Tunnels (2025)'
+        src: 'images/wretched/wretchedv1.mp4',
+        alt: 'Wretched (2023)',
+        description: 'Wretched (2023)'
       },
       summaryHtml: `
-        <p>Tunnels is a VR horror game with single-player and multiplayer modes, focused on creating a tense, claustrophobic experience. Players can crawl, swim, climb, and zipline to explore the environment. Enemies react to light, sound, and movement, forcing players to adapt their strategies. In single-player, you follow a story through eerie tunnels, guided by cryptic clues and a mysterious voice on the radio. In multiplayer, players face changing maze-like levels and must cooperate to escape while avoiding monsters.</p>
+        <p>
+Wretched is a highly immersive VR horror shooter that traps players in a nightmarish, blood-drenched hospital. Bound to a confined platform, players must survive waves of terrors using only a flashlight and a pistol. The game blends psychological horror with intense shooter mechanics, creating a tense and adrenaline-fueled experience.        </p>
      `
        ,
       detailsHtml: `
-      <li><strong>Released Date: </strong> May 2025</li>
-      <li><strong>Project Length:</strong> 1 Year</li>
-      <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/tunnels/6963147540402115/" target="_blank" rel="noopener noreferrer">Tunnels</a></li>
+      <li><strong>Released Date: </strong> July 2023</li>
+      <li><strong>Project Length:</strong> 2 Months</li>
+      <li><strong>Meta Store: </strong><a href="https://www.meta.com/experiences/wretched/9659173670822828/?srsltid=AfmBOopY4ZFzDkcJKNMlFnBDNQYUQ0w9EGY3TAB2OqJeu7FatNyCsxNZ" target="_blank" rel="noopener noreferrer">Wretched</a></li>
       <li><strong>Studio:</strong> <a href="https://nomadmonkey.xyz/" target="_blank" rel="noopener noreferrer">Nomad Monkey</a></li>
       <li><strong>Publisher: </strong><a href="https://mastiff-games.com/games/" target="_blank" rel="noopener noreferrer">Mastiff Games</a> </li>
       <li><strong>My Role:</strong> Game Developer</li>
-      <li><strong>Technologies:</strong> Unity, C#, Photon, Oculus, Blender</li>`
+      <li><strong>Technologies:</strong> Unity, C#, Oculus, Blender</li>`
       ,
       responsibilitiesHtml: `
-        <p>As the game developer for the Tunnels project, I was responsible for the full technical implementation of both single-player and multiplayer modes. I worked closely with sound designers and game artists, providing custom Unity tools to support their work and enhance their workflows.
+        <p>
+As the developer of Wretched, I was responsible for building core gameplay systems for this VR horror shooter. My work focused on AI behavior, interaction mechanics, saving systems, and integrating gameplay feedback with the art and design team to deliver a tense and immersive horror experience.
   </p>
       `,
       roleHtml: `
-        <p>As the only gameplay developer, I was responsible for integrating input and motion...</p>
+        <p></p>
       `,
       keyContributionsHtml: 
-        `
-  <strong>Multiplayer Integration</strong><br>
-  Built multiplayer functionality using <strong> Photon Fusion</strong> for low-latency networking and Photon Voice for in-game voice communication, supporting scalable and synchronized cooperative gameplay.
-  
-  <br><strong>Monetization & Platform Services </strong><br>
-  Integrated in-app purchases and virtual currency systems for Meta Horizon and Oculus, supporting soft currency economies. Connected with Unity Cloud Save and Unity Analytics for persistent player data and behavior tracking.
-  
-  <br> <strong>VR Gameplay & Mechanics</strong><br>
-  Developed immersive VR systems including crawling, swimming, climbing, and ziplining with physics-driven interactions. Scripted dynamic environmental events such as earthquakes and floods to heighten immersion and gameplay tension.
-  
-  <br><strong>AI Systems</strong><br>
-    <p><span class="text-large">Led Core Gameplay Systems</span></p>
-    <p><span class="text-medium">Implemented AI behavior trees and combat logic</span></p>
-    <p><span class="text-small">Also contributed to UI design and UX flows.</span></p>
-    <p><span class="text-highlight">Optimized performance by 40% on mobile devices</span></p>Implemented modular, scalable behaviors for enemy AIs that dynamically react to light, sound, and player movement.
-  
-  <br><strong>Performance Optimization</strong><br>
-  Optimized for VR by profiling and refining CPU, GPU, and memory usage using tools like Unity Profiler, Frame Debugger, and Memory Profiler. Developed custom VR-specific optimizations to maintain high frame rates. Created custom tools for managing baked lighting, fog systems, and light probe setups, enabling real-time adaptation and runtime adjustments based on precomputed lighting data.
-  
-  <br><strong>UI, Localization & Asset Management</strong><br>
-  Integrated diegetic and non-diegetic UI for VR, supported multi-language localization via Unity Localization, and used Addressables for modular asset streaming and memory management during runtime.
-  `
+      [
+        {
+          "header": "Dynamic AI Behavior System",
+          "description": "Developed a <b>state machine-based AI</b> system for dynamic enemy behavior, enabling <b>responsive and immersive</b> gameplay interactions."
+        },
+        {
+          "header": "Player Progression & Save System",
+          "description": "Implemented a robust <b>save system</b> to track <b>player progress</b> and critical <b>game state</b>, ensuring a seamless experience across multiple sessions."
+        },
+        {
+          "header": "VR Combat & Interaction Mechanics",
+          "description": "Designed and implemented core VR combat mechanics, including a <b>flashlight system, realistic shooting</b> with <b>ammo tracking</b>, and intuitive <b>reloading actions</b> tailored for immersive controls."
+        },
+        {
+          "header": "Destructible Environments",
+          "description": "Engineered a system for <b>destructible environments</b>, featuring dynamic meshes for <b>breakable glass</b> and interactive objects to enhance player immersion and realism."
+        },
+        {
+          "header": "UI & Gameplay Integration",
+          "description": "Developed core <b>in-game UI elements</b> and gameplay logic, collaborating closely with art and design teams to ensure a <b>cohesive and intuitive</b> player experience."
+        }
+      ]
+ 
       ,
       gallery: [
-        {
-          type: 'image',
-          src: 'images/tunnels/p1.png',
-          alt: 'tunnelsp1',
-          topText: 'Main Menu Art',
-          bottomText: 'Rendered in Unity HDRP'
+     
+
+       {
+          type: 'video',
+          src: 'public/images/wretched/wretchedg1.mp4',
+          alt: 'dbv1',
+          topText: '',
+          bottomText: ''
         },
-        {
-          type: 'image',
-          src: 'images/tunnels/p2.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+     
   
         {
-          type: 'image',
-          src: 'images/tunnels/p3.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          type: 'video',
+          src: 'public/images/wretched/wretchedg2.mp4',
+          alt: 'dbv4',
+          topText: '',
+          bottomText: ''
         },
   
         {
           type: 'video',
-          src: 'images/tunnels/v1.mp4',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
+          src: 'public/images/wretched/wretchedg3.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
         },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p4.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p5.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
-  
-        {
-          type: 'image',
-          src: 'images/tunnels/p6.png',
-          alt: 'Gameplay Preview',
-          topText: 'Gameplay Trailer',
-          bottomText: 'Raw captured footage from Quest 2'
-        },
+
+          
   
       ]
     }
