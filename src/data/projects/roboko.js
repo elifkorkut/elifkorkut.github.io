@@ -4,34 +4,35 @@ export default
       show: true,
       slug: 'roboko',
       link: '/project/roboko',
-      cardImage: '/images/downhillbike/DownhillBikeLogo.png',
+      cardImage: 'images/roboko/Square.png',
       title: 'RoboKO',
       role: 'Game Developer',
       link1:'',
       link2:'',
-      shortDescription: '',
-      tags: ['Oculus', 'Unity', 'VR','EOS', 'Fishnet'],
+      shortDescription: 'Multiplayer VR Boxing Game',
+      tags: ['Oculus', 'Unity', 'VR','XR','EOS', 'Fishnet'],
       types: [ 'Published Games'],
       mainArt: {
-        type: 'video',
-        src: 'images/downhillbike/DownhillBikev4.mp4',
+        type: 'image',
+        src: 'images/roboko/Cover.png',
         alt: 'RoboKO (2024)',
         description: 'RoboKO (2024)'
       },
       optArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev1.mp4',
+        src: 'public/images/roboko/Robokov1.mp4',
         alt: 'RoboKO (2024)',
         description: 'RoboKO (2024)'
       },
       secondaryArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev2.mp4',
+        src: 'images/roboko/Robokov2.mp4',
         alt: 'RoboKO (2024)',
         description: 'RoboKO (2024)'
       },
       summaryHtml: `
-        <p>Downhill Bike is a VR cycling game that immerses players in scenic forest environments with a focus on realism and competitive gameplay. It features a detailed physics-based bike system with suspension, dual-brake controls, leaning, bunny hops, and wheelies. The game includes Oculus leaderboard integration, ghost players, replay functionality, and a simulated multiplayer mode, supported by haptic feedback and spatial audio for a fully immersive experience.</p>
+        <p>
+RoboKO is a multiplayer VR boxing game developed in Unity, featuring 1:1 motion tracking to deliver responsive and immersive robotic combat. The game includes a competitive online mode and a single-player career mode with AI opponents. The project also features a dynamic customization system allowing players to personalize their robot fighters.        </p>
      `
        ,
       detailsHtml: `
@@ -86,7 +87,7 @@ I was responsible for architecting and implementing core multiplayer gameplay sy
       gallery: [
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg1.mp4',
+          src: 'images/roboko/Robokog1.mp4',
           alt: 'dbv1',
           topText: '',
           bottomText: ''
@@ -95,7 +96,7 @@ I was responsible for architecting and implementing core multiplayer gameplay sy
   
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg4.mp4',
+          src: 'images/roboko/Robokog2.mp4',
           alt: 'dbv4',
           topText: '',
           bottomText: ''
@@ -103,11 +104,19 @@ I was responsible for architecting and implementing core multiplayer gameplay sy
   
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg5.mp4',
+          src: 'images/roboko/Robokog3.mp4',
           alt: 'dbv5',
           topText: '',
           bottomText: ''
         },
+        {
+          type: 'video',
+          src: 'images/roboko/Robokog4.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
 
        
   

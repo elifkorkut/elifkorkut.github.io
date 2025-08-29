@@ -52,7 +52,7 @@ const skills = ref([
 
 const publications = ref([
     { title: 'Developing a Framework for Heterotopias as Discursive Playgrounds : A Comparative Analysis of Non-Immersive and Immersive Technologies', year: '2024', journal: 'Virtual Reality 28, 16,  Springer (2024)', url: 'https://link.springer.com/article/10.1007/s10055-023-00905-w' },
-    { title: 'Creating a Virtual Museum Framework for Immersive Reality Environments Through a Perspective From Heterotopia', year: '2023', journal: 'Master of Science, Middle East Technical University', url: 'https://open.metu.edu.tr/handle/11511/101949' },
+    { title: 'Creating a Virtual Museum Framework for Immersive Reality Environments Through a Perspective From Heterotopia', year: '2023', journal: "Master's Thesis, Middle East Technical University", url: 'https://open.metu.edu.tr/handle/11511/101949' },
     { title: 'Visualization in virtual reality : a systematic review', year: '2023', journal: 'Virtual Reality 27, 1447–1480', url: 'https://link.springer.com/article/10.1007/s10055-023-00753-8' },
     { title: 'Sketch Recognition for Interactive Game Experiences Using Neural Networks', year: '2021', journal: '2021 Entertainment Computing – ICEC 2021. Lecture Notes in Computer Science(), vol 13056.', url: 'https://link.springer.com/chapter/10.1007/978-3-030-89394-1_31' }
 ]);
