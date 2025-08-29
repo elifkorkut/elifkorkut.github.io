@@ -23,7 +23,7 @@
         @click="toggleDropdown"
       >
         <span id="selected-category">{{ selectedCategory }}</span>
-        <span id="chevron-icon">▼</span>
+        <span class="chevron-icon" :class="{ rotated: dropdownVisible }">▼</span>
       </div>
       <div
         id="dropdown-menu"
@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <div :class="masonryClasses">
+  <div :class="gridClasses">
     <router-link
       v-for="project in filteredProjects"
       :key="project.id"
@@ -71,12 +71,12 @@ const selectedCategory = ref('All');
 const filteredProjects = ref([]);
 const dropdownVisible = ref(false);
 
-// Dynamically determine the classes for the projects container
-const masonryClasses = computed(() => {
+// NEW: Computed property to dynamically set grid classes
+const gridClasses = computed(() => {
   return {
-    'projects-masonry': true, // Base class
-    'regular-grid': filteredProjects.value.length < 5,
-    'colossal-grid': filteredProjects.value.length >= 5,
+    'projects-grid': true, // Base class for all layouts
+    'regular-grid': filteredProjects.value.length < 4, // Regular grid for few items
+    'colossal-grid': filteredProjects.value.length >= 4, // Masonry for many items
   };
 });
 
@@ -89,7 +89,7 @@ function applyFilter(category) {
       p => p && p.show !== false && p.types.includes(category)
     );
   }
-  dropdownVisible.value = false;
+  dropdownVisible.value = false; // Close dropdown after selection
 }
 
 function toggleDropdown() {
@@ -102,7 +102,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* --- Base and Filter Styles (largely unchanged) --- */
+/* --- Filter and UI Styles (largely unchanged) --- */
 .filter-container {
   z-index: 5;
   align-items: center;
@@ -133,30 +133,72 @@ onMounted(() => {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.filter-btn:hover {
-  background-color: var(--hover-color-button);
-}
+.filter-btn:hover { background-color: var(--hover-color-button); }
 .filter-btn.active {
   background-color: var(--selected-color-button);
   font-weight: bold;
 }
-/* (Dropdown styles are unchanged) */
-.dropdown-container { display: none; /* ... */ }
+.dropdown-container {
+  display: none;
+  position: relative;
+  margin: 0 30px;
+}
+.dropdown-toggle {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--accent-color-button);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+.chevron-icon {
+  font-size: 16px;
+  transition: transform 0.3s;
+}
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+#dropdown-menu {
+  /* This is controlled by v-show, so no 'display' property is needed here */
+  position: absolute; /* Ensures it overlaps content below */
+  background-color: var(--accent-color-button);
+  margin-top: 5px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.filter-dropdown-btn {
+  padding: 12px 20px;
+  background-color: var(--accent-color-button);
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.filter-dropdown-btn:hover { background-color: var(--hover-color-button); }
 
 /* --- Grid Layout Styles --- */
 
 /* Base styles for the grid container */
-.projects-masonry {
+.projects-grid {
   padding: 20px;
 }
 
-/* Layout for MORE than 3 items (Colossal/Masonry) */
+/* Layout for 4+ items (Colossal/Masonry) */
 .colossal-grid {
   column-count: 3;
   column-gap: 1.5rem;
 }
 
-/* Layout for LESS than 4 items (Regular Grid) */
+/* Layout for less than 4 items (Regular Grid) */
 .regular-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -167,22 +209,18 @@ onMounted(() => {
 .project-card-wrapper {
   width: 100%;
   margin-bottom: 1.5rem;
+  display: block; /* Use block for consistency */
 }
 
-/* Specific styles for items in the colossal/masonry layout */
+/* Specific styles for items in the masonry layout */
 .colossal-grid .project-card-wrapper {
-  display: inline-block;
   break-inside: avoid;
 }
 
 /* --- Responsive Breakpoints --- */
 @media (max-width: 1024px) {
-  .colossal-grid {
-    column-count: 2;
-  }
-  .regular-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .colossal-grid { column-count: 2; }
+  .regular-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 750px) {
@@ -192,15 +230,16 @@ onMounted(() => {
   .dropdown-container {
     display: block;
   }
-  /* Additional responsive rules might be needed here if you want to change grid behavior */
+  /*
+    NOTE: The buggy '#dropdown-menu { display: block; }' rule has been REMOVED
+    to allow Vue's v-show to work correctly.
+  */
+  .colossal-grid { column-count: 2; }
+  .regular-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 500px) {
-  .colossal-grid {
-    column-count: 1;
-  }
-  .regular-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  .colossal-grid { column-count: 1; }
+  .regular-grid { grid-template-columns: repeat(1, 1fr); }
 }
 </style>
