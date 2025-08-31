@@ -7,7 +7,7 @@ import ludikid from './projects/ludikid.js';
 import processing from './projects/processing.js';
 import roboko from './projects/roboko.js';
 import sketchrecognition from './projects/sketchrecognition.js';
-import sketchscape from './projects/sketchscape.js';
+
 import visualisationreview from './projects/visualisationreview.js';
 import wretched from './projects/wretched.js';
 import downhillbike from './projects/downhillbike.js';
@@ -18,5 +18,5 @@ import downhillbike from './projects/downhillbike.js';
 
 ];*/
 
-export const projects = [tunnels,heterotopia,downhillbike,findthedifference, wretched,roboko,
+export const projects = [tunnels,heterotopia,downhillbike,findthedifference, wretched,roboko,visualisationreview,sketchrecognition,
 ];
