@@ -1,5 +1,5 @@
 export default { 
-    id: 5,
+    id: 13,
     show: true,
     slug: 'heterotopia',
     link: '/project/heterotopia',
@@ -24,7 +24,8 @@ export default {
       description: ''
     },
     summaryHtml: `
-      <p>The discursive space represents the reordering of knowledge gained through accumulation. 
+      <p>
+      The discursive space represents the reordering of knowledge gained through accumulation. 
       In the digital age, multimedia has become the language of information, and the space for archival practices is provided by non-immersive technologies, 
       resulting in the disappearance of several layers from discursive activities. 
       Heterotopias are unique, multilayered epistemic contexts that connect 
