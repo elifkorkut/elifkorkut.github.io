@@ -1,10 +1,10 @@
 export default 
     { 
-      id: 1,
+      id: 31,
       show: true,
       slug: 'virtualmuseum',
       link: '/project/virtualmuseum',
-      cardImage: '/images/downhillbike/DownhillBikeLogo.png',
+      cardImage: 'images/virtualmuseum/Square.png',
       title: 'Virtual Museum',
       role: 'Developer',
       link1:'',
@@ -14,25 +14,25 @@ export default
       types: [ 'Multimedia Projects'],
       mainArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev4.mp4',
-        alt: 'Downhill Bike (2023)',
-        description: 'Downhill Bike (2023)'
+        src: 'images/virtualmuseum/virtual1.mp4',
+        alt: 'Virtual Museum (2023)',
+        description: 'Virtual Museum (2023)'
       },
       optArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev1.mp4',
-        alt: 'Downhill Bike (2023)',
-        description: 'Downhill Bike (2023)'
+        src: 'images/virtualmuseum/virtual2.mp4',
+        alt: 'Virtual Museum (2023)',
+        description: 'Virtual Museum (2023)'
       },
       secondaryArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev2.mp4',
-        alt: 'Downhill Bike (2023)',
-        description: 'Downhill Bike (2023)'
+        src: 'images/virtualmuseum/virtual3.mp4',
+        alt: 'Virtual Museum (2023)',
+        description: 'Virtual Museum (2023)'
       },
       summaryHtml: `
         <p>
-        This project is a Virtual Museum application that allows users to create and explore personalized exhibition spaces in VR. Users can import multimedia content—including text, 3D models, images, videos, and audio—from their local device or Google Drive. Imported items are automatically converted into prefabs, making them immediately usable within the app. Users can then build their museum spaces either by arranging content manually, using pre-defined modular components, or through procedural generation algorithms (Binary Space Partitioning, Cellular Automata, Growth Algorithms, Procedural Room Generation). Developed with Unity for Oculus VR, the application provides an interactive framework for turning digital archives into immersive, navigable museum experiences.
+       This project is a Virtual Museum application that allows users to create and explore personalized exhibition spaces in VR, PC, and MR. Users can import multimedia content—including text, 3D models, images, videos, and audiofrom their local device or Google Drive. Imported items are automatically converted into prefabs, making them immediately usable within the app. Users can then build their museum spaces either by arranging content manually, using pre-defined modular components, or through procedural generation algorithms (Binary Space Partitioning, Cellular Automata, Growth Algorithms, Procedural Room Generation). Developed with Unity for Oculus VR, the application provides an interactive framework for turning digital archives into immersive, navigable museum experiences.
         </p>
      `
        ,
@@ -88,7 +88,7 @@ export default
       gallery: [
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg1.mp4',
+          src: 'images/virtualmuseum/virtual4.mp4',
           alt: 'dbv1',
           topText: '',
           bottomText: ''
@@ -97,7 +97,7 @@ export default
   
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg4.mp4',
+          src: 'images/virtualmuseum/virtual5.mp4',
           alt: 'dbv4',
           topText: '',
           bottomText: ''
@@ -105,7 +105,7 @@ export default
   
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg5.mp4',
+          src: 'images/virtualmuseum/virtual6.mp4',
           alt: 'dbv5',
           topText: '',
           bottomText: ''
@@ -113,6 +113,112 @@ export default
 
        
   
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual7.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual8.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual9.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual10.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual11.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual12.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual13.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual14.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual15.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual16.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual17.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+        {
+          type: 'video',
+          src: 'images/virtualmuseum/virtual18.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+
+
+       
+
        
   
       ]

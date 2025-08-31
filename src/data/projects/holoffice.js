@@ -4,7 +4,7 @@ export default
       show: true,
       slug: 'holoffice',
       link: '/project/holoffice',
-      cardImage: '/images/downhillbike/DownhillBikeLogo.png',
+      cardImage: 'images/holoffice/Square.png',
       title: 'Holoffice',
       role: 'Developer',
       link1:'',
@@ -14,21 +14,21 @@ export default
       types: [ 'Multimedia Projects'],
       mainArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev4.mp4',
-        alt: 'Downhill Bike (2023)',
-        description: 'Downhill Bike (2023)'
+        src: 'images/holoffice/holofficev1.mp4',
+        alt: 'Holoffice 2022',
+        description: 'Holoffice 2022'
       },
       optArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev1.mp4',
-        alt: 'Downhill Bike (2023)',
-        description: 'Downhill Bike (2023)'
+        src: 'images/holoffice/holofficev2.mp4',
+        alt: 'Holoffice 2022',
+        description: 'Holoffice 2022'
       },
       secondaryArt: {
         type: 'video',
-        src: 'images/downhillbike/DownhillBikev2.mp4',
-        alt: 'Downhill Bike (2023)',
-        description: 'Downhill Bike (2023)'
+        src: 'images/holoffice/holofficev7.mp4',
+        alt: 'Holoffice 2022',
+        description: 'Holoffice 2022'
       },
       summaryHtml: `
         <p>
@@ -84,7 +84,7 @@ This project is a co-located, collaborative mixed-reality application designed f
       gallery: [
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg1.mp4',
+          src: 'images/holoffice/holofficev4.mp4',
           alt: 'dbv1',
           topText: '',
           bottomText: ''
@@ -93,7 +93,7 @@ This project is a co-located, collaborative mixed-reality application designed f
   
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg4.mp4',
+          src: 'images/holoffice/holofficev5.mp4',
           alt: 'dbv4',
           topText: '',
           bottomText: ''
@@ -101,7 +101,14 @@ This project is a co-located, collaborative mixed-reality application designed f
   
         {
           type: 'video',
-          src: 'images/downhillbike/DownhillBikeg5.mp4',
+          src: 'images/holoffice/holofficev6.mp4',
+          alt: 'dbv5',
+          topText: '',
+          bottomText: ''
+        },
+        {
+          type: 'video',
+          src: 'images/holoffice/holofficev2.mp4',
           alt: 'dbv5',
           topText: '',
           bottomText: ''
