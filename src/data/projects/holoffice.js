@@ -32,7 +32,7 @@ export default
       },
       summaryHtml: `
         <p>
-This project is a co-located, collaborative mixed-reality application designed for office environments. Developed in partnership with Ericsson Research Center, it brings together a suite of interactive modules, including multiplayer games, personal status indicators, task management tools, and virtual sticky notes—to enhance productivity while fostering engagement and team collaboration. By blending utility with playful interaction, the application transforms the workplace into a more efficient and enjoyable space.     `
+This project is a co-located, collaborative mixed-reality application designed for office environments. Developed in partnership with Ericsson Research Center, it brings together a suite of interactive modules, including multiplayer games, personal status indicators, task management tools, and virtual sticky notes, to enhance productivity while fostering engagement and team collaboration. By blending utility with playful interaction, the application transforms the workplace into a more efficient and enjoyable space.     `
        ,
       detailsHtml: `
       <li><strong>Date: </strong> May 2022</li>
