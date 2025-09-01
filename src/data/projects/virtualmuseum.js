@@ -32,7 +32,7 @@ export default
       },
       summaryHtml: `
         <p>
-       This project is a Virtual Museum application that allows users to create and explore personalized exhibition spaces in VR, PC, and MR. Users can import multimedia content—including text, 3D models, images, videos, and audiofrom their local device or Google Drive. Imported items are automatically converted into prefabs, making them immediately usable within the app. Users can then build their museum spaces either by arranging content manually, using pre-defined modular components, or through procedural generation algorithms (Binary Space Partitioning, Cellular Automata, Growth Algorithms, Procedural Room Generation). Developed with Unity for Oculus VR, the application provides an interactive framework for turning digital archives into immersive, navigable museum experiences.
+       This project is a Virtual Museum application that allows users to create and explore personalized exhibition spaces in VR, PC, and MR. Users can import multimedia content, including text, 3D models, images, videos, and audiofrom their local device or Google Drive. Imported items are automatically converted into prefabs, making them immediately usable within the app. Users can then build their museum spaces either by arranging content manually, using pre-defined modular components, or through procedural generation algorithms (Binary Space Partitioning, Cellular Automata, Growth Algorithms, Procedural Room Generation). Developed with Unity for Oculus VR, the application provides an interactive framework for turning digital archives into immersive, navigable museum experiences.
         </p>
      `
        ,
