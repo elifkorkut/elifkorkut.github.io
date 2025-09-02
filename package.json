@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://elifkorkut.github.io/",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",

@@ -3,6 +3,7 @@
     <h2 class="projects-section-title">PROJECTS</h2>
   </header>
 
+  <!-- Filter buttons (desktop) -->
   <div class="filter-container">
     <div class="filters">
       <button
@@ -16,23 +17,22 @@
       </button>
     </div>
 
+    <!-- Dropdown (mobile) -->
     <div class="dropdown-container">
       <div
-        id="dropdown-toggle"
         class="dropdown-toggle"
         @click="toggleDropdown"
       >
-        <span id="selected-category">{{ selectedCategory }}</span>
+        <span class="selected-category">{{ selectedCategory }}</span>
         <span class="chevron-icon" :class="{ rotated: dropdownVisible }">▼</span>
       </div>
       <div
-        id="dropdown-menu"
         class="dropdown-menu"
         v-show="dropdownVisible"
       >
         <button
           v-for="category in categories"
-          :key="category"
+          :key="'dropdown-' + category"
           class="filter-dropdown-btn"
           @click="applyFilter(category)"
         >
@@ -42,10 +42,11 @@
     </div>
   </div>
 
+  <!-- Projects grid -->
   <div :class="gridClasses">
     <router-link
       v-for="project in filteredProjects"
-      :key="project.id"
+      :key="project.id+project.title"
       :to="project.link"
       class="project-card-wrapper"
     >
@@ -62,33 +63,41 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'; // Import computed
-import { projects } from '../data/projects.js';
-import ProjectCard from './ProjectCard.vue';
+import { ref, onMounted, computed } from "vue";
+import { projects } from "../data/projects.js";
+import ProjectCard from "./ProjectCard.vue";
 
-const categories = ['All', 'Published Games', 'Multimedia Projects', 'Publications'];
-const selectedCategory = ref('All');
+const categories = ["All", "Published Games", "Multimedia Projects", "Publications"];
+const selectedCategory = ref("All");
 const filteredProjects = ref([]);
 const dropdownVisible = ref(false);
 
-// NEW: Computed property to dynamically set grid classes
+// Computed grid classes
 const gridClasses = computed(() => {
   return {
-    'projects-grid': true, // Base class for all layouts
-    'regular-grid': filteredProjects.value.length < 4, // Regular grid for few items
-    'colossal-grid': filteredProjects.value.length >= 4, // Masonry for many items
+    "projects-grid": true,
+    "regular-grid": filteredProjects.value.length < 4,
+    "colossal-grid": filteredProjects.value.length >= 4,
   };
 });
 
 function applyFilter(category) {
   selectedCategory.value = category;
-  if (category === 'All') {
-    filteredProjects.value = projects.filter(p => p && p.show !== false);
+
+  if (category === "All") {
+    filteredProjects.value = projects.filter(
+      (p) => p && p.show !== false
+    );
   } else {
     filteredProjects.value = projects.filter(
-      p => p && p.show !== false && p.types.includes(category)
+      (p) =>
+        p &&
+        p.show !== false &&
+        Array.isArray(p.types) &&
+        p.types.includes(category)
     );
   }
+
   dropdownVisible.value = false; // Close dropdown after selection
 }
 
@@ -97,12 +106,12 @@ function toggleDropdown() {
 }
 
 onMounted(() => {
-  applyFilter('All');
+  applyFilter("All");
 });
 </script>
 
 <style scoped>
-/* --- Filter and UI Styles (largely unchanged) --- */
+/* --- Filter and UI Styles --- */
 .filter-container {
   z-index: 5;
   align-items: center;
@@ -155,6 +164,9 @@ onMounted(() => {
   cursor: pointer;
   border: none;
 }
+.selected-category {
+  font-weight: 500;
+}
 .chevron-icon {
   font-size: 16px;
   transition: transform 0.3s;
@@ -162,9 +174,8 @@ onMounted(() => {
 .chevron-icon.rotated {
   transform: rotate(180deg);
 }
-#dropdown-menu {
-  /* This is controlled by v-show, so no 'display' property is needed here */
-  position: absolute; /* Ensures it overlaps content below */
+.dropdown-menu {
+  position: absolute;
   background-color: var(--accent-color-button);
   margin-top: 5px;
   z-index: 10;
@@ -186,33 +197,23 @@ onMounted(() => {
 .filter-dropdown-btn:hover { background-color: var(--hover-color-button); }
 
 /* --- Grid Layout Styles --- */
-
-/* Base styles for the grid container */
 .projects-grid {
   padding: 20px;
 }
-
-/* Layout for 4+ items (Colossal/Masonry) */
 .colossal-grid {
   column-count: 3;
   column-gap: 1.5rem;
 }
-
-/* Layout for less than 4 items (Regular Grid) */
 .regular-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-
-/* Base styles for the project card wrapper */
 .project-card-wrapper {
   width: 100%;
   margin-bottom: 1.5rem;
-  display: block; /* Use block for consistency */
+  display: block;
 }
-
-/* Specific styles for items in the masonry layout */
 .colossal-grid .project-card-wrapper {
   break-inside: avoid;
 }
@@ -222,22 +223,12 @@ onMounted(() => {
   .colossal-grid { column-count: 2; }
   .regular-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 750px) {
-  .filters {
-    display: none;
-  }
-  .dropdown-container {
-    display: block;
-  }
-  /*
-    NOTE: The buggy '#dropdown-menu { display: block; }' rule has been REMOVED
-    to allow Vue's v-show to work correctly.
-  */
+  .filters { display: none; }
+  .dropdown-container { display: block; }
   .colossal-grid { column-count: 2; }
   .regular-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (max-width: 500px) {
   .colossal-grid { column-count: 1; }
   .regular-grid { grid-template-columns: repeat(1, 1fr); }
