@@ -1,6 +1,6 @@
 export default 
     { 
-      id: 31,
+      id: 1110,
       show: true,
       slug: 'virtualmuseum',
       link: '/project/virtualmuseum',
@@ -165,13 +165,7 @@ export default
         },
 
 
-        {
-          type: 'video',
-          src: 'images/virtualmuseum/virtual13.mp4',
-          alt: 'dbv5',
-          topText: '',
-          bottomText: ''
-        },
+    
 
         {
           type: 'video',
