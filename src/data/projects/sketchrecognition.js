@@ -1,5 +1,5 @@
 export default { 
-  id: 8,
+  id: 118,
   show: true,
   slug: 'sketchrecognition',
   link: '/project/sketchrecognition',
@@ -45,7 +45,7 @@ export default {
       bottomText: ''
     },
     {
-      type: '',
+      type: 'image',
       src: 'images/publications/sketchscape/sketchscape_publication_cover.png',
       alt: 'Preview',
       topText: '',

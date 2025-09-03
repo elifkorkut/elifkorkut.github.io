@@ -3,7 +3,6 @@
     <h2 class="projects-section-title">PROJECTS</h2>
   </header>
 
-  <!-- Filter buttons (desktop) -->
   <div class="filter-container">
     <div class="filters">
       <button
@@ -17,7 +16,6 @@
       </button>
     </div>
 
-    <!-- Dropdown (mobile) -->
     <div class="dropdown-container">
       <div
         class="dropdown-toggle"
@@ -42,7 +40,6 @@
     </div>
   </div>
 
-  <!-- Projects grid -->
   <div :class="gridClasses">
     <router-link
       v-for="project in filteredProjects"
@@ -200,6 +197,7 @@ onMounted(() => {
 .projects-grid {
   padding: 20px;
 }
+/* Base style: 3 columns */
 .colossal-grid {
   column-count: 3;
   column-gap: 1.5rem;
@@ -219,16 +217,32 @@ onMounted(() => {
 }
 
 /* --- Responsive Breakpoints --- */
+
+/* NEW: For large screens */
+@media (min-width: 1400px) {
+  .colossal-grid { column-count: 4; }
+  .regular-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* NEW: For extra-large screens */
+@media (min-width: 1800px) {
+  .colossal-grid { column-count: 5; }
+  .regular-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* For tablets and small desktops */
 @media (max-width: 1024px) {
   .colossal-grid { column-count: 2; }
   .regular-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* For changing filter UI to dropdown */
 @media (max-width: 750px) {
   .filters { display: none; }
   .dropdown-container { display: block; }
-  .colossal-grid { column-count: 2; }
-  .regular-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* For mobile */
 @media (max-width: 500px) {
   .colossal-grid { column-count: 1; }
   .regular-grid { grid-template-columns: repeat(1, 1fr); }

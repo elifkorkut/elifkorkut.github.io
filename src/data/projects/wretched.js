@@ -82,7 +82,7 @@ As the developer of Wretched, I was responsible for building core gameplay syste
 
        {
           type: 'video',
-          src: 'public/images/wretched/wretchedg1.mp4',
+          src: 'images/wretched/wretchedg1.mp4',
           alt: 'dbv1',
           topText: '',
           bottomText: ''
@@ -91,7 +91,7 @@ As the developer of Wretched, I was responsible for building core gameplay syste
   
         {
           type: 'video',
-          src: 'public/images/wretched/wretchedg2.mp4',
+          src: 'images/wretched/wretchedg2.mp4',
           alt: 'dbv4',
           topText: '',
           bottomText: ''
@@ -99,7 +99,7 @@ As the developer of Wretched, I was responsible for building core gameplay syste
   
         {
           type: 'video',
-          src: 'public/images/wretched/wretchedg3.mp4',
+          src: 'images/wretched/wretchedg3.mp4',
           alt: 'dbv5',
           topText: '',
           bottomText: ''

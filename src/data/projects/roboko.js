@@ -1,6 +1,6 @@
 export default 
     { 
-      id: 7,
+      id: 117,
       show: true,
       slug: 'roboko',
       link: '/project/roboko',
@@ -20,7 +20,7 @@ export default
       },
       optArt: {
         type: 'video',
-        src: 'public/images/roboko/Robokov1.mp4',
+        src: 'images/roboko/Robokov1.mp4',
         alt: 'RoboKO (2024)',
         description: 'RoboKO (2024)'
       },
