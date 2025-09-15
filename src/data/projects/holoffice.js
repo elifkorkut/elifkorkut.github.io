@@ -1,6 +1,6 @@
 export default 
     { 
-      id: 32,
+      id: 114,
       show: true,
       slug: 'holoffice',
       link: '/project/holoffice',
