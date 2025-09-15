@@ -20,6 +20,17 @@
         <li>
           <a href="https://www.linkedin.com/in/elifhilalkorkut/" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
         </li>
+        <li>
+    <a href="https://scholar.google.com/citations?hl=tr&user=8GzZicEAAAAJ" class="btn-social btn-outline" target="_blank">
+      <i class="fa fa-graduation-cap"></i>
+    </a>
+  </li>
+  <!-- CV Download / Open -->
+  <li>
+    <a href="ElifHilalKorkut_CV.pdf" class="btn-social btn-outline" target="_blank">
+      <i class="fa fa-file-text" aria-hidden="true"></i>
+    </a>
+  </li>
       </ul>
     </div>
   </section>
