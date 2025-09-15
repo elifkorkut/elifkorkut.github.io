@@ -31,9 +31,7 @@ export default {
     <Projects />
   </div>
 </div>
-  <div id="footer">
-    <MyFooter />
-  </div>
+
     
  
 </template>

@@ -93,7 +93,7 @@ export default {
 }
 
 .tag {
-  background-color: var(--background-color);
+  background-color: var(--tag-color);
   color: white;
   border-radius: 4px;
   padding: 5px 8px;

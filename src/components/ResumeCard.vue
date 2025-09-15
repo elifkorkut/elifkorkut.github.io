@@ -358,8 +358,8 @@ const interests = ref([
     gap: 0.5rem;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: var(--hover-color-button);
-    color: var(--bg-primary_project);
+    background-color: var(--resume-button);
+    color: white;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;

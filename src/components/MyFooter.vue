@@ -29,10 +29,11 @@
 
 <style scoped>
 .footer {
+ 
   padding: 1.5rem 0;
   background-color: var(--primary-color);
   text-align: center;
-  color: #ccc;
+  color: var(--button-border);
 }
 
 .footer-social-links {
@@ -51,7 +52,7 @@
   width: 36px;
   height: 36px;
   font-size: 18px;
-  border: 1.5px solid #888;
+  border: 2px solid var(--button-border);
   border-radius: 50%;
   background-color: transparent;
   color: inherit;
@@ -65,7 +66,7 @@
 
 .footer-copy {
   font-size: 0.85rem;
-  color: #777;
+  color: var(--text-secondary);
   margin: 0;
 }
 @media (max-width: 1023px) {

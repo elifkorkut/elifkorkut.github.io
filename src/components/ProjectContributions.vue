@@ -36,7 +36,7 @@ defineProps({
 .section-title {
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--highlight-color);
+  color: var(--text-color);
   margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
   border-bottom: 3px solid var(--line-color);
@@ -52,20 +52,20 @@ defineProps({
   background-color: var(--background-color); /* Slightly darker than the main card */
   padding: 1.25rem;
   border-radius: 6px;
-  border-left: 3px solid var(--highlight-color);
+  border-left: 3px solid var(--text-color);
 }
 
 .contribution-header {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--highlight-color);
+  color: var(--text-color);
   margin: 0 0 0.5rem 0;
 }
 
 .contribution-description {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: var(--text-secondary_contributions);
+  color: var(--text-color);
   text-align: justify;
   margin: 0;
 }

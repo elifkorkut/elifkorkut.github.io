@@ -100,7 +100,7 @@
     </div>
   </div>
 
-  <MyFooter />
+ 
 </template>
 
 <script setup>
@@ -265,9 +265,9 @@ onMounted(() => {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: var(--hover-color-button);
-  color: var(--text-color);
-  border: 1px solid var(--hover-color-button);
+  background-color: var(--accent-color-button);
+  color: white;
+  border: 1px solid var(---accent-color-button);
   cursor: pointer;
   border-radius: 6px;
   font-size: 1rem;
@@ -277,7 +277,7 @@ onMounted(() => {
 
 .nav-btn:hover {
   background-color: var(--hover-color-button);
-  border-color: var(--accent-color_project);
+  border-color: var(--hover-color-button);
 }
 
 .link-button {
@@ -308,7 +308,7 @@ onMounted(() => {
   font-style: italic;
   font-size: 0.9rem;
   line-height: 1.6;
-  border-left: 3px solid var(--highlight-color);
+  border-left: 3px solid var(--text-color);
   padding-left: 1rem;
 }
 

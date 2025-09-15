@@ -28,10 +28,7 @@ export default {
   </div>
 </div>
 
-  <div id="footer">
- <MyFooter />
-  </div>
-    
+
  
 </template>
 

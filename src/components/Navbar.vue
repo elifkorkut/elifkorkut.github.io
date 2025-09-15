@@ -16,8 +16,8 @@ export default {
 @import '../styles.css';
 
 .navbar {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--navbar-color);
+  color: var(--navbar-text-color-reverse);
   border-radius: 40px;
   display: flex;
   justify-content: space-around;
@@ -29,8 +29,8 @@ export default {
 }
 
 .nav-btn {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--navbar-color);
+  color: var(--navbar-text-color-reverse);
   text-align: center;
   border: none;
   padding: 10px;
@@ -44,12 +44,12 @@ export default {
 
 .nav-btn:hover {
   background-color: var(--accent-color-navbar-button);
+  color: var(--navbar-text-color);
 }
 
 .nav-btn-active {
   background-color: var(--background-color);
-  color: white;
-  text-align: center;
+  color: var(--navbar-text-color);
   border: none;
   padding: 10px;
   cursor: pointer;

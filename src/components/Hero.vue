@@ -100,7 +100,7 @@ export default {
      display: inline-block;
      height: 50px;
      width: 50px;
-     border: 2px solid white;
+     border: 2px solid var(--button-border);
      border-radius: 100%;
      text-align: center;
      font-size: 20px;
@@ -111,9 +111,9 @@ export default {
  
    .btn-outline {
      
-     color: white;
+     color:var(--button-border);
      font-size: 30px;
-     border: solid 2px white;
+     border: solid 2px var(--button-border);
      background: transparent;
      transition: all 0.3s ease-in-out;
      margin-top: 2em;
@@ -125,8 +125,8 @@ export default {
    .btn-outline.active {
      
      color: var(--background-color);
-     background: white;
-     border: solid 2px white;
+     background:var(--button-border);
+     border: solid 2px var(--button-border);
    }
  
    .btn:focus,

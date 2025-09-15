@@ -27,7 +27,7 @@ defineProps({
 .section-title {
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--highlight-color);
+  color: var(--text-color);
   margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
   border-bottom: 3px solid var(--line-color);
@@ -37,7 +37,7 @@ defineProps({
   background-color: var(--background-color); /* Match the contributions item background */
   padding: 1.25rem;
   border-radius: 6px;
-  border-left: 3px solid var(--highlight-color);
+  border-left: 3px solid var(--text-color);
 }
 
 .responsibilities-content {

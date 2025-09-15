@@ -6,11 +6,16 @@
   --test-color:  #d0a517;   
   /* General */
 
-  --background-color: #1A1D23;       
+  --background-color: #1A1D23;    
+  
   --primary-color: #252932;                   
   --line-color: #3A4454;          
   --shadow-color: #121418; 
+  --navbar-color: #252932;
+  --navbar-text-color:white;
+  --navbar-text-color-reverse:white;
   
+  --tag-color:#1A1D23;
      /* Text */
      --text-color: #F0F2F5;             
      --text-color_dark: #202124;        
@@ -34,10 +39,53 @@
   --highlight-color: #FFFFFF;      
   --highlight-border: #60A5FA; 
   --text-popup: #60A5FA; 
-          
-  
+  --resume-button :#676f7c;
+   
+  --button-border: white;
+
+
 
 }
+  
+.light-theme {
+      
+    /* General */
+    --background-color: #f7f7f9; 
+       /* soft off-white */
+    --primary-color: #ffffff;          /* card/content bg */
+    --line-color: #1e293b;             /* subtle gray divider */
+    --shadow-color: #d1d9e6;           /* muted shadow */
+    --navbar-color:  #1e293b;
+    --navbar-text-color:#1e293b;
+    --navbar-text-color-reverse:white;
+    --tag-color:#1e293b;
+    /* Text */
+    --text-color: #1e293b;             /* slate gray, softer than pure black */
+    --text-color_dark: #bdbfc2;        /* for inverted elements */
+    --text-secondary: #475569;         /* muted slate */
+    --text-tertiary: #64748b;          /* softer slate */
+  
+    /* Buttons */
+    --accent-color-navbar-button: white; /* chic muted blue */
+    --accent-color-button:  #1e293b;         /* subtle gray button bg */
+    --hover-color-button:  #a9b8d1;          /* darker gray on hover */
+    --selected-color-button: #a9b8d1;       /* slate for selected state */
+  
+    /* Project cards */
+    --bg-card_project1: #ffffff;       /* crisp white */
+    --bg-card_project2: #ffffff;       /* soft contrast */
+  
+    /* Highlights */
+    --highlight-bg-color: #3b82f6;     /* refined vibrant blue */
+    --highlight-color: #ffffff;
+    --highlight-border: #3b82f6;
+    --text-popup: #3b82f6;
+
+    --button-border: #1e293b; 
+    --resume-button :  #1e293b;
+
+  }
+  
 
 
 

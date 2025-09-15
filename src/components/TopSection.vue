@@ -4,7 +4,11 @@
 <section>
       <div class="top-content">
         <router-link to="/">
-  <img src="/images/Raccoon_Logo_white.png" alt="Logo" class="top-logo" />
+          <img
+          :src="isLight ? '/images/Raccoon_Logo.png' : '/images/Raccoon_Logo_white.png'"
+          alt="Logo"
+          class="top-logo"
+        />
 </router-link>
 
         <p class="top-text">&nbsp;&nbsp;&nbsp;elif hilal korkut | game developer</p>
@@ -13,10 +17,13 @@
     
   </template>
   
-  <script>
-  export default {
-    name: 'TopSection'
-  }
+  <script setup>
+
+import { inject } from 'vue'
+
+// ✅ inject the reactive theme state from App.vue
+const isLight = inject('isLight')
+ 
   </script>
   
   <style scoped>
@@ -48,6 +55,7 @@
      align-items: center;
      font-family: 'afacad', sans-serif;
      font-weight: 300;
+
  }
  
  
@@ -64,6 +72,7 @@
        top: 20px;
        left: 0px;
        width: 300px;
+      
    }
  
    .top-text {
