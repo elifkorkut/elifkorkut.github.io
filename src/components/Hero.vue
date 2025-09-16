@@ -27,7 +27,7 @@
   </li>
   <!-- CV Download / Open -->
   <li>
-    <a href="ElifHilalKorkut_CV.pdf" class="btn-social btn-outline" target="_blank">
+    <a href="CV_ElifHilalKorkut.pdf" class="btn-social btn-outline" target="_blank">
       <i class="fa fa-file-text" aria-hidden="true"></i>
     </a>
   </li>
